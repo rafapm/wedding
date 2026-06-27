@@ -1,7 +1,7 @@
 export default {
   meta: { languageName: 'Azərbaycanca' },
   nav: {
-    home: 'Ana səhifə', story: 'Hekayə və Qalereya', schedule: 'Proqram', venue: 'Məkan', travel: 'Səyahət və Barselona',
+    home: 'Ana səhifə', story: 'Hekayəmiz', schedule: 'Proqram', venue: 'Məkan', travel: 'Səyahət',
     things: 'Görüləcək Yerlər', dress: 'Geyim Kodu', party: 'Toy Heyəti', gallery: 'Qalereya',
     registry: 'Hədiyyələr', faq: 'Suallar', rsvp: 'RSVP', contact: 'Əlaqə',
   },

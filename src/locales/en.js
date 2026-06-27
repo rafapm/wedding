@@ -1,7 +1,7 @@
 export default {
   meta: { languageName: 'English' },
   nav: {
-    home: 'Home', story: 'Story & Gallery', schedule: 'Schedule', venue: 'Venue', travel: 'Travel & Barcelona',
+    home: 'Home', story: 'Our Story', schedule: 'Schedule', venue: 'Venue', travel: 'Travel',
     things: 'Things to Do', dress: 'Dress Code', party: 'Wedding Party', gallery: 'Gallery',
     registry: 'Registry', faq: 'FAQ', rsvp: 'RSVP', contact: 'Contact',
   },

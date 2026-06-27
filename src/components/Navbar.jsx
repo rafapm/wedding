@@ -16,7 +16,7 @@ const navItems = [
 ];
 
 function linkClass({ isActive }) {
-  return `block rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] transition ${
+  return `block whitespace-nowrap rounded-full px-2.5 py-2 text-xs font-semibold uppercase tracking-[0.12em] transition ${
     isActive ? 'bg-charcoal text-ivory' : 'text-charcoal/75 hover:bg-parchment hover:text-charcoal'
   }`;
 }
@@ -31,7 +31,7 @@ export default function Navbar() {
         <NavLink to="/" className="font-serif text-2xl font-semibold tracking-wide text-charcoal" onClick={() => setOpen(false)}>
           June & Rafael
         </NavLink>
-        <div className="hidden items-center gap-2 xl:flex">
+        <div className="hidden items-center gap-1.5 xl:flex">
           {navItems.map(([to, key]) => (
             <NavLink key={to} to={to} className={linkClass}>
               {t(`nav.${key}`)}

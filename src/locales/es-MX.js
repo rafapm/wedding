@@ -1,7 +1,7 @@
 export default {
   meta: { languageName: 'Español' },
   nav: {
-    home: 'Inicio', story: 'Historia y Galería', schedule: 'Itinerario', venue: 'Lugar', travel: 'Viaje y Barcelona',
+    home: 'Inicio', story: 'Historia', schedule: 'Itinerario', venue: 'Lugar', travel: 'Viaje',
     things: 'Qué Hacer', dress: 'Código de Vestimenta', party: 'Cortejo', gallery: 'Galería',
     registry: 'Mesa de Regalos', faq: 'Preguntas', rsvp: 'RSVP', contact: 'Contacto',
   },

@@ -69,7 +69,6 @@ Edit this file to update:
 - Contact info
 - Map embed URL
 - Gallery images
-- Wedding party data
 
 ## Updating Translations
 
@@ -164,18 +163,12 @@ venue: {
 }
 ```
 
-## Gallery And Wedding Party Images
+## Gallery Images
 
 Gallery images go in:
 
 ```text
 public/images/gallery/
-```
-
-Wedding party portraits go in:
-
-```text
-public/images/wedding-party/
 ```
 
 Then update the matching arrays in `src/data/weddingConfig.js`.

@@ -1,7 +1,7 @@
 export default {
   meta: { languageName: 'English' },
   nav: {
-    home: 'Home', story: 'Our Story', schedule: 'Schedule', venue: 'Venue', travel: 'Travel & Stay',
+    home: 'Home', story: 'Story & Gallery', schedule: 'Schedule', venue: 'Venue', travel: 'Travel & Barcelona',
     things: 'Things to Do', dress: 'Dress Code', party: 'Wedding Party', gallery: 'Gallery',
     registry: 'Registry', faq: 'FAQ', rsvp: 'RSVP', contact: 'Contact',
   },
@@ -51,6 +51,13 @@ export default {
   },
   travel: {
     title: 'Travel & Stay', intro: 'Barcelona is well connected and easy to love. More specific recommendations will be added soon.',
+    labels: {
+      airports: 'Airports',
+      hotels: 'Hotels',
+      neighborhoods: 'Neighborhoods',
+      transportation: 'Transportation',
+      tips: 'Travel Tips',
+    },
     sections: {
       airports: ['Barcelona-El Prat Airport (BCN) is the primary airport for international arrivals.', 'Guests may also connect through Madrid or other major European hubs.'],
       hotels: ['Recommended hotels and room blocks will be listed here.', 'Check back for neighborhoods that balance convenience, charm, and easy transportation.'],
@@ -62,6 +69,14 @@ export default {
   things: {
     title: 'Things to Do',
     intro: 'A few Barcelona ideas for the days around the wedding.',
+    labels: {
+      restaurants: 'Restaurants',
+      coffee: 'Coffee & Bakeries',
+      sightseeing: 'Sightseeing',
+      beaches: 'Beaches',
+      museums: 'Museums',
+      dayTrips: 'Day Trips',
+    },
     categories: {
       restaurants: ['Classic tapas night', 'Seafood by the water', 'A long celebratory dinner'],
       coffee: ['Morning cortado stops', 'Neighborhood bakeries', 'Churros and chocolate'],
@@ -79,7 +94,6 @@ export default {
     avoid: 'Please avoid overly casual attire, denim, sneakers, and white or bridal ivory.',
     inspiration: 'Inspiration Images',
   },
-  party: { title: 'Wedding Party', intro: 'The people standing beside us. Names, roles, photos, and notes can be edited in the config file.', roles: { maidOfHonor: 'Maid of Honor', bestMan: 'Best Man', bridesmaid: 'Bridesmaid', groomsman: 'Groomsman' }, partyBio: 'A short bio and favorite memory will go here.' },
   gallery: { title: 'Gallery', intro: 'Engagement photos, venue inspiration, and favorite moments will live here.', venueTerrace: 'Venue terrace inspiration', barcelonaCoast: 'Barcelona coast', dinnerTable: 'Dinner table mood', engagement: 'Engagement photo placeholder' },
   registry: { title: 'Registry', message: 'Your presence is the greatest gift. For those who have asked, we will share registry details here soon.' },
   faq: {
@@ -94,7 +108,7 @@ export default {
       ['Will transportation be provided?', 'We are working through logistics and will update this page.'],
       ['What time should I arrive?', 'Please arrive before the ceremony start time once confirmed.'],
       ['Is the wedding indoors or outdoors?', 'Some portions may be outdoors, weather permitting.'],
-      ['Who can I contact with questions?', 'Please use the Contact page for the best current contact information.'],
+      ['Who can I contact with questions?', 'Please use the contact section at the end of the home page for the best current contact information.'],
     ],
   },
   rsvp: { title: 'RSVP', intro: 'Please respond through the form below once invitations are sent.', deadline: 'RSVP deadline' },

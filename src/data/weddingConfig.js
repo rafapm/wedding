@@ -43,12 +43,6 @@ export const weddingConfig = {
     { src: '/images/gallery/dinner-table.jpg', captionKey: 'dinnerTable', alt: 'Elegant wedding dinner table inspiration' },
     { src: '/images/gallery/engagement.jpg', captionKey: 'engagement', alt: 'Engagement photo placeholder' },
   ],
-  weddingParty: [
-    { name: 'Name TBD', roleKey: 'maidOfHonor', photo: '/images/wedding-party/person-1.jpg', bioKey: 'partyBio' },
-    { name: 'Name TBD', roleKey: 'bestMan', photo: '/images/wedding-party/person-2.jpg', bioKey: 'partyBio' },
-    { name: 'Name TBD', roleKey: 'bridesmaid', photo: '/images/wedding-party/person-3.jpg', bioKey: 'partyBio' },
-    { name: 'Name TBD', roleKey: 'groomsman', photo: '/images/wedding-party/person-4.jpg', bioKey: 'partyBio' },
-  ],
 };
 
 export const hiddenPages = {

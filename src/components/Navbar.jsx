@@ -9,14 +9,10 @@ const navItems = [
   ['/schedule', 'schedule'],
   ['/venue', 'venue'],
   ['/travel-stay', 'travel'],
-  ['/things-to-do', 'things'],
   ['/dress-code', 'dress'],
-  ['/wedding-party', 'party'],
-  ['/gallery', 'gallery'],
   ['/registry', 'registry'],
   ['/faq', 'faq'],
   ['/rsvp', 'rsvp'],
-  ['/contact', 'contact'],
 ];
 
 function linkClass({ isActive }) {

@@ -1,7 +1,7 @@
 export default {
   meta: { languageName: 'Español' },
   nav: {
-    home: 'Inicio', story: 'Nuestra Historia', schedule: 'Itinerario', venue: 'Lugar', travel: 'Viaje y Hospedaje',
+    home: 'Inicio', story: 'Historia y Galería', schedule: 'Itinerario', venue: 'Lugar', travel: 'Viaje y Barcelona',
     things: 'Qué Hacer', dress: 'Código de Vestimenta', party: 'Cortejo', gallery: 'Galería',
     registry: 'Mesa de Regalos', faq: 'Preguntas', rsvp: 'RSVP', contact: 'Contacto',
   },
@@ -50,7 +50,14 @@ export default {
     mapTitle: 'Mapa', galleryTitle: 'Video y Galería del Lugar',
   },
   travel: {
-    title: 'Viaje y Hospedaje', intro: 'Barcelona está muy bien conectada y es fácil enamorarse de ella. Pronto agregaremos recomendaciones específicas.',
+    title: 'Viaje y Barcelona', intro: 'Barcelona está muy bien conectada y es fácil enamorarse de ella. Pronto agregaremos recomendaciones específicas.',
+    labels: {
+      airports: 'Aeropuertos',
+      hotels: 'Hoteles',
+      neighborhoods: 'Zonas',
+      transportation: 'Transporte',
+      tips: 'Consejos de Viaje',
+    },
     sections: {
       airports: ['El Aeropuerto Barcelona-El Prat (BCN) es el principal para llegadas internacionales.', 'También se puede conectar por Madrid u otros hubs europeos.'],
       hotels: ['Aquí aparecerán hoteles recomendados y posibles bloques de habitaciones.', 'Regresa para ver colonias que combinen comodidad, encanto y transporte fácil.'],
@@ -61,6 +68,14 @@ export default {
   },
   things: {
     title: 'Qué Hacer', intro: 'Algunas ideas en Barcelona para los días alrededor de la boda.',
+    labels: {
+      restaurants: 'Restaurantes',
+      coffee: 'Café y Panaderías',
+      sightseeing: 'Paseos',
+      beaches: 'Playas',
+      museums: 'Museos',
+      dayTrips: 'Escapadas',
+    },
     categories: {
       restaurants: ['Noche clásica de tapas', 'Mariscos frente al agua', 'Una cena larga para celebrar'],
       coffee: ['Cortados por la mañana', 'Panaderías de barrio', 'Churros con chocolate'],
@@ -77,7 +92,6 @@ export default {
     avoid: 'Por favor evita ropa demasiado casual, mezclilla, tenis y blanco o marfil de novia.',
     inspiration: 'Imágenes de Inspiración',
   },
-  party: { title: 'Cortejo', intro: 'Las personas que estarán a nuestro lado. Nombres, roles, fotos y notas se pueden editar en la configuración.', roles: { maidOfHonor: 'Dama de Honor Principal', bestMan: 'Padrino Principal', bridesmaid: 'Dama', groomsman: 'Padrino' }, partyBio: 'Aquí irá una breve biografía y un recuerdo favorito.' },
   gallery: { title: 'Galería', intro: 'Aquí vivirán fotos de compromiso, inspiración del lugar y momentos favoritos.', venueTerrace: 'Inspiración de terraza del venue', barcelonaCoast: 'Costa de Barcelona', dinnerTable: 'Ambiente de mesa', engagement: 'Foto de compromiso placeholder' },
   registry: { title: 'Mesa de Regalos', message: 'Su presencia es el mejor regalo. Para quienes han preguntado, compartiremos aquí los detalles de la mesa de regalos próximamente.' },
   faq: {
@@ -92,7 +106,7 @@ export default {
       ['¿Habrá transporte?', 'Estamos definiendo la logística y actualizaremos esta página.'],
       ['¿A qué hora debo llegar?', 'Llega antes del inicio de la ceremonia cuando se confirme el horario.'],
       ['¿La boda será interior o exterior?', 'Algunas partes pueden ser al aire libre, si el clima lo permite.'],
-      ['¿A quién contacto con preguntas?', 'Usa la página de Contacto para la información actualizada.'],
+      ['¿A quién contacto con preguntas?', 'Usa la sección de contacto al final del inicio para la información actualizada.'],
     ],
   },
   rsvp: { title: 'RSVP', intro: 'Por favor responde en el formulario cuando se envíen las invitaciones.', deadline: 'Fecha límite RSVP' },

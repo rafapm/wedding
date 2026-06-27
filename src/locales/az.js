@@ -1,7 +1,7 @@
 export default {
   meta: { languageName: 'Azərbaycanca' },
   nav: {
-    home: 'Ana səhifə', story: 'Hekayəmiz', schedule: 'Proqram', venue: 'Məkan', travel: 'Səyahət və Qalmaq',
+    home: 'Ana səhifə', story: 'Hekayə və Qalereya', schedule: 'Proqram', venue: 'Məkan', travel: 'Səyahət və Barselona',
     things: 'Görüləcək Yerlər', dress: 'Geyim Kodu', party: 'Toy Heyəti', gallery: 'Qalereya',
     registry: 'Hədiyyələr', faq: 'Suallar', rsvp: 'RSVP', contact: 'Əlaqə',
   },
@@ -50,7 +50,14 @@ export default {
     mapTitle: 'Xəritə', galleryTitle: 'Məkan Videosu və Qalereya',
   },
   travel: {
-    title: 'Səyahət və Qalmaq', intro: 'Barselonaya çatmaq rahatdır və şəhəri sevmək çox asandır. Daha konkret tövsiyələr tezliklə əlavə olunacaq.',
+    title: 'Səyahət və Barselona', intro: 'Barselonaya çatmaq rahatdır və şəhəri sevmək çox asandır. Daha konkret tövsiyələr tezliklə əlavə olunacaq.',
+    labels: {
+      airports: 'Hava Limanları',
+      hotels: 'Otellər',
+      neighborhoods: 'Rayonlar',
+      transportation: 'Nəqliyyat',
+      tips: 'Səyahət Məsləhətləri',
+    },
     sections: {
       airports: ['Barcelona-El Prat Airport (BCN) beynəlxalq uçuşlar üçün əsas hava limanıdır.', 'Madrid və digər Avropa mərkəzləri ilə bağlantı mümkündür.'],
       hotels: ['Tövsiyə olunan otellər və otaq blokları burada veriləcək.', 'Rahatlıq, gözəllik və nəqliyyat baxımından uyğun rayonlar əlavə olunacaq.'],
@@ -61,6 +68,14 @@ export default {
   },
   things: {
     title: 'Görüləcək Yerlər', intro: 'Toy ətrafında Barselonada vaxt keçirmək üçün bir neçə fikir.',
+    labels: {
+      restaurants: 'Restoranlar',
+      coffee: 'Qəhvə və Çörəkxanalar',
+      sightseeing: 'Gəzinti Yerləri',
+      beaches: 'Çimərliklər',
+      museums: 'Muzeylər',
+      dayTrips: 'Günübirlik Səyahətlər',
+    },
     categories: {
       restaurants: ['Klassik tapas axşamı', 'Dəniz kənarında dəniz məhsulları', 'Uzun bayram şam yeməyi'],
       coffee: ['Səhər cortado dayanacaqları', 'Məhəllə çörəkxanaları', 'Çurros və şokolad'],
@@ -77,7 +92,6 @@ export default {
     avoid: 'Çox gündəlik geyim, cins, idman ayaqqabısı və ağ və ya gəlin fil sümüyü rəngindən çəkinməyinizi xahiş edirik.',
     inspiration: 'İlham Şəkilləri',
   },
-  party: { title: 'Toy Heyəti', intro: 'Yanımızda olacaq insanlar. Adlar, rollar, fotolar və qeydlər config faylında redaktə edilə bilər.', roles: { maidOfHonor: 'Baş Gəlin Rəfiqəsi', bestMan: 'Baş Bəy Dostu', bridesmaid: 'Gəlin Rəfiqəsi', groomsman: 'Bəy Dostu' }, partyBio: 'Qısa bio və sevimli xatirə burada olacaq.' },
   gallery: { title: 'Qalereya', intro: 'Nişan fotoları, məkan ilhamı və sevimli anlar burada olacaq.', venueTerrace: 'Məkan terrası ilhamı', barcelonaCoast: 'Barselona sahili', dinnerTable: 'Şam masası ab-havası', engagement: 'Nişan fotosu placeholder' },
   registry: { title: 'Hədiyyələr', message: 'Sizin iştirakınız ən böyük hədiyyədir. Soruşanlar üçün hədiyyə məlumatlarını tezliklə burada paylaşacağıq.' },
   faq: {
@@ -92,7 +106,7 @@ export default {
       ['Nəqliyyat təmin ediləcək?', 'Logistika üzərində işləyirik və bu səhifəni yeniləyəcəyik.'],
       ['Saat neçədə gəlməliyəm?', 'Mərasim vaxtı təsdiqləndikdən sonra başlanğıcdan əvvəl gəlməyinizi xahiş edirik.'],
       ['Toy qapalıdır, yoxsa açıq havada?', 'Havanın imkan verdiyi halda bəzi hissələr açıq havada ola bilər.'],
-      ['Suallarla kimə müraciət edə bilərəm?', 'Ən aktual məlumat üçün Əlaqə səhifəsindən istifadə edin.'],
+      ['Suallarla kimə müraciət edə bilərəm?', 'Ən aktual məlumat üçün ana səhifənin sonundakı əlaqə bölməsindən istifadə edin.'],
     ],
   },
   rsvp: { title: 'RSVP', intro: 'Dəvətnamələr göndərildikdən sonra aşağıdakı formadan cavab verməyinizi xahiş edirik.', deadline: 'RSVP son tarixi' },

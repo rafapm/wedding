@@ -9,12 +9,16 @@ export const weddingConfig = {
   displayDate: 'June 16, 2027',
   venue: {
     name: 'Xalet del Nin',
-    location: 'Barcelona, Spain',
-    mapEmbedUrl: '',
+    location: 'Vilanova i la Geltru, Barcelona, Spain',
+    address: 'Passeig de Salvador Espriu, 1, 08800 Vilanova i la Geltru, Barcelona, Spain',
+    addressUrl: 'https://www.google.com/maps/search/?api=1&query=Passeig%20de%20Salvador%20Espriu%201%2C%2008800%20Vilanova%20i%20la%20Geltru%2C%20Barcelona%2C%20Spain',
+    websiteUrl: 'https://www.xaletdelnin.com/en.html',
+    mapEmbedUrl: 'https://www.google.com/maps?q=Passeig%20de%20Salvador%20Espriu%201%2C%2008800%20Vilanova%20i%20la%20Geltru%2C%20Barcelona%2C%20Spain&output=embed',
   },
   media: {
-    heroVideo: '/videos/venue.mp4',
+    heroVideo: '/media/xalet-del-nin.mp4',
     heroPoster: '/images/venue-poster.jpg',
+    heroVideoClipEndSeconds: 3,
   },
   rsvp: {
     googleFormEmbedUrl: 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true',
@@ -22,9 +26,23 @@ export const weddingConfig = {
     deadline: 'TBD',
   },
   contact: {
-    email: 'hello@example.com',
-    plannerEmail: 'planner@example.com',
-    phone: '+1 (000) 000-0000',
+    couple: [
+      {
+        name: 'June Karimli',
+        email: 'gunaykarimli94@gmail.com',
+        phone: '+1 650 922 4139',
+      },
+      {
+        name: 'Rafael Perez Martinez',
+        email: 'rafa.prezz@gmail.com',
+        phone: '+1 650-613-9824',
+      },
+    ],
+    planner: {
+      name: 'Boda y Miel',
+      email: 'info@bodaymiel.com',
+      phone: '+34 676 057 565',
+    },
   },
   schedule: [
     { key: 'welcome', date: 'June 15, 2027', time: 'TBD' },

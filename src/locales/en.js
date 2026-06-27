@@ -44,9 +44,17 @@ export default {
     },
   },
   venue: {
-    title: 'Xalet del Nin', intro: 'Barcelona, Spain',
-    aboutTitle: 'About the Venue', about: 'A romantic coastal venue with Mediterranean architecture, refined gardens, and sweeping destination-wedding atmosphere.',
-    gettingThereTitle: 'Getting There', gettingThere: 'Transportation notes, parking guidance, and rideshare recommendations will be shared closer to the wedding.',
+    title: 'Xalet del Nin', intro: 'Vilanova i la Geltru, Barcelona, Spain',
+    aboutTitle: 'About the Venue', about: 'Xalet del Nin is a Mediterranean venue on the Barcelona coast, set right by the sea and just minutes from the center of Vilanova i la Geltru. The house dates to 1913 and was refurbished in 2019 with care for its original architectural character.',
+    detailsTitle: 'Venue Details',
+    details: [
+      { title: 'By the Sea', body: 'A secluded coastal setting with views toward the Mediterranean.' },
+      { title: 'Historic House', body: 'A 1913 property designed by architect Josep Font i Guma.' },
+      { title: 'Refined Gardens', body: 'Mediterranean planting, intimate outdoor areas, and sea views throughout the gardens.' },
+      { title: 'Barcelona Coast', body: 'Located in Vilanova i la Geltru, close to Barcelona and the surrounding coastline.' },
+    ],
+    gettingThereTitle: 'Getting There', gettingThere: 'The venue address is listed below. Transportation notes, parking guidance, and guest shuttle details will be shared closer to the wedding.',
+    websiteLink: 'Visit the Xalet del Nin website',
     mapTitle: 'Map', galleryTitle: 'Venue Video & Image Gallery',
   },
   travel: {
@@ -112,5 +120,5 @@ export default {
     ],
   },
   rsvp: { title: 'RSVP', intro: 'Please respond through the form below once invitations are sent.', deadline: 'RSVP deadline' },
-  contact: { title: 'Contact', intro: 'For questions about the wedding weekend, please contact June and Rafael or the planner using the details below.', couple: 'Couple', planner: 'Planner' },
+  contact: { title: 'Contact', intro: 'For questions about the wedding weekend, please contact June and Rafael or our planner using the details below.', couple: 'June & Rafael', planner: 'Wedding Planner' },
 };

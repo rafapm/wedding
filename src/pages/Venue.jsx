@@ -15,12 +15,37 @@ export default function Venue() {
             <p className="mt-4 leading-8 text-charcoal/70">{t('venue.about')}</p>
           </article>
           <article>
+            <h2 className="font-serif text-4xl">{t('venue.detailsTitle')}</h2>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {t('venue.details', []).map((detail) => (
+                <div key={detail.title} className="border border-gold/25 bg-white/55 p-5">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">{detail.title}</p>
+                  <p className="mt-3 text-sm leading-6 text-charcoal/70">{detail.body}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+          <article>
             <h2 className="font-serif text-4xl">{t('venue.gettingThereTitle')}</h2>
             <p className="mt-4 leading-8 text-charcoal/70">{t('venue.gettingThere')}</p>
+            <a className="mt-4 block text-charcoal/70 underline-offset-4 hover:underline" href={weddingConfig.venue.addressUrl} target="_blank" rel="noreferrer">
+              {weddingConfig.venue.address}
+            </a>
+            <a className="mt-2 block text-charcoal/70 underline-offset-4 hover:underline" href={weddingConfig.venue.websiteUrl} target="_blank" rel="noreferrer">
+              {t('venue.websiteLink')}
+            </a>
           </article>
         </div>
         <div className="space-y-6">
-          <div className="aspect-video bg-gradient-to-br from-charcoal via-olive to-gold/60" />
+          <video
+            className="aspect-video w-full bg-charcoal object-cover"
+            src={weddingConfig.media.heroVideo}
+            poster={weddingConfig.media.heroPoster}
+            muted
+            loop
+            playsInline
+            controls
+          />
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="aspect-[4/3] bg-parchment" />
             <div className="aspect-[4/3] bg-olive/30" />

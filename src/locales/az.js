@@ -44,9 +44,17 @@ export default {
     },
   },
   venue: {
-    title: 'Xalet del Nin', intro: 'Barselona, İspaniya',
-    aboutTitle: 'Məkan Haqqında', about: 'Romantik sahil məkanı, Aralıq dənizi memarlığı, zərif bağlar və toy üçün unudulmaz atmosfer.',
-    gettingThereTitle: 'Ora Necə Getmək Olar', gettingThere: 'Nəqliyyat, parkinq və transfer tövsiyələri toy yaxınlaşdıqca paylaşılacaq.',
+    title: 'Xalet del Nin', intro: 'Vilanova i la Geltru, Barselona, İspaniya',
+    aboutTitle: 'Məkan Haqqında', about: 'Xalet del Nin Barselona sahilində, Aralıq dənizinin yanında yerləşən zərif bir məkandır və Vilanova i la Geltru mərkəzindən bir neçə dəqiqəlik məsafədədir. Ev 1913-cü ilə aiddir və 2019-cu ildə orijinal memarlıq ruhu qorunaraq yenilənib.',
+    detailsTitle: 'Məkan Detalları',
+    details: [
+      { title: 'Dəniz Kənarında', body: 'Aralıq dənizinə baxan sakit və özəl sahil məkanı.' },
+      { title: 'Tarixi Ev', body: 'Memar Josep Font i Guma tərəfindən layihələndirilmiş 1913-cü il mülkü.' },
+      { title: 'Zərif Bağlar', body: 'Aralıq dənizi bitkiləri, intim açıq məkanlar və bağlardan dəniz mənzərələri.' },
+      { title: 'Barselona Sahili', body: 'Barselonaya və sahil xəttinə yaxın Vilanova i la Geltru-da yerləşir.' },
+    ],
+    gettingThereTitle: 'Ora Necə Getmək Olar', gettingThere: 'Məkan ünvanı aşağıdadır. Nəqliyyat, parkinq və qonaq transferi detalları toy yaxınlaşdıqca paylaşılacaq.',
+    websiteLink: 'Xalet del Nin saytına bax',
     mapTitle: 'Xəritə', galleryTitle: 'Məkan Videosu və Qalereya',
   },
   travel: {
@@ -110,5 +118,5 @@ export default {
     ],
   },
   rsvp: { title: 'RSVP', intro: 'Dəvətnamələr göndərildikdən sonra aşağıdakı formadan cavab verməyinizi xahiş edirik.', deadline: 'RSVP son tarixi' },
-  contact: { title: 'Əlaqə', intro: 'Toy həftəsi ilə bağlı suallar üçün June və Rafaelə və ya planlayıcıya aşağıdakı məlumatlarla yazın.', couple: 'Cütlük', planner: 'Planlayıcı' },
+  contact: { title: 'Əlaqə', intro: 'Toy həftəsi ilə bağlı suallar üçün June və Rafaelə və ya planlayıcımıza aşağıdakı məlumatlarla yazın.', couple: 'June & Rafael', planner: 'Toy Planlayıcısı' },
 };

@@ -1,15 +1,30 @@
 import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 import Countdown from './Countdown';
 import { weddingConfig } from '../data/weddingConfig';
 import { useTranslation } from '../hooks/useTranslation';
 
 export default function HeroVideo() {
   const { t } = useTranslation();
+  const videoRef = useRef(null);
+  const clipEnd = weddingConfig.media.heroVideoClipEndSeconds;
+
+  const restartClip = () => {
+    if (!videoRef.current || !clipEnd) return;
+    videoRef.current.currentTime = 0;
+    videoRef.current.play().catch(() => {});
+  };
+
+  const keepClipShort = () => {
+    if (!videoRef.current || !clipEnd) return;
+    if (videoRef.current.currentTime >= clipEnd) restartClip();
+  };
 
   return (
     <section className="relative min-h-[calc(100vh-73px)] overflow-hidden bg-charcoal text-ivory">
       <img src={weddingConfig.media.heroPoster} alt="" className="absolute inset-0 h-full w-full object-cover opacity-45" />
       <video
+        ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
         src={weddingConfig.media.heroVideo}
         poster={weddingConfig.media.heroPoster}
@@ -17,6 +32,8 @@ export default function HeroVideo() {
         muted
         loop
         playsInline
+        onLoadedMetadata={restartClip}
+        onTimeUpdate={keepClipShort}
         aria-hidden="true"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/30 to-charcoal/75" />

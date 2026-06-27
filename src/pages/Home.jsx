@@ -50,15 +50,28 @@ export default function Home() {
         <div className="grid gap-5 md:grid-cols-2">
           <article className="border border-gold/25 bg-white/55 p-8">
             <h2 className="font-serif text-4xl">{t('contact.couple')}</h2>
-            <a className="mt-4 block text-charcoal/70 underline-offset-4 hover:underline" href={`mailto:${weddingConfig.contact.email}`}>
-              {weddingConfig.contact.email}
-            </a>
-            <p className="mt-2 text-charcoal/70">{weddingConfig.contact.phone}</p>
+            <div className="mt-5 space-y-5">
+              {weddingConfig.contact.couple.map((person) => (
+                <div key={person.email}>
+                  <p className="font-semibold text-charcoal">{person.name}</p>
+                  <a className="mt-2 block text-charcoal/70 underline-offset-4 hover:underline" href={`mailto:${person.email}`}>
+                    {person.email}
+                  </a>
+                  <a className="mt-1 block text-charcoal/70 underline-offset-4 hover:underline" href={`tel:${person.phone.replace(/[^+\d]/g, '')}`}>
+                    {person.phone}
+                  </a>
+                </div>
+              ))}
+            </div>
           </article>
           <article className="border border-gold/25 bg-white/55 p-8">
             <h2 className="font-serif text-4xl">{t('contact.planner')}</h2>
-            <a className="mt-4 block text-charcoal/70 underline-offset-4 hover:underline" href={`mailto:${weddingConfig.contact.plannerEmail}`}>
-              {weddingConfig.contact.plannerEmail}
+            <p className="mt-5 font-semibold text-charcoal">{weddingConfig.contact.planner.name}</p>
+            <a className="mt-2 block text-charcoal/70 underline-offset-4 hover:underline" href={`mailto:${weddingConfig.contact.planner.email}`}>
+              {weddingConfig.contact.planner.email}
+            </a>
+            <a className="mt-1 block text-charcoal/70 underline-offset-4 hover:underline" href={`tel:${weddingConfig.contact.planner.phone.replace(/[^+\d]/g, '')}`}>
+              {weddingConfig.contact.planner.phone}
             </a>
           </article>
         </div>

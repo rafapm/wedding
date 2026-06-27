@@ -99,11 +99,11 @@ in `src/data/weddingConfig.js`.
 The homepage uses:
 
 ```text
-public/videos/venue.mp4
+public/media/xalet-del-nin.mp4
 public/images/venue-poster.jpg
 ```
 
-Add your final compressed MP4 at `public/videos/venue.mp4` and a poster image at `public/images/venue-poster.jpg`.
+Add your final compressed MP4 at `public/media/xalet-del-nin.mp4` and a poster image at `public/images/venue-poster.jpg`. A root-level `media/` folder can be used as a local drop folder, but Vite serves files from `public/`.
 
 Recommended video export:
 

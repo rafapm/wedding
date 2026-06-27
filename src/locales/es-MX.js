@@ -44,9 +44,17 @@ export default {
     },
   },
   venue: {
-    title: 'Xalet del Nin', intro: 'Barcelona, España',
-    aboutTitle: 'Sobre el Lugar', about: 'Un venue romántico junto a la costa, con arquitectura mediterránea, jardines refinados y una atmósfera perfecta para boda de destino.',
-    gettingThereTitle: 'Cómo Llegar', gettingThere: 'Compartiremos detalles de transporte, estacionamiento y recomendaciones conforme se acerque la boda.',
+    title: 'Xalet del Nin', intro: 'Vilanova i la Geltru, Barcelona, España',
+    aboutTitle: 'Sobre el Lugar', about: 'Xalet del Nin es un venue mediterráneo en la costa de Barcelona, junto al mar y a pocos minutos del centro de Vilanova i la Geltru. La casa data de 1913 y fue renovada en 2019 respetando su carácter arquitectónico original.',
+    detailsTitle: 'Detalles del Venue',
+    details: [
+      { title: 'Junto al Mar', body: 'Un entorno costero y reservado con vistas hacia el Mediterráneo.' },
+      { title: 'Casa Histórica', body: 'Una propiedad de 1913 diseñada por el arquitecto Josep Font i Guma.' },
+      { title: 'Jardines Refinados', body: 'Vegetación mediterránea, espacios íntimos al aire libre y vistas al mar desde los jardines.' },
+      { title: 'Costa de Barcelona', body: 'Ubicado en Vilanova i la Geltru, cerca de Barcelona y de la costa.' },
+    ],
+    gettingThereTitle: 'Cómo Llegar', gettingThere: 'La dirección del venue aparece abajo. Compartiremos detalles de transporte, estacionamiento y shuttle para invitados conforme se acerque la boda.',
+    websiteLink: 'Visitar el sitio de Xalet del Nin',
     mapTitle: 'Mapa', galleryTitle: 'Video y Galería del Lugar',
   },
   travel: {
@@ -110,5 +118,5 @@ export default {
     ],
   },
   rsvp: { title: 'RSVP', intro: 'Por favor responde en el formulario cuando se envíen las invitaciones.', deadline: 'Fecha límite RSVP' },
-  contact: { title: 'Contacto', intro: 'Para preguntas sobre el fin de semana, contacta a June y Rafael o a la wedding planner con los datos abajo.', couple: 'Pareja', planner: 'Planner' },
+  contact: { title: 'Contacto', intro: 'Para preguntas sobre el fin de semana, contacta a June y Rafael o a nuestra wedding planner con los datos abajo.', couple: 'June & Rafael', planner: 'Wedding Planner' },
 };

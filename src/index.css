@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background:
+      radial-gradient(circle at top left, rgba(184, 148, 95, 0.12), transparent 28rem),
+      linear-gradient(180deg, #f8f3ea 0%, #efe4d1 100%);
+    color: #282622;
+    font-family: Inter, system-ui, sans-serif;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+  }
+
+  :focus-visible {
+    outline: 2px solid #63724f;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .section {
+    @apply mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8;
+  }
+
+  .button-dark {
+    @apply bg-charcoal px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-ivory transition hover:bg-olive;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

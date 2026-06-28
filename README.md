@@ -89,7 +89,7 @@ The password gate is simple frontend privacy only. The password is stored in the
 To update the password, edit:
 
 ```js
-password: 'dolmataco'
+password: 'xxxxxxx'
 ```
 
 in `src/data/weddingConfig.js`.

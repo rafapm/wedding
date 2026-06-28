@@ -146,7 +146,7 @@ export default {
     formalDinner: 'Rəsmi şam yeməyi',
     cityCelebration: 'Şəhərdə bayram',
   },
-  registry: { title: 'Hədiyyələr', message: 'Bir çoxunuz bizimlə İspaniyada qeyd etmək üçün dünyanın müxtəlif yerlərindən gəlirsiniz və sizin iştirakınız həqiqətən ən böyük hədiyyədir. Bu həftəni sizinlə paylaşmağı səbirsizliklə gözləyirik. Yenə də bizə hədiyyə ilə xeyir-dua vermək istəyənlər üçün bal ayı fondu hazırlayırıq və tezliklə Venmo, Zelle, nağd pul və ya QR kod detalları paylaşa bilərik.' },
+  registry: { title: 'Hədiyyələr', message: 'Bizə hədiyyə ilə kömək etmək istəyənlər üçün bal ayı/ev fondu hazırlayırıq. Venmo, Zelle, nağd pul və ya QR kod detalları tezliklə burada paylaşılacaq.' },
   faq: {
     title: 'Tez-tez Verilən Suallar',
     items: [

@@ -146,7 +146,7 @@ export default {
     formalDinner: 'Cena formal',
     cityCelebration: 'Celebración en la ciudad',
   },
-  registry: { title: 'Mesa de Regalos', message: 'Muchos de ustedes viajarán desde muy lejos para celebrar con nosotros en España, y su presencia de verdad es el mejor regalo. No podemos esperar para compartir esta semana con ustedes. Para quienes aun así quisieran bendecirnos con un regalo, estamos creando un fondo para la luna de miel y pronto podríamos compartir detalles de Venmo, Zelle, efectivo o códigos QR.' },
+  registry: { title: 'Mesa de Regalos', message: 'Para quienes desean darnos un regalo, estamos creando un fondo para la luna de miel y pronto podríamos compartir detalles de Venmo, Zelle, efectivo o códigos QR.' },
   faq: {
     title: 'Preguntas Frecuentes',
     items: [

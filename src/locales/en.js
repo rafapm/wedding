@@ -147,7 +147,7 @@ export default {
     formalDinner: 'Formal dinner',
     cityCelebration: 'City celebration',
   },
-  registry: { title: 'Registry', message: 'Many of you are traveling across the globe to celebrate with us in Spain, and your presence truly is the greatest gift. We cannot wait to share this week with you. For anyone who would still like to bless us with a gift, we are creating a honeymoon fund and may share Venmo, Zelle, cash, or QR code details here soon.' },
+  registry: { title: 'Registry', message: 'For anyone who would like to help us with a gift, we are creating a honeymoon/house fund. We will share Venmo, Zelle, cash, or QR code details here soon.' },
   faq: {
     title: 'FAQ',
     items: [

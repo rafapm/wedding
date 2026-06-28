@@ -4,6 +4,7 @@ import { useTranslation } from '../hooks/useTranslation';
 
 export default function Venue() {
   const { t } = useTranslation();
+  const assetUrl = (path) => (path.startsWith('/') ? `${import.meta.env.BASE_URL}${path.slice(1)}` : path);
 
   return (
     <section className="section">
@@ -37,14 +38,11 @@ export default function Venue() {
           </article>
         </div>
         <div className="space-y-6">
-          <video
+          <img
             className="aspect-video w-full bg-charcoal object-cover"
-            src={weddingConfig.media.heroVideo}
-            poster={weddingConfig.media.heroPoster}
-            muted
-            loop
-            playsInline
-            controls
+            src={assetUrl(weddingConfig.media.venueImage)}
+            alt="Xalet del Nin by the Mediterranean coast"
+            loading="lazy"
           />
           <div className="grid gap-4 sm:grid-cols-2">
             <div className="aspect-[4/3] bg-parchment" />

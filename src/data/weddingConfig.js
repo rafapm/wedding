@@ -17,7 +17,8 @@ export const weddingConfig = {
   },
   media: {
     heroVideo: '/media/xalet-del-nin.mp4',
-    heroPoster: '/images/venue-poster.jpg',
+    heroPoster: '/images/xalet.jpg',
+    venueImage: '/images/xalet.jpg',
     heroVideoClipEndSeconds: 3,
   },
   rsvp: {

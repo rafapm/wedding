@@ -8,6 +8,9 @@ export default function HeroVideo() {
   const { t } = useTranslation();
   const videoRef = useRef(null);
   const clipEnd = weddingConfig.media.heroVideoClipEndSeconds;
+  const assetUrl = (path) => (path.startsWith('/') ? `${import.meta.env.BASE_URL}${path.slice(1)}` : path);
+  const heroVideo = assetUrl(weddingConfig.media.heroVideo);
+  const heroPoster = assetUrl(weddingConfig.media.heroPoster);
 
   const restartClip = () => {
     if (!videoRef.current || !clipEnd) return;
@@ -22,12 +25,12 @@ export default function HeroVideo() {
 
   return (
     <section className="relative min-h-[calc(100vh-73px)] overflow-hidden bg-charcoal text-ivory">
-      <img src={weddingConfig.media.heroPoster} alt="" className="absolute inset-0 h-full w-full object-cover opacity-45" />
+      <img src={heroPoster} alt="" className="absolute inset-0 h-full w-full object-cover opacity-45" />
       <video
         ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
-        src={weddingConfig.media.heroVideo}
-        poster={weddingConfig.media.heroPoster}
+        src={heroVideo}
+        poster={heroPoster}
         autoPlay
         muted
         loop

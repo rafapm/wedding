@@ -7,7 +7,7 @@ export default {
   },
   common: {
     names: 'June & Rafael', gettingMarried: "We’re getting married", date: 'June 16, 2027',
-    place: 'Xalet del Nin · Barcelona, Spain', viewWeekend: 'View the Week', rsvp: 'RSVP',
+    place: 'Xalet del Nin · Barcelona, Spain', viewWeekend: 'Celebration Schedule', rsvp: 'RSVP',
     days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds',
     soon: 'More details coming soon', openForm: 'Open RSVP Form', backHome: 'Back to home',
   },
@@ -18,6 +18,7 @@ export default {
   home: {
     welcomeTitle: 'Welcome to Barcelona',
     welcome: 'We cannot wait to gather with the people we love most for a wedding week on the Mediterranean coast. This site will be updated as travel, schedule, and RSVP details are confirmed.',
+    welcomeImageAlt: 'June and Rafael on the beach',
     weekendTitle: 'The Wedding Week',
     venueCopy: 'Xalet del Nin offers sea air, historic charm, and a refined Barcelona backdrop for an intimate destination celebration.',
     quickLinks: 'Plan Your Trip',
@@ -59,18 +60,16 @@ export default {
     mapTitle: 'Map', galleryTitle: 'Venue Video & Image Gallery',
   },
   travel: {
-    title: 'Travel & Stay', intro: 'Barcelona is well connected, full of beautiful neighborhoods, and easy to turn into a longer trip.',
+    title: 'Travel & Stay', intro: 'Barcelona is well connected, full of incredible food, architecture, beaches, and easy ways to turn the wedding into a longer trip.',
     labels: {
       airports: 'Airports',
       hotels: 'Hotels',
-      neighborhoods: 'Neighborhoods',
       transportation: 'Transportation',
       tips: 'Travel Tips',
     },
     sections: {
       airports: ['Barcelona-El Prat Airport (BCN) is the closest major airport, about a 20-30 minute drive from the surrounding area.', 'Flights from the U.S. often depart in the evening and arrive the next morning, so please account for the overnight flight and time change when booking.'],
       hotels: ['Recommended hotels and room blocks will be listed here once finalized.', 'For now, Eixample is a great central base, the Gothic Quarter is atmospheric and walkable, Gracia feels local and relaxed, and beach-side stays work well for guests who want a coastal feel.'],
-      neighborhoods: ['Eixample is polished, central, and convenient for first-time visitors.', 'The Gothic Quarter is best for history, narrow streets, and being close to classic Barcelona sights.', 'Gracia is charming and neighborhood-y, with plazas, cafes, and a slower pace.', 'Barceloneta and nearby beach areas are better if you want sea air and easy beach walks.'],
       transportation: ['Barcelona has reliable taxis, metro, and train service, plus private transfers for groups.', 'For the wedding venue, we will share transportation guidance closer to the date so guests can plan safely and comfortably.'],
       tips: ['We recommend arriving the prior weekend so you can settle in, adjust to the time change, and enjoy Barcelona and the surrounding coast before the wedding.', 'Our wedding is on a Wednesday, which gives you weekend time on both sides of the celebration. For U.S. guests, this also falls during Juneteenth week, so please keep holiday travel timing in mind.'],
     },
@@ -100,7 +99,7 @@ export default {
         { label: 'Granja M. Viader', url: 'https://www.granjaviader.cat/', note: 'for churros and hot chocolate.' },
       ],
       sightseeing: [
-        { label: 'Sagrada Familia', url: 'https://sagradafamilia.org/en/' },
+        { label: 'Sagrada Familia', url: 'https://sagradafamilia.org/en/', note: '(now complete)' },
         { label: 'Park Guell', url: 'https://parkguell.barcelona/en' },
         { label: 'Casa Batllo', url: 'https://www.casabatllo.es/en/' },
         { label: 'La Pedrera', url: 'https://www.lapedrera.com/en' },
@@ -127,11 +126,24 @@ export default {
   },
   dress: {
     title: 'Dress Code',
-    intro: 'Elegant destination wedding attire with a Mediterranean sensibility.',
-    description: 'Think polished summer formal: lightweight suits, linen or breathable tailoring, midi or long dresses, elegant jumpsuits, and refined separates that feel festive without being too heavy for June on the Barcelona coast.',
-    palette: 'Soft coastal color is welcome: olive, sage, muted gold, terracotta, dusty blue, rose, warm neutrals, and other Mediterranean-inspired tones.',
-    avoid: 'Please avoid denim, shorts, flip-flops, casual sneakers, and white or bridal ivory. Since part of the celebration will be outdoors, consider comfortable dress shoes or block heels for garden and terrace areas.',
-    inspiration: 'Inspiration Images',
+    intro: 'Mediterranean garden formal: elegant, romantic, colorful, and comfortable for an outdoor celebration by the sea.',
+    sections: [
+      { eyebrow: 'The feeling', title: 'Garden formal, not black tie', body: 'Imagine a refined summer wedding at a coastal villa: polished silhouettes, beautiful color, breathable fabrics, and a little personality. The venue has gardens, stone architecture, sea air, and an indoor late-night party, so choose something that can move through both settings.' },
+      { eyebrow: 'The setting', title: 'Outdoor first, indoor later', body: 'The first part of the celebration will be outdoors on grass, garden paths, and terraces. After 10:00 PM, music and dancing move indoors, so layers and comfortable dress shoes are your friends.' },
+    ],
+    paletteTitle: 'Color Palette',
+    palette: 'We love olive, sage, emerald, muted gold, champagne, soft yellow, dusty blue, rose, terracotta, warm neutrals, and charcoal. Prints are welcome if they feel elevated and Mediterranean rather than loud or beach-casual.',
+    womenTitle: 'For women',
+    women: 'Midi or long dresses, elegant jumpsuits, dressy separates, silk, chiffon, linen blends, and structured summer fabrics all work beautifully. Block heels, wedges, or refined flats are recommended for the garden areas.',
+    menTitle: 'For men',
+    men: 'Lightweight suits or tailored separates are perfect. Linen, tropical wool, or breathable cotton blends in charcoal, olive, tan, navy, or soft neutrals will feel polished without being too heavy.',
+    avoidTitle: 'Please avoid',
+    avoid: 'Please avoid white, bridal ivory, denim, shorts, flip-flops, casual sneakers, beach coverups, and anything too club-like or overly casual. A tuxedo is not required.',
+    inspiration: 'Inspiration',
+    inspirationLinks: [
+      { label: 'Women', url: 'https://www.pinterest.com/search/pins/?q=mediterranean%20garden%20formal%20wedding%20guest%20dress', note: 'Mediterranean garden formal dresses, color, and textures.' },
+      { label: 'Men', url: 'https://www.pinterest.com/search/pins/?q=summer%20garden%20formal%20wedding%20men%20linen%20suit', note: 'Lightweight tailoring, linen suits, and polished summer separates.' },
+    ],
   },
   gallery: {
     title: 'Gallery',

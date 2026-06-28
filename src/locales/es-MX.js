@@ -7,7 +7,7 @@ export default {
   },
   common: {
     names: 'June & Rafael', gettingMarried: 'Nos casamos', date: '16 de junio de 2027',
-    place: 'Xalet del Nin · Barcelona, España', viewWeekend: 'Ver la Semana', rsvp: 'RSVP',
+    place: 'Xalet del Nin · Barcelona, España', viewWeekend: 'Itinerario de Celebración', rsvp: 'RSVP',
     days: 'Días', hours: 'Horas', minutes: 'Minutos', seconds: 'Segundos',
     soon: 'Más detalles próximamente', openForm: 'Abrir formulario RSVP', backHome: 'Volver al inicio',
   },
@@ -18,6 +18,7 @@ export default {
   home: {
     welcomeTitle: 'Bienvenidos a Barcelona',
     welcome: 'Nos emociona reunirnos con la gente que más queremos para una semana de boda junto al Mediterráneo. Actualizaremos este sitio conforme se confirmen los detalles de viaje, itinerario y RSVP.',
+    welcomeImageAlt: 'June y Rafael en la playa',
     weekendTitle: 'La Semana de la Boda',
     venueTitle: 'Un Escenario Mediterráneo Elegante',
     venueCopy: 'Xalet del Nin reúne aire de mar, encanto histórico y una atmósfera refinada de Barcelona para una celebración de destino íntima.',
@@ -60,18 +61,16 @@ export default {
     mapTitle: 'Mapa', galleryTitle: 'Video y Galería del Lugar',
   },
   travel: {
-    title: 'Viaje y Hospedaje', intro: 'Barcelona está muy bien conectada, llena de barrios hermosos y es fácil convertirla en un viaje más largo.',
+    title: 'Viaje y Hospedaje', intro: 'Barcelona está muy bien conectada y tiene comida, arquitectura, playas y muchas formas de convertir la boda en un viaje más largo.',
     labels: {
       airports: 'Aeropuertos',
       hotels: 'Hoteles',
-      neighborhoods: 'Zonas',
       transportation: 'Transporte',
       tips: 'Consejos de Viaje',
     },
     sections: {
       airports: ['El Aeropuerto Barcelona-El Prat (BCN) es el aeropuerto principal más cercano, aproximadamente a 20-30 minutos en coche de la zona.', 'Los vuelos desde Estados Unidos suelen salir por la tarde/noche y llegar a la mañana siguiente, así que tomen en cuenta el vuelo nocturno y el cambio de horario al reservar.'],
       hotels: ['Compartiremos hoteles recomendados y posibles bloques de habitaciones cuando estén finalizados.', 'Por ahora, Eixample es una gran base céntrica, el Barrio Gótico es histórico y caminable, Gracia se siente más local y relajado, y las zonas cerca de la playa funcionan bien para quienes quieren un ambiente costero.'],
-      neighborhoods: ['Eixample es elegante, céntrico y conveniente para quienes visitan Barcelona por primera vez.', 'El Barrio Gótico es ideal para historia, calles estrechas y estar cerca de sitios clásicos.', 'Gracia es encantador y de barrio, con plazas, cafés y un ritmo más tranquilo.', 'Barceloneta y las zonas cercanas a la playa son mejores si quieren aire de mar y caminatas junto al agua.'],
       transportation: ['Barcelona tiene taxis, metro y tren confiables, además de traslados privados para grupos.', 'Para el venue de la boda, compartiremos recomendaciones de transporte más cerca de la fecha para que todos puedan planear de forma segura y cómoda.'],
       tips: ['Recomendamos llegar el fin de semana anterior para instalarse, ajustarse al cambio de horario y disfrutar Barcelona y la costa antes de la boda.', 'Nuestra boda es un miércoles, así que tendrán tiempo de fin de semana antes y después de la celebración. Para invitados de Estados Unidos, también cae durante la semana de Juneteenth, así que consideren los tiempos de viaje de feriado.'],
     },
@@ -100,7 +99,7 @@ export default {
         { label: 'Granja M. Viader', url: 'https://www.granjaviader.cat/', note: 'para churros con chocolate.' },
       ],
       sightseeing: [
-        { label: 'Sagrada Familia', url: 'https://sagradafamilia.org/en/' },
+        { label: 'Sagrada Familia', url: 'https://sagradafamilia.org/en/', note: '(ya terminada)' },
         { label: 'Park Güell', url: 'https://parkguell.barcelona/en' },
         { label: 'Casa Batlló', url: 'https://www.casabatllo.es/en/' },
         { label: 'La Pedrera', url: 'https://www.lapedrera.com/en' },
@@ -126,11 +125,25 @@ export default {
     },
   },
   dress: {
-    title: 'Código de Vestimenta', intro: 'Vestimenta elegante de boda de destino con sensibilidad mediterránea.',
-    description: 'Piensen en formal de verano pulido: trajes ligeros, lino o telas frescas, vestidos midi o largos, jumpsuits elegantes y prendas refinadas que se sientan festivas sin ser demasiado pesadas para junio en la costa de Barcelona.',
-    palette: 'Los colores suaves de costa son bienvenidos: olivo, salvia, dorado tenue, terracota, azul empolvado, rosa, neutros cálidos y otros tonos inspirados en el Mediterráneo.',
-    avoid: 'Por favor eviten mezclilla, shorts, chanclas, tenis casuales y blanco o marfil de novia. Como parte de la celebración será al aire libre, consideren zapatos cómodos de vestir o tacones de bloque para jardines y terrazas.',
-    inspiration: 'Imágenes de Inspiración',
+    title: 'Código de Vestimenta',
+    intro: 'Formal de jardín mediterráneo: elegante, romántico, colorido y cómodo para una celebración al aire libre junto al mar.',
+    sections: [
+      { eyebrow: 'La idea', title: 'Formal de jardín, no black tie', body: 'Imaginen una boda de verano refinada en una villa costera: siluetas pulidas, buen color, telas frescas y un poco de personalidad. El venue tiene jardines, piedra, aire de mar y fiesta interior por la noche, así que elijan algo que funcione en ambos ambientes.' },
+      { eyebrow: 'El lugar', title: 'Afuera primero, adentro después', body: 'La primera parte de la celebración será al aire libre, con pasto, caminos de jardín y terrazas. Después de las 10:00 PM, la música y el baile pasan al interior, así que una capa ligera y zapatos cómodos de vestir serán buena idea.' },
+    ],
+    paletteTitle: 'Paleta de Color',
+    palette: 'Nos encantan olivo, salvia, esmeralda, dorado tenue, champagne, amarillo suave, azul empolvado, rosa, terracota, neutros cálidos y charcoal. Los estampados son bienvenidos si se sienten elevados y mediterráneos, no demasiado playeros o casuales.',
+    womenTitle: 'Para mujeres',
+    women: 'Vestidos midi o largos, jumpsuits elegantes, conjuntos de vestir, seda, chiffon, mezclas de lino y telas estructuradas de verano funcionan muy bien. Recomendamos tacones de bloque, plataformas discretas o flats elegantes para las zonas de jardín.',
+    menTitle: 'Para hombres',
+    men: 'Trajes ligeros o separates con buen fit son perfectos. Lino, lana tropical o mezclas frescas de algodón en charcoal, olivo, beige, navy o neutros suaves se verán pulidos sin sentirse pesados.',
+    avoidTitle: 'Por favor eviten',
+    avoid: 'Por favor eviten blanco, marfil de novia, mezclilla, shorts, chanclas, tenis casuales, salidas de playa y cualquier look demasiado de antro o demasiado casual. No se requiere tuxedo.',
+    inspiration: 'Inspiración',
+    inspirationLinks: [
+      { label: 'Mujeres', url: 'https://www.pinterest.com/search/pins/?q=mediterranean%20garden%20formal%20wedding%20guest%20dress', note: 'Vestidos, colores y texturas de jardín formal mediterráneo.' },
+      { label: 'Hombres', url: 'https://www.pinterest.com/search/pins/?q=summer%20garden%20formal%20wedding%20men%20linen%20suit', note: 'Trajes ligeros, lino y separates pulidos de verano.' },
+    ],
   },
   gallery: {
     title: 'Galería',
@@ -146,7 +159,7 @@ export default {
     formalDinner: 'Cena formal',
     cityCelebration: 'Celebración en la ciudad',
   },
-  registry: { title: 'Mesa de Regalos', message: 'Para quienes desean darnos un regalo, estamos creando un fondo para la luna de miel y pronto podríamos compartir detalles de Venmo, Zelle, efectivo o códigos QR.' },
+  registry: { title: 'Mesa de Regalos', message: 'Para quienes quieran ayudarnos con un regalo, estamos creando un fondo para la luna de miel / casa. Pronto compartiremos detalles de Venmo, Zelle, efectivo o códigos QR.' },
   faq: {
     title: 'Preguntas Frecuentes',
     items: [

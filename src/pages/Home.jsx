@@ -5,6 +5,9 @@ import EventCard from '../components/EventCard';
 import { weddingConfig } from '../data/weddingConfig';
 import { useTranslation } from '../hooks/useTranslation';
 
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const assetUrl = (path) => `${base}${path}`;
+
 const quickLinks = [
   ['/rsvp', 'rsvp'],
   ['/travel-stay', 'travel'],
@@ -20,6 +23,14 @@ export default function Home() {
     <>
       <HeroVideo />
       <section className="section">
+        <div className="mx-auto mb-8 max-w-2xl md:mb-10">
+          <img
+            className="aspect-[4/3] w-full object-cover"
+            src={assetUrl('/images/gallery/fix-0711.jpg')}
+            alt={t('home.welcomeImageAlt')}
+            loading="lazy"
+          />
+        </div>
         <SectionHeader eyebrow="June & Rafael" title={t('home.welcomeTitle')} intro={t('home.welcome')} centered />
       </section>
       <section className="section bg-parchment/60">

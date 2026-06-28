@@ -7,7 +7,7 @@ export default {
   },
   common: {
     names: 'June & Rafael', gettingMarried: 'Evlənirik', date: '16 iyun 2027',
-    place: 'Xalet del Nin · Barselona, İspaniya', viewWeekend: 'Həftəyə Bax', rsvp: 'RSVP',
+    place: 'Xalet del Nin · Barselona, İspaniya', viewWeekend: 'Bayram Proqramı', rsvp: 'RSVP',
     days: 'Gün', hours: 'Saat', minutes: 'Dəqiqə', seconds: 'Saniyə',
     soon: 'Ətraflı məlumat tezliklə', openForm: 'RSVP Formunu Aç', backHome: 'Ana səhifəyə qayıt',
   },
@@ -18,6 +18,7 @@ export default {
   home: {
     welcomeTitle: 'Barselonaya Xoş Gəlmisiniz',
     welcome: 'Aralıq dənizi sahilində sevdiyimiz insanlarla toy həftəsini paylaşmağı səbirsizliklə gözləyirik. Səyahət, proqram və RSVP detalları təsdiqləndikcə bu sayt yenilənəcək.',
+    welcomeImageAlt: 'June və Rafael sahildə',
     weekendTitle: 'Toy Həftəsi',
     venueTitle: 'Zərif Aralıq Dənizi Məkanı',
     venueCopy: 'Xalet del Nin dəniz havası, tarixi cazibə və Barselonaya xas incə bir atmosfer təqdim edir.',
@@ -60,18 +61,16 @@ export default {
     mapTitle: 'Xəritə', galleryTitle: 'Məkan Videosu və Qalereya',
   },
   travel: {
-    title: 'Səyahət və Qalmaq', intro: 'Barselonaya çatmaq rahatdır, şəhərin gözəl məhəllələri çoxdur və səfəri daha uzun bir tətilə çevirmək asandır.',
+    title: 'Səyahət və Qalmaq', intro: 'Barselonaya çatmaq rahatdır; şəhərdə gözəl yeməklər, memarlıq, çimərliklər və toy səfərini daha uzun tətilə çevirmək üçün çox imkan var.',
     labels: {
       airports: 'Hava Limanları',
       hotels: 'Otellər',
-      neighborhoods: 'Rayonlar',
       transportation: 'Nəqliyyat',
       tips: 'Səyahət Məsləhətləri',
     },
     sections: {
       airports: ['Barcelona-El Prat Airport (BCN) ən yaxın əsas hava limanıdır və ətraf bölgəyə maşınla təxminən 20-30 dəqiqəlik məsafədədir.', 'ABŞ-dan uçuşlar çox vaxt axşam yola düşüb səhəri gün çatır, ona görə bilet alarkən gecə uçuşunu və saat fərqini nəzərə alın.'],
       hotels: ['Tövsiyə etdiyimiz otellər və mümkün otaq blokları yekunlaşdıqdan sonra burada paylaşılacaq.', 'Hələlik Eixample mərkəzi və rahat bazadır, Gothic Quarter tarixi və piyada gəzmək üçün uyğundur, Gracia daha yerli və sakit hiss verir, dəniz kənarı ərazilər isə sahil havası istəyənlər üçün yaxşı seçimdir.'],
-      neighborhoods: ['Eixample zərif, mərkəzi və Barselonaya ilk dəfə gələnlər üçün rahatdır.', 'Gothic Quarter tarix, dar küçələr və klassik görməli yerlərə yaxınlıq üçün yaxşıdır.', 'Gracia meydanları, kafeləri və daha sakit tempi ilə məhəllə ab-havası verir.', 'Barceloneta və yaxın çimərlik əraziləri dəniz havası və sahil gəzintiləri istəyənlər üçün uyğundur.'],
       transportation: ['Barselonada taksi, metro və qatar sistemi etibarlıdır, qruplar üçün şəxsi transferlər də mümkündür.', 'Toy məkanı üçün qonaqların rahat və təhlükəsiz plan qura bilməsi adına nəqliyyat tövsiyələrini tarix yaxınlaşdıqca paylaşacağıq.'],
       tips: ['Toydan əvvəlki həftəsonu gəlməyi tövsiyə edirik ki, yerləşə, saat fərqinə uyğunlaşa və toydan əvvəl Barselona ilə sahil bölgəsindən zövq ala biləsiniz.', 'Toyumuz çərşənbə günüdür, buna görə bayramın hər iki tərəfində həftəsonu vaxtınız olacaq. ABŞ-dan gələn qonaqlar üçün bu tarix Juneteenth həftəsinə düşür, buna görə bayram səyahət vaxtını nəzərə alın.'],
     },
@@ -100,7 +99,7 @@ export default {
         { label: 'Granja M. Viader', url: 'https://www.granjaviader.cat/', note: 'çurros və isti şokolad üçün.' },
       ],
       sightseeing: [
-        { label: 'Sagrada Familia', url: 'https://sagradafamilia.org/en/' },
+        { label: 'Sagrada Familia', url: 'https://sagradafamilia.org/en/', note: '(artıq tamamlanıb)' },
         { label: 'Park Guell', url: 'https://parkguell.barcelona/en' },
         { label: 'Casa Batllo', url: 'https://www.casabatllo.es/en/' },
         { label: 'La Pedrera', url: 'https://www.lapedrera.com/en' },
@@ -126,11 +125,25 @@ export default {
     },
   },
   dress: {
-    title: 'Geyim Kodu', intro: 'Aralıq dənizi ruhunda zərif destination wedding geyimi.',
-    description: 'Səliqəli yay formal geyimi düşünün: yüngül kostyumlar, kətan və ya nəfəs alan parçalar, midi və ya uzun libaslar, zərif kombinezonlar və iyun ayında Barselona sahili üçün çox ağır olmayan bayram əhval-ruhiyyəli kombinlər.',
-    palette: 'Yumşaq sahil rəngləri uyğundur: zeytun, adaçayı yaşılı, sakit qızılı, terrakota, toz mavi, çəhrayı, isti neytral tonlar və Aralıq dənizindən ilhamlanan digər rənglər.',
-    avoid: 'Zəhmət olmasa cins, şort, şəpit, çox gündəlik idman ayaqqabısı və ağ və ya gəlin fil sümüyü rəngindən çəkinin. Bayramın bir hissəsi açıq havada olacağı üçün bağ və terraslar üçün rahat ziyafət ayaqqabısı və ya qalın daban seçmək yaxşı olar.',
-    inspiration: 'İlham Şəkilləri',
+    title: 'Geyim Kodu',
+    intro: 'Aralıq dənizi bağ formalı: zərif, romantik, rəngli və dəniz kənarında açıq havada keçirilən bayram üçün rahat.',
+    sections: [
+      { eyebrow: 'Üslub', title: 'Bağ formalı, black tie deyil', body: 'Sahil villasındakı zərif yay toyunu düşünün: səliqəli siluetlər, gözəl rənglər, nəfəs alan parçalar və bir az şəxsiyyət. Məkanda bağlar, daş memarlıq, dəniz havası və gecə qapalı məkanda əyləncə var, buna görə hər iki şəraitə uyğun geyim seçin.' },
+      { eyebrow: 'Məkan', title: 'Əvvəl açıq hava, sonra içəri', body: 'Bayramın ilk hissəsi otluq, bağ yolları və terraslarda açıq havada olacaq. Saat 22:00-dan sonra musiqi və rəqs qapalı məkana keçir, buna görə yüngül üst geyim və rahat ziyafət ayaqqabısı yaxşı seçimdir.' },
+    ],
+    paletteTitle: 'Rəng Palitrası',
+    palette: 'Zeytun, adaçayı yaşılı, zümrüd, sakit qızılı, şampan, yumşaq sarı, toz mavi, çəhrayı, terrakota, isti neytral tonlar və charcoal rənglərini sevirik. Naxışlar da uyğundur, yetər ki, zərif və Aralıq dənizi ruhunda olsun, çox çimərlik və ya gündəlik görünməsin.',
+    womenTitle: 'Qadınlar üçün',
+    women: 'Midi və ya uzun libaslar, zərif kombinezonlar, ziyafət dəstləri, ipək, şifon, kətan qarışıqları və strukturlaşdırılmış yay parçaları çox gözəl uyğunlaşır. Bağ zonaları üçün qalın daban, platforma və ya zərif düz ayaqqabı tövsiyə olunur.',
+    menTitle: 'Kişilər üçün',
+    men: 'Yüngül kostyumlar və ya yaxşı biçilmiş kombinlər idealdır. Kətan, tropik yun və ya nəfəs alan pambıq qarışıqları charcoal, zeytun, bej, navy və yumşaq neytral tonlarda səliqəli görünəcək və ağır hiss etdirməyəcək.',
+    avoidTitle: 'Zəhmət olmasa çəkinin',
+    avoid: 'Ağ, gəlin fil sümüyü, cins, şort, şəpit, çox gündəlik idman ayaqqabısı, çimərlik üst geyimləri və çox klub tərzi və ya çox gündəlik görünüşlərdən çəkinin. Smokin tələb olunmur.',
+    inspiration: 'İlham',
+    inspirationLinks: [
+      { label: 'Qadınlar', url: 'https://www.pinterest.com/search/pins/?q=mediterranean%20garden%20formal%20wedding%20guest%20dress', note: 'Aralıq dənizi bağ formalı libaslar, rənglər və teksturalar.' },
+      { label: 'Kişilər', url: 'https://www.pinterest.com/search/pins/?q=summer%20garden%20formal%20wedding%20men%20linen%20suit', note: 'Yüngül dərzilik, kətan kostyumlar və səliqəli yay kombinləri.' },
+    ],
   },
   gallery: {
     title: 'Qalereya',
@@ -146,7 +159,7 @@ export default {
     formalDinner: 'Rəsmi şam yeməyi',
     cityCelebration: 'Şəhərdə bayram',
   },
-  registry: { title: 'Hədiyyələr', message: 'Bizə hədiyyə ilə kömək etmək istəyənlər üçün bal ayı/ev fondu hazırlayırıq. Venmo, Zelle, nağd pul və ya QR kod detalları tezliklə burada paylaşılacaq.' },
+  registry: { title: 'Hədiyyələr', message: 'Hədiyyə ilə bizə dəstək olmaq istəyənlər üçün bal ayı / ev fondu hazırlayırıq. Venmo, Zelle, nağd pul və ya QR kod detalları tezliklə burada paylaşılacaq.' },
   faq: {
     title: 'Tez-tez Verilən Suallar',
     items: [

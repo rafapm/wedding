@@ -1,7 +1,7 @@
 import SectionHeader from '../components/SectionHeader';
 import { useTranslation } from '../hooks/useTranslation';
 
-const sections = ['airports', 'hotels', 'neighborhoods', 'transportation', 'tips'];
+const sections = ['airports', 'hotels', 'transportation', 'tips'];
 const categories = ['restaurants', 'coffee', 'sightseeing', 'beaches', 'museums', 'dayTrips'];
 
 function RecommendationItem({ item }) {

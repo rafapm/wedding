@@ -89,7 +89,7 @@ The password gate is simple frontend privacy only. The password is stored in the
 To update the password, edit:
 
 ```js
-password: 'xxxxxxx'
+password: 'your-private-password'
 ```
 
 in `src/data/weddingConfig.js`.

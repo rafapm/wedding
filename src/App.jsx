@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import PasswordGate from './components/PasswordGate';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import OurStory from './pages/OurStory';
 import Schedule from './pages/Schedule';
@@ -15,6 +16,7 @@ export default function App() {
   return (
     <PasswordGate>
       <Layout>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/our-story" element={<OurStory />} />

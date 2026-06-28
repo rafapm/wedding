@@ -1,0 +1,7 @@
+node_modules
+dist
+/media
+.DS_Store
+*.local
+.env
+.env.*

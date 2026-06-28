@@ -39,11 +39,6 @@ export const weddingConfig = {
         phone: '+1 650-613-9824',
       },
     ],
-    planner: {
-      name: 'Boda y Miel',
-      email: 'info@bodaymiel.com',
-      phone: '+34 676 057 565',
-    },
   },
   schedule: [
     { key: 'welcome', date: 'June 15, 2027', time: 'TBD' },
@@ -57,10 +52,16 @@ export const weddingConfig = {
     { label: 'Registry Two', url: '#', visible: false },
   ],
   galleryImages: [
-    { src: '/images/gallery/venue-terrace.jpg', captionKey: 'venueTerrace', alt: 'Mediterranean terrace at the venue' },
-    { src: '/images/gallery/barcelona-coast.jpg', captionKey: 'barcelonaCoast', alt: 'Barcelona coastline inspiration' },
-    { src: '/images/gallery/dinner-table.jpg', captionKey: 'dinnerTable', alt: 'Elegant wedding dinner table inspiration' },
-    { src: '/images/gallery/engagement.jpg', captionKey: 'engagement', alt: 'Engagement photo placeholder' },
+    { src: '/images/gallery/fix-0626.jpg', captionKey: 'coupleOne', alt: 'June and Rafael together' },
+    { src: '/images/gallery/img-1603.jpeg', captionKey: 'coupleTwo', alt: 'June and Rafael photo' },
+    { src: '/images/gallery/fix-0926.jpg', captionKey: 'coupleThree', alt: 'June and Rafael engagement-style photo' },
+    { src: '/images/gallery/fix-0711.jpg', captionKey: 'coupleFour', alt: 'June and Rafael candid photo' },
+    { src: '/images/gallery/img-5825.jpeg', captionKey: 'coupleFive', alt: 'June and Rafael travel photo' },
+    { src: '/images/gallery/fix-0562.jpg', captionKey: 'coupleSix', alt: 'June and Rafael portrait' },
+    { src: '/images/gallery/img-1485.jpeg', captionKey: 'coupleSeven', alt: 'June and Rafael memory' },
+    { src: '/images/gallery/img-0190.png', captionKey: 'coupleEight', alt: 'June and Rafael moment' },
+    { src: '/images/gallery/img-6480.jpeg', captionKey: 'coupleNine', alt: 'June and Rafael together outdoors' },
+    { src: '/images/gallery/img-0260.jpeg', captionKey: 'coupleTen', alt: 'June and Rafael celebration photo' },
   ],
 };
 

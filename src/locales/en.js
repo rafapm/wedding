@@ -8,7 +8,7 @@ export default {
   common: {
     names: 'June & Rafael', gettingMarried: "We’re getting married", date: 'June 16, 2027',
     place: 'Xalet del Nin · Barcelona, Spain', viewWeekend: 'View the Weekend', rsvp: 'RSVP',
-    days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds', resetAccess: 'Reset access',
+    days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds',
     soon: 'More details coming soon', openForm: 'Open RSVP Form', backHome: 'Back to home',
   },
   gate: {
@@ -19,7 +19,6 @@ export default {
     welcomeTitle: 'Welcome to Barcelona',
     welcome: 'We cannot wait to gather with the people we love most for a wedding week on the Mediterranean coast. This site will be updated as travel, schedule, and RSVP details are confirmed.',
     weekendTitle: 'The Wedding Weekend',
-    venueTitle: 'An Elegant Mediterranean Setting',
     venueCopy: 'Xalet del Nin offers sea air, historic charm, and a refined Barcelona backdrop for an intimate destination celebration.',
     quickLinks: 'Plan Your Trip',
   },
@@ -102,7 +101,20 @@ export default {
     avoid: 'Please avoid overly casual attire, denim, sneakers, and white or bridal ivory.',
     inspiration: 'Inspiration Images',
   },
-  gallery: { title: 'Gallery', intro: 'Engagement photos, venue inspiration, and favorite moments will live here.', venueTerrace: 'Venue terrace inspiration', barcelonaCoast: 'Barcelona coast', dinnerTable: 'Dinner table mood', engagement: 'Engagement photo placeholder' },
+  gallery: {
+    title: 'Gallery',
+    intro: 'A few favorite photos of us, with more to come.',
+    coupleOne: 'June & Rafael',
+    coupleTwo: 'A favorite moment',
+    coupleThree: 'Together',
+    coupleFour: 'Our story',
+    coupleFive: 'A shared memory',
+    coupleSix: 'Portrait',
+    coupleSeven: 'A day we love',
+    coupleEight: 'Us',
+    coupleNine: 'Together outdoors',
+    coupleTen: 'Celebration',
+  },
   registry: { title: 'Registry', message: 'Your presence is the greatest gift. For those who have asked, we will share registry details here soon.' },
   faq: {
     title: 'FAQ',
@@ -120,5 +132,5 @@ export default {
     ],
   },
   rsvp: { title: 'RSVP', intro: 'Please respond through the form below once invitations are sent.', deadline: 'RSVP deadline' },
-  contact: { title: 'Contact', intro: 'For questions about the wedding weekend, please contact June and Rafael or our planner using the details below.', couple: 'June & Rafael', planner: 'Wedding Planner' },
+  contact: { title: 'Contact', intro: 'For questions about the wedding weekend, please contact us using the details below.', couple: 'June & Rafael' },
 };

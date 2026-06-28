@@ -8,7 +8,7 @@ export default {
   common: {
     names: 'June & Rafael', gettingMarried: 'Evlənirik', date: '16 iyun 2027',
     place: 'Xalet del Nin · Barselona, İspaniya', viewWeekend: 'Həftəsonuna Bax', rsvp: 'RSVP',
-    days: 'Gün', hours: 'Saat', minutes: 'Dəqiqə', seconds: 'Saniyə', resetAccess: 'Girişi sıfırla',
+    days: 'Gün', hours: 'Saat', minutes: 'Dəqiqə', seconds: 'Saniyə',
     soon: 'Ətraflı məlumat tezliklə', openForm: 'RSVP Formunu Aç', backHome: 'Ana səhifəyə qayıt',
   },
   gate: {
@@ -100,7 +100,20 @@ export default {
     avoid: 'Çox gündəlik geyim, cins, idman ayaqqabısı və ağ və ya gəlin fil sümüyü rəngindən çəkinməyinizi xahiş edirik.',
     inspiration: 'İlham Şəkilləri',
   },
-  gallery: { title: 'Qalereya', intro: 'Nişan fotoları, məkan ilhamı və sevimli anlar burada olacaq.', venueTerrace: 'Məkan terrası ilhamı', barcelonaCoast: 'Barselona sahili', dinnerTable: 'Şam masası ab-havası', engagement: 'Nişan fotosu placeholder' },
+  gallery: {
+    title: 'Qalereya',
+    intro: 'Bizdən bir neçə sevimli foto. Daha çoxu tezliklə.',
+    coupleOne: 'June & Rafael',
+    coupleTwo: 'Sevimli an',
+    coupleThree: 'Birlikdə',
+    coupleFour: 'Hekayəmiz',
+    coupleFive: 'Paylaşdığımız xatirə',
+    coupleSix: 'Portret',
+    coupleSeven: 'Sevdiyimiz gün',
+    coupleEight: 'Biz',
+    coupleNine: 'Açıq havada birlikdə',
+    coupleTen: 'Bayram',
+  },
   registry: { title: 'Hədiyyələr', message: 'Sizin iştirakınız ən böyük hədiyyədir. Soruşanlar üçün hədiyyə məlumatlarını tezliklə burada paylaşacağıq.' },
   faq: {
     title: 'Tez-tez Verilən Suallar',
@@ -118,5 +131,5 @@ export default {
     ],
   },
   rsvp: { title: 'RSVP', intro: 'Dəvətnamələr göndərildikdən sonra aşağıdakı formadan cavab verməyinizi xahiş edirik.', deadline: 'RSVP son tarixi' },
-  contact: { title: 'Əlaqə', intro: 'Toy həftəsi ilə bağlı suallar üçün June və Rafaelə və ya planlayıcımıza aşağıdakı məlumatlarla yazın.', couple: 'June & Rafael', planner: 'Toy Planlayıcısı' },
+  contact: { title: 'Əlaqə', intro: 'Toy həftəsi ilə bağlı suallar üçün aşağıdakı məlumatlarla bizə yazın.', couple: 'June & Rafael' },
 };

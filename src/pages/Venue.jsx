@@ -44,10 +44,6 @@ export default function Venue() {
             alt="Xalet del Nin by the Mediterranean coast"
             loading="lazy"
           />
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="aspect-[4/3] bg-parchment" />
-            <div className="aspect-[4/3] bg-olive/30" />
-          </div>
         </div>
       </div>
       <div className="mt-12">

@@ -8,7 +8,7 @@ export default {
   common: {
     names: 'June & Rafael', gettingMarried: 'Nos casamos', date: '16 de junio de 2027',
     place: 'Xalet del Nin · Barcelona, España', viewWeekend: 'Ver el Fin de Semana', rsvp: 'RSVP',
-    days: 'Días', hours: 'Horas', minutes: 'Minutos', seconds: 'Segundos', resetAccess: 'Cerrar acceso',
+    days: 'Días', hours: 'Horas', minutes: 'Minutos', seconds: 'Segundos',
     soon: 'Más detalles próximamente', openForm: 'Abrir formulario RSVP', backHome: 'Volver al inicio',
   },
   gate: {
@@ -100,7 +100,20 @@ export default {
     avoid: 'Por favor evita ropa demasiado casual, mezclilla, tenis y blanco o marfil de novia.',
     inspiration: 'Imágenes de Inspiración',
   },
-  gallery: { title: 'Galería', intro: 'Aquí vivirán fotos de compromiso, inspiración del lugar y momentos favoritos.', venueTerrace: 'Inspiración de terraza del venue', barcelonaCoast: 'Costa de Barcelona', dinnerTable: 'Ambiente de mesa', engagement: 'Foto de compromiso placeholder' },
+  gallery: {
+    title: 'Galería',
+    intro: 'Algunas fotos favoritas de nosotros, con más por venir.',
+    coupleOne: 'June & Rafael',
+    coupleTwo: 'Un momento favorito',
+    coupleThree: 'Juntos',
+    coupleFour: 'Nuestra historia',
+    coupleFive: 'Un recuerdo compartido',
+    coupleSix: 'Retrato',
+    coupleSeven: 'Un día que queremos',
+    coupleEight: 'Nosotros',
+    coupleNine: 'Juntos al aire libre',
+    coupleTen: 'Celebración',
+  },
   registry: { title: 'Mesa de Regalos', message: 'Su presencia es el mejor regalo. Para quienes han preguntado, compartiremos aquí los detalles de la mesa de regalos próximamente.' },
   faq: {
     title: 'Preguntas Frecuentes',
@@ -118,5 +131,5 @@ export default {
     ],
   },
   rsvp: { title: 'RSVP', intro: 'Por favor responde en el formulario cuando se envíen las invitaciones.', deadline: 'Fecha límite RSVP' },
-  contact: { title: 'Contacto', intro: 'Para preguntas sobre el fin de semana, contacta a June y Rafael o a nuestra wedding planner con los datos abajo.', couple: 'June & Rafael', planner: 'Wedding Planner' },
+  contact: { title: 'Contacto', intro: 'Para preguntas sobre el fin de semana, contáctanos con los datos abajo.', couple: 'June & Rafael' },
 };

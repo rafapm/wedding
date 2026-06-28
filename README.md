@@ -68,24 +68,26 @@ Only use the Supabase anon key in frontend code. Do not put a service-role key i
 
 The RSVP page uses `/rsvp` and looks up guests by the email address where they received their invitation. Email lookup is trimmed and compared case-insensitively. Guests can return later with the same email to update their RSVP.
 
-1. Create a Supabase project.
-2. Open the Supabase SQL editor.
-3. Run:
+### 1. Create the database tables
 
-```text
-supabase/migrations/001_rsvp_schema.sql
+In Supabase, go to **SQL Editor** and create a new query.
+
+Do **not** type the file path into the SQL editor. You need to paste the actual SQL inside the file.
+
+From Terminal, copy the migration SQL to your clipboard:
+
+```bash
+cd /Users/rafapm/Documents/GitHub/wedding
+pbcopy < supabase/migrations/001_rsvp_schema.sql
 ```
 
-4. Optionally run fake test data:
+Then:
 
-```text
-supabase/seed.sql
-```
+1. Go back to Supabase SQL Editor.
+2. Paste into the editor.
+3. Click **Run**.
 
-5. Add your real households, guests, events, and event invites.
-6. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` to `.env.local` locally and to your deployment environment.
-
-The main tables are:
+This creates:
 
 - `households`
 - `guests`
@@ -94,6 +96,74 @@ The main tables are:
 - `rsvps`
 - `admin_users`
 - `rsvp_lookup_attempts`
+
+It also creates the lookup/save/admin functions used by the website.
+
+### 2. Add test data
+
+Optional, but helpful while testing. Copy the seed SQL:
+
+```bash
+cd /Users/rafapm/Documents/GitHub/wedding
+pbcopy < supabase/seed.sql
+```
+
+Paste it into a new Supabase SQL Editor query and click **Run**.
+
+The seed creates fake guests you can test with:
+
+```text
+alex.rivera@example.com
+sam.rivera@example.com
+maya.chen@example.com
+```
+
+### 3. Add real guests later
+
+After testing, add your real households, guests, events, and event invitations in Supabase. The most important relationship is:
+
+- `households` stores the invitation/household.
+- `guests` stores each individual guest.
+- `events` stores RSVP-able events.
+- `guest_event_invites` controls which guest sees which events.
+- `rsvps` stores one response per guest per event.
+
+### 4. Connect the website to Supabase
+
+In Supabase, go to **Project Settings → API**.
+
+Copy:
+
+- Project URL
+- `anon public` key
+
+Create `.env.local`:
+
+```bash
+cd /Users/rafapm/Documents/GitHub/wedding
+cp .env.example .env.local
+```
+
+Edit `.env.local`:
+
+```text
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-public-key
+```
+
+Restart the local dev server after changing `.env.local`.
+
+For deployment, these `VITE_` values must exist when you run `pnpm build` or `pnpm deploy`, because Vite bakes them into the static site.
+
+One simple local deploy option is:
+
+```bash
+cd /Users/rafapm/Documents/GitHub/wedding
+set -a
+source .env.local
+set +a
+pnpm deploy
+```
 
 Each RSVP is unique by `guest_id` and `event_id`, so saves are idempotent and update existing responses instead of creating duplicates.
 

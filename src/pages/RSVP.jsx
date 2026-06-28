@@ -14,6 +14,8 @@ const emptyResponse = {
   additionalNotes: '',
 };
 
+const eventNeedsDetails = (eventKey) => eventKey === 'wedding';
+
 function buildInitialResponses(invitation) {
   const next = {};
   const plusOnes = {};
@@ -129,10 +131,27 @@ export default function RSVP() {
         guests: invitation.guests.map((guest) => ({
           guestId: guest.id,
           plusOneName: plusOnes[guest.id] || '',
-          responses: guest.events.map((rsvpEvent) => ({
-            eventId: rsvpEvent.id,
-            ...responses[guest.id][rsvpEvent.id],
-          })),
+          responses: guest.events.map((rsvpEvent) => {
+            const response = responses[guest.id][rsvpEvent.id];
+
+            if (!eventNeedsDetails(rsvpEvent.eventKey)) {
+              return {
+                eventId: rsvpEvent.id,
+                attending: response.attending,
+                mealPreference: '',
+                dietaryRestrictions: '',
+                travelNotes: '',
+                arrivalDate: '',
+                departureDate: '',
+                additionalNotes: '',
+              };
+            }
+
+            return {
+              eventId: rsvpEvent.id,
+              ...response,
+            };
+          }),
         })),
       };
 
@@ -234,7 +253,7 @@ export default function RSVP() {
               <div className="mt-6 space-y-5">
                 {guest.events.map((rsvpEvent) => {
                   const current = responses[guest.id]?.[rsvpEvent.id] || emptyResponse;
-                  const isAttending = current.attending === 'true';
+                  const showDetails = eventNeedsDetails(rsvpEvent.eventKey) && current.attending === 'true';
 
                   return (
                     <div key={rsvpEvent.id} className="border border-gold/20 bg-ivory/70 p-5">
@@ -265,7 +284,7 @@ export default function RSVP() {
                         </fieldset>
                       </div>
 
-                      {isAttending && (
+                      {showDetails && (
                         <div className="mt-5 grid gap-4 md:grid-cols-2">
                           <Field label={t('rsvp.mealPreference')}>
                             <input className="w-full border border-gold/30 bg-white px-4 py-3" value={current.mealPreference} onChange={(event) => updateResponse(guest.id, rsvpEvent.id, 'mealPreference', event.target.value)} />

@@ -42,10 +42,8 @@ export const weddingConfig = {
   },
   schedule: [
     { key: 'welcome', date: 'June 15, 2027', time: 'TBD' },
-    { key: 'ceremony', date: 'June 16, 2027', time: 'TBD' },
-    { key: 'cocktail', date: 'June 16, 2027', time: 'TBD' },
-    { key: 'reception', date: 'June 16, 2027', time: 'TBD' },
-    { key: 'brunch', date: 'June 17, 2027', time: 'TBD' },
+    { key: 'wedding', date: 'June 16, 2027', time: 'TBD' },
+    { key: 'afterWedding', date: 'June 18-19, 2027', time: 'Optional' },
   ],
   registryLinks: [
     { label: 'Registry One', url: '#', visible: false },

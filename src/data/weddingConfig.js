@@ -19,7 +19,7 @@ export const weddingConfig = {
     heroVideo: '/media/xalet-del-nin.mp4',
     heroPoster: '/images/xalet.jpg',
     venueImage: '/images/xalet.jpg',
-    heroVideoClipEndSeconds: 3,
+    heroVideoClipEndSeconds: 4,
   },
   rsvp: {
     googleFormEmbedUrl: 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true',

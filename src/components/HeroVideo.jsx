@@ -45,18 +45,16 @@ export default function HeroVideo() {
         <h1 className="max-w-4xl font-serif text-7xl leading-[0.88] sm:text-8xl lg:text-9xl">{t('common.names')}</h1>
         <p className="mt-7 text-lg uppercase tracking-[0.22em] text-ivory/85">{t('common.date')}</p>
         <p className="mt-3 text-base uppercase tracking-[0.16em] text-ivory/75">{t('common.place')}</p>
-        <div className="mt-8 flex flex-col gap-5 lg:flex-row lg:items-center">
-          <div className="flex flex-wrap gap-3">
-            <Link className="bg-ivory px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-charcoal transition hover:bg-beige" to="/schedule">
-              {t('common.viewWeekend')}
-            </Link>
-            <Link className="border border-ivory/70 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-ivory transition hover:bg-ivory hover:text-charcoal" to="/rsvp">
-              {t('common.rsvp')}
-            </Link>
-          </div>
-          <p className="max-w-md border-l border-ivory/35 pl-5 text-sm leading-6 text-ivory/80">
-            {t('home.venueCopy')}
-          </p>
+        <div className="mt-8 flex flex-wrap gap-3">
+          <Link className="bg-ivory px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-charcoal transition hover:bg-beige" to="/schedule">
+            {t('common.viewWeekend')}
+          </Link>
+          <Link className="border border-ivory/70 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-ivory transition hover:bg-ivory hover:text-charcoal" to="/rsvp">
+            {t('common.rsvp')}
+          </Link>
+          <Link className="border border-ivory/70 px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-ivory transition hover:bg-ivory hover:text-charcoal" to="/venue">
+            {t('nav.venue')}
+          </Link>
         </div>
         <div className="mt-10 max-w-2xl">
           <Countdown />

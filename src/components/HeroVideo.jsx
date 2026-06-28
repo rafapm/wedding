@@ -28,7 +28,7 @@ export default function HeroVideo() {
       <img src={heroPoster} alt="" className="absolute inset-0 h-full w-full object-cover opacity-45" />
       <video
         ref={videoRef}
-        className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
+        className="absolute inset-0 h-full w-full object-cover"
         src={heroVideo}
         poster={heroPoster}
         autoPlay

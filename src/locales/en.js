@@ -24,7 +24,7 @@ export default {
     quickLinks: 'Plan Your Trip',
   },
   story: {
-    title: 'Our Story',
+    title: 'Our Story: 🇦🇿 + 🇲🇽',
     intro: 'A few favorite chapters, with more details to come.',
     sections: [
       { title: 'How We Met', body: 'We met online in 2020, just before the world changed in ways none of us could have imagined. What started as a few messages became long conversations, then real plans, and eventually the beginning of everything we are celebrating now.' },

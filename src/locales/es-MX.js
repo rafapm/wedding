@@ -25,7 +25,7 @@ export default {
     quickLinks: 'Planea tu Viaje',
   },
   story: {
-    title: 'Nuestra Historia',
+    title: 'Nuestra Historia: 🇦🇿 + 🇲🇽',
     intro: 'Algunos capítulos favoritos, con más detalles por venir.',
     sections: [
       { title: 'Cómo Nos Conocimos', body: 'Nos conocimos en línea en 2020, justo antes de que el mundo cambiara de maneras que nadie imaginaba. Lo que empezó con unos mensajes se convirtió en largas conversaciones, luego en planes reales y, eventualmente, en el comienzo de todo lo que estamos celebrando ahora.' },

@@ -25,7 +25,7 @@ export default {
     quickLinks: 'Səyahəti Planla',
   },
   story: {
-    title: 'Hekayəmiz',
+    title: 'Hekayəmiz: 🇦🇿 + 🇲🇽',
     intro: 'Sevimli fəsillərimizdən bəziləri. Daha çox detal tezliklə.',
     sections: [
       { title: 'Necə Tanış Olduq', body: 'Biz 2020-ci ildə, dünya heç kimin təsəvvür etmədiyi şəkildə dəyişməzdən bir az əvvəl onlayn tanış olduq. Bir neçə mesajla başlayan söhbət uzun danışqlara, sonra real planlara və nəhayət indi qeyd etdiyimiz hər şeyin başlanğıcına çevrildi.' },

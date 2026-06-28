@@ -4,6 +4,19 @@ import { useTranslation } from '../hooks/useTranslation';
 const sections = ['airports', 'hotels', 'neighborhoods', 'transportation', 'tips'];
 const categories = ['restaurants', 'coffee', 'sightseeing', 'beaches', 'museums', 'dayTrips'];
 
+function RecommendationItem({ item }) {
+  if (typeof item === 'string') return item;
+
+  return (
+    <>
+      <a className="underline-offset-4 hover:underline" href={item.url} target="_blank" rel="noreferrer">
+        {item.label}
+      </a>
+      {item.note && <span> {item.note}</span>}
+    </>
+  );
+}
+
 export default function TravelStay() {
   const { t } = useTranslation();
   return (
@@ -15,7 +28,7 @@ export default function TravelStay() {
             <article key={key} className="border border-gold/25 bg-white/55 p-7">
               <h2 className="font-serif text-3xl">{t(`travel.labels.${key}`)}</h2>
               <ul className="mt-4 space-y-3 text-charcoal/70">
-                {t(`travel.sections.${key}`, []).map((item) => <li key={item}>{item}</li>)}
+                {t(`travel.sections.${key}`, []).map((item) => <li key={typeof item === 'string' ? item : item.label}><RecommendationItem item={item} /></li>)}
               </ul>
             </article>
           ))}
@@ -28,7 +41,11 @@ export default function TravelStay() {
             <article key={key} className="border border-gold/25 bg-white/55 p-7">
               <h2 className="font-serif text-3xl">{t(`things.labels.${key}`)}</h2>
               <ul className="mt-5 space-y-3">
-                {t(`things.categories.${key}`, []).map((item) => <li key={item} className="text-charcoal/70">{item}</li>)}
+                {t(`things.categories.${key}`, []).map((item) => (
+                  <li key={typeof item === 'string' ? item : item.label} className="text-charcoal/70">
+                    <RecommendationItem item={item} />
+                  </li>
+                ))}
               </ul>
             </article>
           ))}

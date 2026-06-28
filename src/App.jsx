@@ -11,6 +11,7 @@ import DressCode from './pages/DressCode';
 import Registry from './pages/Registry';
 import FAQ from './pages/FAQ';
 import RSVP from './pages/RSVP';
+import Admin from './pages/Admin';
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/registry" element={<Registry />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/rsvp" element={<RSVP />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="/contact" element={<Navigate to="/" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

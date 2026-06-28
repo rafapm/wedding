@@ -22,8 +22,6 @@ export const weddingConfig = {
     heroVideoClipEndSeconds: 4,
   },
   rsvp: {
-    googleFormEmbedUrl: 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true',
-    googleFormUrl: 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform',
     deadline: 'TBD',
   },
   contact: {

@@ -8,20 +8,19 @@ A custom multi-page Vite + React wedding website for June & Rafael, June 16, 202
 - React
 - Tailwind CSS
 - React Router
-- Google Forms for RSVP collection
-- Google Sheets / Google Drive response storage through Google Forms
+- Supabase for custom RSVP data
 - GitHub Pages deployment with `gh-pages`
 
 ## Install
 
 ```bash
-npm install
+pnpm install
 ```
 
 ## Run Locally
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 Then open the local URL printed by Vite. The site password is configured in `src/data/weddingConfig.js`.
@@ -29,23 +28,130 @@ Then open the local URL printed by Vite. The site password is configured in `src
 ## Build
 
 ```bash
-npm run build
+pnpm build
 ```
 
-The build also copies `dist/index.html` to `dist/404.html` so React Router routes work better on GitHub Pages refreshes.
+The build also copies `dist/index.html` to `dist/404.html` so React Router routes work better on refresh.
 
 ## Deploy To GitHub Pages
 
-1. Update `homepage` in `package.json` with your real GitHub Pages URL.
-2. Update `base` in `vite.config.js` if your repository name is not `wedding`.
-3. Install dependencies with `npm install`.
-4. Run:
+The project is configured for the custom domain:
+
+```text
+https://juneandrafael.com/
+```
+
+Deploy with:
 
 ```bash
-npm run deploy
+pnpm deploy
 ```
 
 This publishes the `dist` folder to the `gh-pages` branch.
+
+## Environment Variables
+
+Copy `.env.example` to `.env.local` and add your Supabase project settings:
+
+```bash
+cp .env.example .env.local
+```
+
+```text
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
+
+Only use the Supabase anon key in frontend code. Do not put a service-role key in this project.
+
+## Custom RSVP Setup
+
+The RSVP page uses `/rsvp` and looks up guests by the email address where they received their invitation. Email lookup is trimmed and compared case-insensitively. Guests can return later with the same email to update their RSVP.
+
+1. Create a Supabase project.
+2. Open the Supabase SQL editor.
+3. Run:
+
+```text
+supabase/migrations/001_rsvp_schema.sql
+```
+
+4. Optionally run fake test data:
+
+```text
+supabase/seed.sql
+```
+
+5. Add your real households, guests, events, and event invites.
+6. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` to `.env.local` locally and to your deployment environment.
+
+The main tables are:
+
+- `households`
+- `guests`
+- `events`
+- `guest_event_invites`
+- `rsvps`
+- `admin_users`
+- `rsvp_lookup_attempts`
+
+Each RSVP is unique by `guest_id` and `event_id`, so saves are idempotent and update existing responses instead of creating duplicates.
+
+## Admin Setup
+
+The admin page is available at:
+
+```text
+/admin
+```
+
+Admin access uses Supabase Auth email/password plus the `admin_users` allowlist table.
+
+1. In Supabase, create an Auth user for June/Rafael.
+2. Copy that Auth user's UUID.
+3. Insert the admin user:
+
+```sql
+insert into admin_users (user_id, email)
+values ('AUTH_USER_UUID_HERE', 'your-email@example.com');
+```
+
+The admin dashboard can:
+
+- View all households and guests
+- Search by name or email
+- See who has RSVP'd and who is pending
+- See invited and attending counts per event
+- See meal counts
+- See dietary restrictions and allergies
+- See travel notes
+- Manually update an RSVP
+- Export RSVP data to CSV
+
+## RSVP Data Model Notes
+
+- One household can contain one guest, a couple, or a family.
+- One email may represent a household.
+- Guests can have individual event invitations.
+- Plus-ones are supported per guest with `plus_one_allowed`.
+- Event names, dates, descriptions, visibility, and order live in the `events` table.
+- Guests only see events they are invited to.
+
+## Security Notes
+
+The public RSVP flow does not expose the full guest list. It only returns a household when the entered email or fallback code matches that household.
+
+The SQL migration enables row-level security and uses RPC functions for public lookup and RSVP saving. A simple lookup-attempt log/rate limit is included in `lookup_invitation`.
+
+The site-wide password gate is simple frontend privacy only. The password is stored in the JavaScript bundle and can be discovered by someone technical. It is useful for casual guest privacy, but it is not server-side security.
+
+To update the site password, edit:
+
+```js
+password: 'your-private-password'
+```
+
+in `src/data/weddingConfig.js`.
 
 ## Editing Wedding Details
 
@@ -55,24 +161,7 @@ Core details live in:
 src/data/weddingConfig.js
 ```
 
-Edit this file to update:
-
-- Password
-- Couple names
-- Wedding date
-- Venue and location
-- Hero video and poster paths
-- Google Form URLs
-- RSVP deadline
-- Schedule events
-- Registry links
-- Contact info
-- Map embed URL
-- Gallery images
-
-## Updating Translations
-
-All page text is stored in structured locale files:
+Locale text lives in:
 
 ```text
 src/locales/en.js
@@ -80,30 +169,16 @@ src/locales/es-MX.js
 src/locales/az.js
 ```
 
-The default language is English. Guest language selection is saved in `localStorage`.
-
-## Password Privacy
-
-The password gate is simple frontend privacy only. The password is stored in the JavaScript bundle and can be discovered by someone technical. It is useful for casual guest privacy, but it is not server-side security.
-
-To update the password, edit:
-
-```js
-password: 'your-private-password'
-```
-
-in `src/data/weddingConfig.js`.
-
 ## Replacing The Hero Video
 
 The homepage uses:
 
 ```text
 public/media/xalet-del-nin.mp4
-public/images/venue-poster.jpg
+public/images/xalet.jpg
 ```
 
-Add your final compressed MP4 at `public/media/xalet-del-nin.mp4` and a poster image at `public/images/venue-poster.jpg`. A root-level `media/` folder can be used as a local drop folder, but Vite serves files from `public/`.
+Add your final compressed MP4 at `public/media/xalet-del-nin.mp4`. A root-level `media/` folder can be used as a local drop folder, but Vite serves files from `public/`.
 
 Recommended video export:
 
@@ -116,51 +191,7 @@ Recommended video export:
 Example compression command:
 
 ```bash
-ffmpeg -i input.mov -vf "scale='min(1920,iw)':-2" -c:v libx264 -crf 24 -preset slow -an public/videos/venue.mp4
-```
-
-## Google Form RSVP
-
-Create a Google Form with these fields:
-
-- Full name
-- Email address
-- Phone number
-- Will you attend?
-- Meal preference
-- Dietary restrictions
-- Food allergies
-- Will you attend the welcome event?
-- Will you attend the wedding ceremony?
-- Will you attend the reception?
-- Will you attend brunch / afterparty if added?
-- Message for June & Rafael
-
-In Google Forms, click **Send**, choose the embed icon, and copy the iframe `src` URL. Paste it into:
-
-```js
-rsvp: {
-  googleFormEmbedUrl: '...',
-  googleFormUrl: '...',
-}
-```
-
-## Connecting Google Form To Google Sheets
-
-1. Open your Google Form.
-2. Go to **Responses**.
-3. Click **Link to Sheets**.
-4. Create a new spreadsheet or select an existing one.
-5. Google Forms will automatically store responses in Google Sheets and Google Drive.
-
-## Adding A Google Map
-
-Paste a Google Maps embed URL into:
-
-```js
-venue: {
-  mapEmbedUrl: '...'
-}
+ffmpeg -i input.mov -vf "scale='min(1920,iw)':-2" -c:v libx264 -crf 24 -preset slow -an public/media/xalet-del-nin.mp4
 ```
 
 ## Gallery Images
@@ -175,12 +206,14 @@ Then update the matching arrays in `src/data/weddingConfig.js`.
 
 ## Custom Domain
 
-1. In GitHub Pages settings, add your custom domain.
-2. Configure your DNS provider with the records GitHub recommends.
-3. Add a `public/CNAME` file containing only your domain, for example:
+The custom domain is stored in:
 
 ```text
-www.juneandrafael.com
+public/CNAME
 ```
 
-4. Redeploy with `npm run deploy`.
+It should contain:
+
+```text
+juneandrafael.com
+```

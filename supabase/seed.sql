@@ -22,10 +22,9 @@ insert into guest_event_invites (guest_id, event_id)
 select g.id, e.id
 from guests g
 cross join events e
-where g.id in ('33333333-3333-3333-3333-333333333333', '44444444-4444-4444-4444-444444444444')
-on conflict do nothing;
-
-insert into guest_event_invites (guest_id, event_id)
-values
-  ('55555555-5555-5555-5555-555555555555', 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb')
+where g.id in (
+  '33333333-3333-3333-3333-333333333333',
+  '44444444-4444-4444-4444-444444444444',
+  '55555555-5555-5555-5555-555555555555'
+)
 on conflict do nothing;

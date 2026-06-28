@@ -53,11 +53,17 @@ export const weddingConfig = {
     { src: '/images/gallery/fix-0926.jpg', captionKey: 'beachProposal', alt: 'Rafael proposing to June on the beach' },
     { src: '/images/gallery/fix-0711.jpg', captionKey: 'beachPortrait', alt: 'June and Rafael on the beach' },
     { src: '/images/gallery/img-5825.jpeg', captionKey: 'parisMemory', alt: 'June and Rafael in Paris' },
+    { src: '/images/gallery/luna.jpg', captionKey: 'luna', alt: 'Luna the cat' },
+    { src: '/images/gallery/leia.jpg', captionKey: 'leia', alt: 'Leia the cat' },
+    { src: '/images/gallery/mochi.jpg', captionKey: 'mochi', alt: 'Mochi the cat' },
     { src: '/images/gallery/fix-0562.jpg', captionKey: 'beachPortraitTwo', alt: 'June and Rafael beach portrait' },
     { src: '/images/gallery/img-1485.jpeg', captionKey: 'gardenMemory', alt: 'June and Rafael in a garden' },
     { src: '/images/gallery/img-0190.png', captionKey: 'costumeNight', alt: 'June and Rafael in costume' },
     { src: '/images/gallery/img-6480.jpeg', captionKey: 'formalDinner', alt: 'June and Rafael at a formal dinner' },
     { src: '/images/gallery/img-0260.jpeg', captionKey: 'cityCelebration', alt: 'June and Rafael dressed up in the city' },
+    { src: '/images/gallery/img-1914.jpg', captionKey: 'concertNight', alt: 'June and Rafael at a concert' },
+    { src: '/images/gallery/img-2016.jpg', captionKey: 'romeoSantos', alt: 'June and Rafael at a Romeo Santos concert' },
+    { src: '/images/gallery/img-3976.jpg', captionKey: 'princeRoyce', alt: 'June and Rafael at a Prince Royce concert' },
   ],
 };
 

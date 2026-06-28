@@ -16,6 +16,22 @@ const emptyResponse = {
 
 const eventNeedsDetails = (eventKey) => eventKey === 'wedding';
 
+function localizedEventCopy(event, t) {
+  const localeKeyByEventKey = {
+    welcome: 'welcome',
+    wedding: 'wedding',
+    after_wedding: 'afterWedding',
+    afterWedding: 'afterWedding',
+  };
+  const localeKey = localeKeyByEventKey[event.eventKey];
+  const translated = localeKey ? t(`schedule.events.${localeKey}`) : null;
+
+  return {
+    title: translated?.title || event.eventName,
+    description: translated?.description || event.description,
+  };
+}
+
 function buildInitialResponses(invitation) {
   const next = {};
   const plusOnes = {};
@@ -47,6 +63,18 @@ function Field({ label, children }) {
       <div className="mt-2">{children}</div>
     </label>
   );
+}
+
+function toggleListValue(currentValue, option) {
+  const values = currentValue
+    ? currentValue.split(',').map((value) => value.trim()).filter(Boolean)
+    : [];
+
+  if (values.includes(option)) {
+    return values.filter((value) => value !== option).join(', ');
+  }
+
+  return [...values, option].join(', ');
 }
 
 export default function RSVP() {
@@ -105,7 +133,7 @@ export default function RSVP() {
     invitation.guests?.forEach((guest) => {
       guest.events?.forEach((event) => {
         if (!responses[guest.id]?.[event.id]?.attending) {
-          missing.push(`${guest.displayName}: ${event.eventName}`);
+          missing.push(`${guest.displayName}: ${localizedEventCopy(event, t).title}`);
         }
       });
     });
@@ -150,6 +178,7 @@ export default function RSVP() {
             return {
               eventId: rsvpEvent.id,
               ...response,
+              travelNotes: '',
             };
           }),
         })),
@@ -254,14 +283,15 @@ export default function RSVP() {
                 {guest.events.map((rsvpEvent) => {
                   const current = responses[guest.id]?.[rsvpEvent.id] || emptyResponse;
                   const showDetails = eventNeedsDetails(rsvpEvent.eventKey) && current.attending === 'true';
+                  const eventCopy = localizedEventCopy(rsvpEvent, t);
 
                   return (
                     <div key={rsvpEvent.id} className="border border-gold/20 bg-ivory/70 p-5">
                       <div className="grid gap-4 lg:grid-cols-[1fr_0.7fr]">
                         <div>
-                          <h4 className="font-serif text-3xl">{rsvpEvent.eventName}</h4>
+                          <h4 className="font-serif text-3xl">{eventCopy.title}</h4>
                           <p className="mt-2 text-sm uppercase tracking-[0.14em] text-charcoal/55">{rsvpEvent.eventDate || t('common.soon')}</p>
-                          {rsvpEvent.description && <p className="mt-3 text-charcoal/70">{rsvpEvent.description}</p>}
+                          {eventCopy.description && <p className="mt-3 text-charcoal/70">{eventCopy.description}</p>}
                         </div>
                         <fieldset className="flex gap-3 lg:justify-end">
                           <legend className="sr-only">{t('rsvp.attendance')}</legend>
@@ -286,24 +316,63 @@ export default function RSVP() {
 
                       {showDetails && (
                         <div className="mt-5 grid gap-4 md:grid-cols-2">
-                          <Field label={t('rsvp.mealPreference')}>
-                            <input className="w-full border border-gold/30 bg-white px-4 py-3" value={current.mealPreference} onChange={(event) => updateResponse(guest.id, rsvpEvent.id, 'mealPreference', event.target.value)} />
-                          </Field>
-                          <Field label={t('rsvp.dietaryRestrictions')}>
-                            <input className="w-full border border-gold/30 bg-white px-4 py-3" value={current.dietaryRestrictions} onChange={(event) => updateResponse(guest.id, rsvpEvent.id, 'dietaryRestrictions', event.target.value)} />
-                          </Field>
+                          <fieldset className="md:col-span-2">
+                            <legend className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">{t('rsvp.mealPreference')}</legend>
+                            <p className="mt-2 text-sm text-charcoal/60">{t('rsvp.mealPreferenceNote')}</p>
+                            <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                              {[
+                                ['Beef', t('rsvp.mealBeef')],
+                                ['Chicken', t('rsvp.mealChicken')],
+                                ['Fish', t('rsvp.mealFish')],
+                                ['Vegetarian / Vegan', t('rsvp.mealVegetarianVegan')],
+                              ].map(([value, label]) => (
+                                <label key={value} className="flex cursor-pointer items-center gap-2 border border-gold/25 bg-white px-4 py-3">
+                                  <input
+                                    type="radio"
+                                    name={`${guest.id}-${rsvpEvent.id}-meal`}
+                                    value={value}
+                                    checked={current.mealPreference === value}
+                                    onChange={(event) => updateResponse(guest.id, rsvpEvent.id, 'mealPreference', event.target.value)}
+                                    required
+                                  />
+                                  <span className="text-sm font-semibold uppercase tracking-[0.12em]">{label}</span>
+                                </label>
+                              ))}
+                            </div>
+                          </fieldset>
+                          <fieldset className="md:col-span-2">
+                            <legend className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">{t('rsvp.dietaryRestrictions')}</legend>
+                            <p className="mt-2 text-sm text-charcoal/60">{t('rsvp.dietaryNote')}</p>
+                            <div className="mt-3 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                              {[
+                                ['Intolerance', t('rsvp.dietaryIntolerance')],
+                                ['Allergy', t('rsvp.dietaryAllergy')],
+                                ['Vegetarian', t('rsvp.dietaryVegetarian')],
+                                ['Vegan', t('rsvp.dietaryVegan')],
+                              ].map(([value, label]) => (
+                                <label key={value} className="flex cursor-pointer items-center gap-2 border border-gold/25 bg-white px-4 py-3">
+                                  <input
+                                    type="checkbox"
+                                    value={value}
+                                    checked={(current.dietaryRestrictions || '').split(',').map((item) => item.trim()).includes(value)}
+                                    onChange={() => updateResponse(guest.id, rsvpEvent.id, 'dietaryRestrictions', toggleListValue(current.dietaryRestrictions, value))}
+                                  />
+                                  <span className="text-sm font-semibold uppercase tracking-[0.12em]">{label}</span>
+                                </label>
+                              ))}
+                            </div>
+                          </fieldset>
                           <Field label={t('rsvp.arrivalDate')}>
                             <input className="w-full border border-gold/30 bg-white px-4 py-3" type="date" value={current.arrivalDate} onChange={(event) => updateResponse(guest.id, rsvpEvent.id, 'arrivalDate', event.target.value)} />
                           </Field>
                           <Field label={t('rsvp.departureDate')}>
                             <input className="w-full border border-gold/30 bg-white px-4 py-3" type="date" value={current.departureDate} onChange={(event) => updateResponse(guest.id, rsvpEvent.id, 'departureDate', event.target.value)} />
                           </Field>
-                          <Field label={t('rsvp.travelNotes')}>
-                            <textarea className="min-h-28 w-full border border-gold/30 bg-white px-4 py-3" value={current.travelNotes} onChange={(event) => updateResponse(guest.id, rsvpEvent.id, 'travelNotes', event.target.value)} />
-                          </Field>
-                          <Field label={t('rsvp.additionalNotes')}>
-                            <textarea className="min-h-28 w-full border border-gold/30 bg-white px-4 py-3" value={current.additionalNotes} onChange={(event) => updateResponse(guest.id, rsvpEvent.id, 'additionalNotes', event.target.value)} />
-                          </Field>
+                          <div className="md:col-span-2">
+                            <Field label={t('rsvp.additionalNotes')}>
+                              <textarea className="min-h-36 w-full border border-gold/30 bg-white px-4 py-3" value={current.additionalNotes} placeholder={t('rsvp.additionalNotesPlaceholder')} onChange={(event) => updateResponse(guest.id, rsvpEvent.id, 'additionalNotes', event.target.value)} />
+                            </Field>
+                          </div>
                         </div>
                       )}
                     </div>

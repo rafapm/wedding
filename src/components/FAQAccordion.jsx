@@ -16,7 +16,7 @@ export default function FAQAccordion({ items }) {
             <span className="font-serif text-2xl text-charcoal">{question}</span>
             <span className="text-2xl text-gold">{open === index ? '−' : '+'}</span>
           </button>
-          {open === index && <p className="pb-6 leading-7 text-charcoal/70">{answer}</p>}
+          {open === index && <p className="whitespace-pre-line pb-6 leading-7 text-charcoal/70">{answer}</p>}
         </div>
       ))}
     </div>

@@ -262,5 +262,10 @@ export default {
     yes: 'Sí',
     no: 'No',
   },
-  contact: { title: 'Contacto', intro: 'Para preguntas sobre el fin de semana, contáctanos con los datos abajo.', couple: 'June & Rafael' },
+  contact: {
+    title: 'Contacto',
+    intro: 'Para preguntas sobre el fin de semana, contáctanos con los datos abajo.',
+    couple: 'June & Rafael',
+    names: { june: 'June Karimli', rafael: 'Rafael Perez Martinez' },
+  },
 };

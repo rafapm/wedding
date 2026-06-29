@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import LanguageSwitcher from './LanguageSwitcher';
+import { weddingConfig } from '../data/weddingConfig';
 import { useTranslation } from '../hooks/useTranslation';
 
 const navItems = [
@@ -23,13 +24,14 @@ function linkClass({ isActive }) {
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const { t } = useTranslation();
+  const { language, t } = useTranslation();
+  const coupleName = language === 'az' ? 'Günay & Rafael' : weddingConfig.couple.firstNames;
 
   return (
     <header className="sticky top-0 z-40 border-b border-gold/20 bg-ivory/90 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8" aria-label="Primary">
         <NavLink to="/" className="font-serif text-2xl font-semibold tracking-wide text-charcoal" onClick={() => setOpen(false)}>
-          June & Rafael
+          {coupleName}
         </NavLink>
         <div className="hidden items-center gap-1.5 xl:flex">
           {navItems.map(([to, key]) => (

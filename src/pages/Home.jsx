@@ -16,8 +16,9 @@ const quickLinks = [
 ];
 
 export default function Home() {
-  const { t } = useTranslation();
+  const { language, t } = useTranslation();
   const events = weddingConfig.schedule.slice(0, 3);
+  const coupleName = language === 'az' ? 'Günay & Rafael' : weddingConfig.couple.firstNames;
 
   return (
     <>
@@ -31,7 +32,7 @@ export default function Home() {
             loading="lazy"
           />
         </div>
-        <SectionHeader eyebrow="June & Rafael" title={t('home.welcomeTitle')} intro={t('home.welcome')} centered />
+        <SectionHeader eyebrow={coupleName} title={t('home.welcomeTitle')} intro={t('home.welcome')} centered />
       </section>
       <section className="section bg-parchment/60">
         <SectionHeader title={t('home.weekendTitle')} />
@@ -57,7 +58,7 @@ export default function Home() {
             <div className="mt-5 space-y-5">
               {weddingConfig.contact.couple.map((person) => (
                 <div key={person.email}>
-                  <p className="font-semibold text-charcoal">{person.name}</p>
+                  <p className="font-semibold text-charcoal">{language === 'az' && person.key === 'june' ? 'Günay Karimli' : person.name}</p>
                   <a className="mt-2 block text-charcoal/70 underline-offset-4 hover:underline" href={`mailto:${person.email}`}>
                     {person.email}
                   </a>

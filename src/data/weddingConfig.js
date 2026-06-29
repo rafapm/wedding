@@ -27,11 +27,13 @@ export const weddingConfig = {
   contact: {
     couple: [
       {
+        key: 'june',
         name: 'June Karimli',
         email: 'gunaykarimli94@gmail.com',
         phone: '+1 (650)-922-4139',
       },
       {
+        key: 'rafael',
         name: 'Rafael Perez Martinez',
         email: 'rafa.prezz@gmail.com',
         phone: '+1 (650)-613-9824',

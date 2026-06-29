@@ -262,5 +262,10 @@ export default {
     yes: 'Yes',
     no: 'No',
   },
-  contact: { title: 'Contact', intro: 'For questions about the wedding weekend, please contact us using the details below.', couple: 'June & Rafael' },
+  contact: {
+    title: 'Contact',
+    intro: 'For questions about the wedding weekend, please contact us using the details below.',
+    couple: 'June & Rafael',
+    names: { june: 'June Karimli', rafael: 'Rafael Perez Martinez' },
+  },
 };

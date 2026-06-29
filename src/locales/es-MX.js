@@ -3,7 +3,7 @@ export default {
   nav: {
     home: 'Inicio', story: 'Historia', schedule: 'Itinerario', venue: 'Lugar', travel: 'Viaje',
     things: 'Qué Hacer', dress: 'Código de Vestimenta', party: 'Cortejo', gallery: 'Galería',
-    registry: 'Mesa de Regalos', faq: 'Preguntas', rsvp: 'RSVP', contact: 'Contacto',
+    registry: 'Regalos', faq: 'Preguntas', rsvp: 'RSVP', contact: 'Contacto',
   },
   common: {
     names: 'June & Rafael', gettingMarried: 'Nos casamos', date: '16 de junio de 2027',
@@ -165,7 +165,7 @@ export default {
     romeoSantos: 'Celebración de compromiso',
     princeRoyce: 'Concierto de Romeo Santos y Prince Royce',
   },
-  registry: { title: 'Mesa de Regalos', message: 'Para quienes quieran ayudarnos con un regalo, estamos creando un fondo para la luna de miel / casa. Pronto compartiremos detalles de Venmo, Zelle, efectivo o códigos QR.' },
+  registry: { title: 'Regalos', message: 'Para quienes quieran ayudarnos con un regalo, estamos creando un fondo para la luna de miel / casa. Pronto compartiremos detalles de Venmo, Zelle, efectivo o códigos QR.' },
   faq: {
     title: 'Preguntas Frecuentes',
     items: [

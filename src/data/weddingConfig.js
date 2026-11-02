@@ -22,7 +22,7 @@ export const weddingConfig = {
     heroVideoClipEndSeconds: 4,
   },
   rsvp: {
-    deadline: 'TBD',
+    deadline: 'January 15, 2027',
   },
   contact: {
     couple: [

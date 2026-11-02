@@ -210,7 +210,7 @@ export default function RSVP() {
     <section className="section">
       <SectionHeader title={t('rsvp.title')} intro={t('rsvp.intro')} />
       <p className="mb-6 text-sm font-semibold uppercase tracking-[0.18em] text-gold">
-        {t('rsvp.deadline')}: {weddingConfig.rsvp.deadline}
+        {t('rsvp.deadline')}: {t('rsvp.deadlineDate', weddingConfig.rsvp.deadline)}
       </p>
 
       <form onSubmit={handleLookup} className="border border-gold/25 bg-white/60 p-7 shadow-soft">

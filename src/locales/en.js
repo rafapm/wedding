@@ -25,20 +25,35 @@ export default {
   },
   story: {
     title: 'Our Story: 🇦🇿 + 🇲🇽',
-    intro: 'A few favorite chapters, with more details to come.',
+    intro: "We met in early 2020, just before the world changed. Looking back now, that meeting feels like the first page of the life we would build together.",
     sections: [
-      { title: 'How We Met', body: 'We met online in 2020, just before the world changed in ways none of us could have imagined. What started as a few messages became long conversations, then real plans, and eventually the beginning of everything we are celebrating now.' },
-      { title: 'The Proposal', body: 'Rafael proposed in the Dominican Republic on December 23, 2025, in a place that felt especially meaningful because June loves bachata. We celebrated with a beautiful dinner, wine, music, and the kind of joy we will never forget.' },
-      { title: 'Luna, Leia & Mochi', body: 'Our home is shared with three cats: Luna, Leia, and Mochi. They each have strong opinions, excellent timing, and a very real belief that every important life decision should involve them.' },
-    ],
+      {
+            "title": "Where Our Story Began",
+            "body": "Our first date was on Saturday, January 11, 2020, at 5:30 PM at Vespucci, a restaurant in San Mateo, CA. The restaurant has since closed, but it will always have a place in our story because it was where we shared our first date, before we knew how much we would come to mean to each other."
+      },
+      {
+            "title": "Love in an Unexpected Season",
+            "body": "Many of our early dates unfolded during the pandemic, as we explored the Bay Area one restaurant and hiking trail at a time. We tried new dishes every weekend, eventually visiting more than 50 restaurants and introducing each other to Mexican and Azerbaijani food along the way. June was discovering how much spice she could handle, and Rafael was discovering just how many meals could involve yogurt. Between the hikes, shared plates, and laughter, we were finding our own little way of bringing two worlds together."
+      },
+      {
+            "title": "A Home of Our Own",
+            "body": "After Rafael finished school in 2024, we adopted Luna, Leia, and Mochi: three tiny menaces who promptly took over our home and our hearts. Luna runs the morning shift, expecting wet food promptly between 6 and 7 AM. She’s also the mastermind behind the den-room closet raids, with Leia and Mochi as her partners in crime. Life together now comes with lots of purrs, zoomies in every direction, and three very good reasons to never sleep in."
+      },
+      {
+            "title": "Choosing Forever",
+            "body": "On December 23, 2025, Rafael asked June to marry him in the Dominican Republic, a place made even more special by her love of bachata. We celebrated over dinner and wine, with bachata playing and a new chapter ahead of us. Now, we can’t wait to celebrate with the people we love beside us in Barcelona."
+      }
+],
   },
   schedule: {
     title: 'Schedule',
     intro: 'A destination wedding week is taking shape. Times and exact locations will be added as they are finalized.',
+    timelineTitle: "Proposed Wedding Day Schedule",
+    timelineNote: "June 16, 2027 · Xalet del Nin · All times are local to Spain. This schedule is tentative and may change. The party ends at 2:00 AM on June 17.",
+    timeline: [{"time": "4:30–5:00 PM", "title": "Welcome Drinks"}, {"time": "5:00–5:30 PM", "title": "Ceremony"}, {"time": "5:30–7:30 PM", "title": "Cocktail Hour"}, {"time": "7:30–10:00 PM", "title": "Wedding Reception / Dinner"}, {"time": "10:00 PM–2:00 AM", "title": "Party"}],
     events: {
-      welcome: { title: 'Welcome Event', description: 'A relaxed gathering to begin the celebration.' },
-      wedding: { title: 'Wedding', description: 'Join us at the beautiful Xalet del Nin as we celebrate our wedding on the Mediterranean coast.' },
-      afterWedding: { title: 'After Wedding Celebration', description: 'Optional, but very encouraged: we would love to keep the party going in Ibiza for the weekend.' },
+      welcome: { title: 'Pre-Wedding Get-Together', description: 'We’re hoping to bring everyone together for a small, relaxed hangout before the wedding. Plans are still tentative; we’ll share the date, time, and location once confirmed.', date: 'Date to be confirmed', time: 'Tentative', location: 'Location to be confirmed' },
+      wedding: { title: 'Wedding', description: 'Join us at the beautiful Xalet del Nin as we celebrate our wedding on the Mediterranean coast.', time: "4:30 PM welcome drinks (proposed)" },
       ceremony: { title: 'Ceremony', description: 'June and Rafael exchange vows.' },
       cocktail: { title: 'Cocktail Hour', description: 'Drinks, small bites, and sunset conversation.' },
       reception: { title: 'Reception', description: 'Dinner, dancing, and a long Mediterranean night.' },
@@ -175,7 +190,7 @@ export default {
       ['Where should I stay?', 'Hotel and neighborhood recommendations will be added to Travel & Stay.'],
       ['How do I get to the venue?', 'Transportation details will be posted once finalized.'],
       ['Will transportation be provided?', 'We are working through logistics and will update this page.'],
-      ['What time should I arrive at the ceremony?', 'We recommend arriving by 3:45 PM so you have time to settle in before the ceremony begins.'],
+      ['What time should I arrive at the ceremony?', "Our proposed schedule begins with welcome drinks at 4:30 PM, followed by the ceremony at 5:00 PM. We’ll confirm the final arrival time closer to the wedding."],
       ['Is the wedding indoors or outdoors?', 'The first part of the celebration will be outdoors, weather permitting. Later in the evening, music and dancing will move indoors after 10:00 PM in accordance with venue timing and local requirements.'],
       ['Do U.S. passport holders need a visa to enter Spain?', 'U.S. passport holders can generally travel to Spain for short tourist stays without a Schengen visa. ETIAS travel authorization for visa-exempt travelers has been postponed to Q4 2026, and we will share updated official guidance once it launches.'],
       ['Do Mexican passport holders need a visa to enter Spain?', 'Mexican passport holders can generally travel to Spain for short tourist stays without a Schengen visa. ETIAS travel authorization for visa-exempt travelers has been postponed to Q4 2026, and we will share updated official guidance once it launches.'],

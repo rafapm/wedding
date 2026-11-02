@@ -27,20 +27,35 @@ export default {
   },
   story: {
     title: 'Hekayəmiz: 🇦🇿 + 🇲🇽',
-    intro: 'Sevimli fəsillərimizdən bəziləri. Daha çox detal tezliklə.',
+    intro: "2020-ci ilin əvvəlində, dünya dəyişməzdən bir az əvvəl tanış olduq. İndi geriyə baxanda həmin görüş birlikdə quracağımız həyatın ilk səhifəsi kimi görünür.",
     sections: [
-      { title: 'Necə Tanış Olduq', body: 'Biz 2020-ci ildə, dünya heç kimin təsəvvür etmədiyi şəkildə dəyişməzdən bir az əvvəl online tanış olduq. Bir neçə mesajla başlayan söhbət uzun danışmalara, sonra real planlara və nəhayət indi qeyd etdiyimiz hər şeyin başlanğıcına çevrildi.' },
-      { title: 'Təklif', body: 'Rafael 23 dekabr 2025-ci ildə Dominikan Respublikasında evlilik təklifi etdi. Bu yer bizim üçün xüsusi idi, çünki Günay bachatanı çox sevir. Biz bunu gözəl bir şam yeməyi, şərab, musiqi və heç vaxt unutmayacağımız sevinclə qeyd etdik.' },
-      { title: 'Luna, Leia və Mochi', body: 'Evimizi üç pişiklə bölüşürük: Luna, Leia və Mochi. Hər birinin güclü fikirləri, mükəmməl zamanlaması və evdəki hər vacib qərara mütləq qatılmalı olduqlarına dair çox ciddi inamları var .' },
-    ],
+      {
+            "title": "Hekayəmizin Başlanğıcı",
+            "body": "İlk görüşümüz 11 yanvar 2020-ci il, şənbə günü saat 17:30-da Kaliforniyanın San Mateo şəhərindəki Vespucci restoranında oldu. Restoran artıq bağlansa da, hekayəmizdə həmişə xüsusi yeri olacaq, çünki bir-birimiz üçün nə qədər dəyərli olacağımızı hələ bilmədən ilk görüşümüzü orada keçirdik."
+      },
+      {
+            "title": "Gözlənilməz Bir Dövrdə Sevgi",
+            "body": "İlk görüşlərimizin çoxu pandemiya dövrünə təsadüf etdi. Körfəz bölgəsini gah yeni bir restoranda, gah da bir yürüş cığırında birlikdə kəşf edirdik. Hər həftəsonu yeni yeməklər dadır, bir-birimizi Meksika və Azərbaycan mətbəxi ilə tanış edirdik. Beləcə, 50-dən çox restorana getdik. Günay nə qədər acı yeyə bildiyini, Rafael isə nə qədər çox yeməyin yanında qatıq ola biləcəyini kəşf edirdi. Yürüşlər, bölüşdüyümüz yeməklər və gülüşlər arasında iki dünyanı birləşdirməyin özümüzə məxsus yolunu tapırdıq."
+      },
+      {
+            "title": "Birlikdə Qurduğumuz Ev",
+            "body": "Rafael 2024-cü ildə təhsilini bitirdikdən sonra Luna, Leia və Mochini sahibləndik: evimizi və ürəyimizi dərhal fəth edən üç balaca dəcəl. Səhər növbəsinə Luna rəhbərlik edir və yaş yeməyini səhər saat 6 ilə 7 arasında vaxtında gözləyir. Öz otaqlarındakı şkafa basqınların da baş plançısı odur, Leia və Mochi isə onun cinayət ortaqlarıdır. Birgə həyatımız indi bol mırıltı, hər tərəfə çılğın qaçışlar və səhərlər gec oyanmamaq üçün üç çox yaxşı səbəblə doludur."
+      },
+      {
+            "title": "Bir Ömür Birlikdə",
+            "body": "23 dekabr 2025-ci ildə Rafael Dominikan Respublikasında Günaya evlilik təklifi etdi. Günayın baçataya sevgisi bu yeri daha da xüsusi edirdi. Baçata sədaları altında şam yeməyi və şərabla bu sevinci qeyd etdik, qarşımızda isə yeni bir fəsil açılırdı. İndi sevdiyimiz insanlarla Barselonada yan-yana bu xoşbəxtliyi qeyd etməyi səbirsizliklə gözləyirik."
+      }
+],
   },
   schedule: {
     title: 'Proqram',
     intro: 'Toy həftəsinin proqramı formalaşır. Saatlar və dəqiq məkanlar bəlli olduqda əlavə olunacaq.',
+    timelineTitle: "Toy Gününün İlkin Proqramı",
+    timelineNote: "16 iyun 2027 · Xalet del Nin · Bütün saatlar İspaniyanın yerli vaxtı ilə göstərilib. Proqram ilkin xarakter daşıyır və dəyişə bilər. Şənlik 17 iyun saat 02:00-da bitir.",
+    timeline: [{"time": "16:30–17:00", "title": "Qarşılama İçkiləri"}, {"time": "17:00–17:30", "title": "Nikah Mərasimi"}, {"time": "17:30–19:30", "title": "Kokteyl Saatı"}, {"time": "19:30–22:00", "title": "Toy Ziyafəti / Şam Yeməyi"}, {"time": "22:00–02:00", "title": "Şənlik"}],
     events: {
-      welcome: { title: 'Qarşılama Tədbiri', description: 'Toy şənliyinə başlamaq üçün səmimi və rahat toplantı.', date: '15 iyun 2027', time: 'Təsdiqlənəcək', location: 'Barselona, məkan tezliklə açıqlanacaq' },
-      wedding: { title: 'Toy', description: 'Aralıq dənizi sahilindəki gözəl Xalet del Nin-də evlənməyimizi qeyd etmək üçün bizə qoşulun.', date: '16 iyun 2027', time: 'Gəliş: 15:45', location: 'Xalet del Nin' },
-      afterWedding: { title: 'Toy Mərasimindən Sonrakı Sənlik', description: 'İstəyə bağlıdır, amma çox sevinərik: həftəsonu bayramı İbizada davam etdirmək istəyirik.', date: '18-19 iyun 2027', time: 'İstəyə bağlı', location: 'İbiza, İspaniya' },
+      welcome: { title: 'Toydan Əvvəl Görüş', description: 'Toydan əvvəl hamınızla kiçik, səmimi bir görüşdə bir araya gəlmək istərdik. Planlar hələ dəqiqləşməyib; tarix, saat və məkan təsdiqlənəndə məlumat verəcəyik.', date: 'Tarix dəqiqləşdiriləcək', time: 'İlkin plan', location: 'Məkan dəqiqləşdiriləcək' },
+      wedding: { title: 'Toy', description: 'Aralıq dənizi sahilindəki gözəl Xalet del Nin-də evlənməyimizi qeyd etmək üçün bizə qoşulun.', date: '16 iyun 2027', location: 'Xalet del Nin', time: "Qarşılama içkiləri: 16:30 (ilkin plan)" },
       ceremony: { title: 'Mərasim', description: 'Günay və Rafael andlarını paylaşır.' },
       cocktail: { title: 'Kokteyl Saatı', description: 'İçkilər, yüngül qəlyanaltılar və günbatımı söhbətləri.' },
       reception: { title: 'Qəbul', description: 'Şam yeməyi, rəqs və uzun Aralıq dənizi gecəsi.' },
@@ -176,7 +191,7 @@ export default {
       ['Harada qalmalıyam?', 'Otel və məhəllə tövsiyələri Səyahət səhifəsində paylaşılacaq.'],
       ['Məkana necə gedim?', 'Nəqliyyat detalları hazır olduqda paylaşılacaq.'],
       ['Nəqliyyat təmin ediləcək?', 'Logistika üzərində işləyirik və bu səhifəni yeniləyəcəyik.'],
-      ['Mərasimə saat neçədə gəlməliyəm?', 'Mərasim başlamazdan əvvəl yerləşmək üçün saat 15:45-də gəlməyinizi tövsiyə edirik.'],
+      ['Mərasimə saat neçədə gəlməliyəm?', "İlkin proqrama əsasən qarşılama içkiləri saat 16:30-da, mərasim isə 17:00-da başlayır. Dəqiq gəliş vaxtını toya yaxın təsdiqləyəcəyik."],
       ['Toy Şənliyi qapalı məkanda, yoxsa açıq havada olacaq?', 'Toy Şənliyinin ilk hissəsi hava şəraiti imkan versə açıq havada olacaq. Axşam daha sonra, məkanın vaxt qaydalarına və yerli tələblərə uyğun olaraq, musiqi və rəqs saat 22:00-dan sonra qapalı məkana keçəcək.'],
       ['ABŞ pasportu olanlara İspaniyaya giriş üçün viza lazımdırmı?', 'ABŞ pasportu olanlar adətən qısa turistik səfərlər üçün İspaniyaya Schengen vizası olmadan da gedə bilirlər. ETIAS sisteminin 2026-cı ilin dördüncü rübündə qüvvəyə minməsi gözlənilir; səyahətə yaxın rəsmi tələbləri yoxlamağınızı xahiş edirik.'],
       ['Meksika pasportu olanlara İspaniyaya giriş üçün viza lazımdırmı?', 'Meksika pasportu olanlar adətən qısa turistik səfərlər üçün İspaniyaya Schengen vizası olmadan da gedə bilirlər. ETIAS sisteminin 2026-cı ilin dördüncü rübündə qüvvəyə minməsi gözlənilir; səyahətə yaxın rəsmi tələbləri yoxlamağınızı xahiş edirik.'],

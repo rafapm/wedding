@@ -26,20 +26,35 @@ export default {
   },
   story: {
     title: 'Nuestra Historia: 🇦🇿 + 🇲🇽',
-    intro: 'Algunos capítulos favoritos, con más detalles por venir.',
+    intro: "Nos conocimos a principios de 2020, justo antes de que el mundo cambiara. Al mirar atrás, ese encuentro se siente como la primera página de la vida que construiríamos juntos.",
     sections: [
-      { title: 'Cómo Nos Conocimos', body: 'Nos conocimos en línea en 2020, justo antes de que el mundo cambiara de maneras que nadie imaginaba. Lo que empezó con unos mensajes se convirtió en largas conversaciones, luego en planes reales y, eventualmente, en el comienzo de todo lo que estamos celebrando ahora.' },
-      { title: 'La Propuesta', body: 'Rafael propuso en República Dominicana el 23 de diciembre de 2025, en un lugar que se sintió especialmente significativo porque a June le encanta la bachata. Celebramos con una cena hermosa, vino, música y una alegría que nunca vamos a olvidar.' },
-      { title: 'Luna, Leia y Mochi', body: 'Compartimos nuestro hogar con tres gatos: Luna, Leia y Mochi. Cada uno tiene opiniones muy fuertes, un sentido perfecto del timing y la firme creencia de que toda decisión importante de la casa debe incluirlos.' },
-    ],
+      {
+            "title": "Donde Comenzó Nuestra Historia",
+            "body": "Nuestra primera cita fue el sábado 11 de enero de 2020 a las 5:30 PM en Vespucci, un restaurante en San Mateo, California. Aunque ya cerró, siempre tendrá un lugar en nuestra historia porque ahí compartimos nuestra primera cita, sin saber todavía lo mucho que llegaríamos a significar el uno para el otro."
+      },
+      {
+            "title": "Amor en Tiempos Inesperados",
+            "body": "Muchas de nuestras primeras citas fueron durante la pandemia, mientras explorábamos el Área de la Bahía, un restaurante y un sendero a la vez. Probábamos platillos nuevos cada fin de semana y llegamos a visitar más de 50 restaurantes, compartiendo también los sabores de la comida mexicana y azerbaiyana. June iba descubriendo cuánto picante podía aguantar, y Rafael, cuántas comidas podían llevar yogur. Entre caminatas, platillos compartidos y risas, fuimos encontrando nuestra propia manera de unir dos mundos."
+      },
+      {
+            "title": "Nuestro Hogar",
+            "body": "Después de que Rafael terminó sus estudios en 2024, adoptamos a Luna, Leia y Mochi: tres pequeños terremotos que enseguida se adueñaron de nuestro hogar y de nuestros corazones. Luna está a cargo del turno de la mañana y espera su comida húmeda puntualmente entre las 6 y las 7 AM. También es la mente maestra detrás de los asaltos al clóset de su cuarto, con Leia y Mochi como sus cómplices. Nuestra vida juntos ahora incluye muchos ronroneos, carreras alocadas en todas direcciones y tres muy buenas razones para nunca dormir hasta tarde."
+      },
+      {
+            "title": "Elegir un Para Siempre",
+            "body": "El 23 de diciembre de 2025, Rafael le pidió matrimonio a June en República Dominicana, un lugar aún más especial por su amor por la bachata. Celebramos con una cena y vino, mientras sonaba bachata y un nuevo capítulo nos esperaba. Ahora, no podemos esperar a celebrar con las personas que amamos a nuestro lado en Barcelona."
+      }
+],
   },
   schedule: {
     title: 'Itinerario',
     intro: 'La semana de boda de destino está tomando forma. Agregaremos horarios y ubicaciones exactas cuando estén confirmados.',
+    timelineTitle: "Horario Tentativo del Día de la Boda",
+    timelineNote: "16 de junio de 2027 · Xalet del Nin · Todos los horarios son de España. Este programa es tentativo y puede cambiar. La fiesta termina a las 2:00 AM del 17 de junio.",
+    timeline: [{"time": "4:30–5:00 PM", "title": "Bebidas de Bienvenida"}, {"time": "5:00–5:30 PM", "title": "Ceremonia"}, {"time": "5:30–7:30 PM", "title": "Cóctel"}, {"time": "7:30–10:00 PM", "title": "Recepción / Cena"}, {"time": "10:00 PM–2:00 AM", "title": "Fiesta"}],
     events: {
-      welcome: { title: 'Evento de Bienvenida', description: 'Una reunión relajada para empezar la celebración.' },
-      wedding: { title: 'Boda', description: 'Acompáñenos en el hermoso Xalet del Nin para celebrar nuestra boda junto a la costa mediterránea.' },
-      afterWedding: { title: 'Celebración Después de la Boda', description: 'Opcional, pero muy recomendada: nos encantaría seguir la fiesta en Ibiza durante el fin de semana.' },
+      welcome: { title: 'Reunión Antes de la Boda', description: 'Nos encantaría reunirnos con ustedes para convivir un rato en un ambiente relajado antes de la boda. El plan aún es tentativo; compartiremos la fecha, la hora y el lugar cuando estén confirmados.', date: 'Fecha por confirmar', time: 'Plan tentativo', location: 'Lugar por confirmar' },
+      wedding: { title: 'Boda', description: 'Acompáñenos en el hermoso Xalet del Nin para celebrar nuestra boda junto a la costa mediterránea.', time: "Bebidas de bienvenida a las 4:30 PM (tentativo)" },
       ceremony: { title: 'Ceremonia', description: 'June y Rafael intercambian votos.' },
       cocktail: { title: 'Cóctel', description: 'Bebidas, bocadillos y conversación al atardecer.' },
       reception: { title: 'Recepción', description: 'Cena, baile y una larga noche mediterránea.' },
@@ -175,7 +190,7 @@ export default {
       ['¿Dónde me hospedo?', 'Las recomendaciones de hoteles y barrios estarán en Viaje y Hospedaje.'],
       ['¿Cómo llego al venue?', 'Publicaremos detalles de transporte cuando estén listos.'],
       ['¿Habrá transporte?', 'Estamos definiendo la logística y actualizaremos esta página.'],
-      ['¿A qué hora debo llegar a la ceremonia?', 'Recomendamos llegar a las 3:45 PM para que tengan tiempo de instalarse antes de que empiece la ceremonia.'],
+      ['¿A qué hora debo llegar a la ceremonia?', "El horario tentativo comienza con bebidas de bienvenida a las 4:30 PM y la ceremonia a las 5:00 PM. Confirmaremos la hora de llegada definitiva más cerca de la boda."],
       ['¿La boda será interior o exterior?', 'La primera parte de la celebración será al aire libre, si el clima lo permite. Más tarde, la música y el baile pasarán al interior después de las 10:00 PM de acuerdo con los tiempos del venue y requisitos locales.'],
       ['¿Los ciudadanos estadounidenses necesitan visa para entrar a España?', 'Los ciudadanos estadounidenses generalmente pueden viajar a España por estancias turísticas cortas sin visa Schengen. La autorización ETIAS para viajeros exentos de visa se pospuso al cuarto trimestre de 2026, y compartiremos información oficial actualizada cuando se lance.'],
       ['¿Los ciudadanos mexicanos necesitan visa para entrar a España?', 'Los ciudadanos mexicanos generalmente pueden viajar a España por estancias turísticas cortas sin visa Schengen. La autorización ETIAS para viajeros exentos de visa se pospuso al cuarto trimestre de 2026, y compartiremos información oficial actualizada cuando se lance.'],

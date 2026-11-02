@@ -20,8 +20,6 @@ function localizedEventCopy(event, t) {
   const localeKeyByEventKey = {
     welcome: 'welcome',
     wedding: 'wedding',
-    after_wedding: 'afterWedding',
-    afterWedding: 'afterWedding',
   };
   const localeKey = localeKeyByEventKey[event.eventKey];
   const translated = localeKey ? t(`schedule.events.${localeKey}`) : null;

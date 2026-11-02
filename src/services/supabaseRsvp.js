@@ -49,18 +49,31 @@ function normalizeEmail(email) {
   return email.trim().toLowerCase();
 }
 
+// Ignore cancelled events even if an older database still returns their invitations.
+function withoutCancelledEvents(invitation) {
+  if (!invitation?.guests) return invitation;
+  return {
+    ...invitation,
+    guests: invitation.guests.map((guest) => ({
+      ...guest,
+      events: guest.events?.filter((event) => !['after_wedding', 'afterWedding'].includes(event.eventKey)),
+    })),
+  };
+}
+
 export async function lookupInvitation(email, fallbackCode = '') {
-  return supabaseFetch(getRestUrl('rpc/lookup_invitation'), {
+  const invitation = await supabaseFetch(getRestUrl('rpc/lookup_invitation'), {
     method: 'POST',
     body: JSON.stringify({
       p_email: normalizeEmail(email),
       p_fallback_code: fallbackCode.trim() || null,
     }),
   });
+  return withoutCancelledEvents(invitation);
 }
 
 export async function saveRsvp(email, payload, fallbackCode = '') {
-  return supabaseFetch(getRestUrl('rpc/save_household_rsvp'), {
+  const invitation = await supabaseFetch(getRestUrl('rpc/save_household_rsvp'), {
     method: 'POST',
     body: JSON.stringify({
       p_email: normalizeEmail(email),
@@ -68,6 +81,7 @@ export async function saveRsvp(email, payload, fallbackCode = '') {
       p_payload: payload,
     }),
   });
+  return withoutCancelledEvents(invitation);
 }
 
 export async function signInAdmin(email, password) {

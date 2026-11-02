@@ -36,7 +36,7 @@ export default function Home() {
       </section>
       <section className="section bg-parchment/60">
         <SectionHeader title={t('home.weekendTitle')} />
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2">
           {events.map((event) => <EventCard key={event.key} event={event} copy={t(`schedule.events.${event.key}`)} />)}
         </div>
       </section>

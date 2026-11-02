@@ -6,9 +6,8 @@ on conflict (id) do nothing;
 
 insert into events (id, event_key, event_name, event_date, description, visible, display_order)
 values
-  ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'welcome', 'Welcome Event', '2027-06-15', 'A relaxed gathering to begin the celebration.', true, 10),
-  ('bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', 'wedding', 'Wedding Ceremony & Reception', '2027-06-16', 'Join us at Xalet del Nin for the wedding celebration.', true, 20),
-  ('cccccccc-cccc-cccc-cccc-cccccccccccc', 'after_wedding', 'Post-Wedding Celebration', '2027-06-18', 'Optional post-wedding celebration in Ibiza.', true, 30)
+  ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'welcome', 'Pre-Wedding Get-Together', null, 'A tentative, small get-together before the wedding. Date, time, and location to be confirmed.', true, 10),
+  ('bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', 'wedding', 'Wedding Ceremony & Reception', '2027-06-16', 'Join us at Xalet del Nin for the wedding celebration.', true, 20)
 on conflict (id) do nothing;
 
 insert into guests (id, household_id, first_name, last_name, email, plus_one_allowed, language_preference)

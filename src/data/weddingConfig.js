@@ -41,9 +41,8 @@ export const weddingConfig = {
     ],
   },
   schedule: [
-    { key: 'welcome', date: 'June 15, 2027', time: 'TBD', location: 'Barcelona area' },
-    { key: 'wedding', date: 'June 16, 2027', time: '3:45 PM arrival', location: 'Xalet del Nin' },
-    { key: 'afterWedding', date: 'June 18-19, 2027', time: 'Optional', location: 'Ibiza, Spain' },
+    { key: 'welcome', date: 'Date to be confirmed', time: 'Tentative', location: 'Location to be confirmed' },
+    { key: 'wedding', date: 'June 16, 2027', time: '4:30 PM welcome drinks (proposed)', location: 'Xalet del Nin' },
   ],
   registryLinks: [
     { label: 'Registry One', url: '#', visible: false },

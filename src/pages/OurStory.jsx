@@ -15,10 +15,10 @@ export default function OurStory() {
           {sections.map((item, index) => (
             <article key={item.title} className="grid items-center gap-8 md:grid-cols-2 md:gap-14">
               <img
-                src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}${['/images/gallery/img-1603.jpeg', '/images/gallery/img-1485.jpeg', '/images/gallery/luna-leia-mochi-cleaned.png', '/images/gallery/fix-0926.jpg'][index]}`}
+                src={`${import.meta.env.BASE_URL.replace(/\/$/, '')}${['/images/gallery/story-beginning-palace.jpg', '/images/gallery/img-1485.jpeg', '/images/gallery/luna-leia-mochi-cleaned.png', '/images/gallery/fix-0926.jpg'][index]}`}
                 alt=""
                 loading="lazy"
-                className={`${index === 2 ? 'aspect-square object-contain' : 'aspect-[4/5] object-cover'} w-full ${index % 2 ? 'md:order-2' : ''}`}
+                className={`${index === 0 ? 'h-auto' : index === 2 ? 'aspect-square object-contain' : 'aspect-[4/5] object-cover'} w-full ${index % 2 ? 'md:order-2' : ''}`}
               />
               <div>
               <h2 className="font-serif text-4xl">{item.title}</h2>

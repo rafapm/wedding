@@ -54,7 +54,7 @@ export default {
     timelineNote: "16 iyun 2027 · Xalet del Nin · Bütün saatlar İspaniyanın yerli vaxtı ilə göstərilib. Proqram ilkin xarakter daşıyır və dəyişə bilər. Şənlik 17 iyun saat 02:00-da bitir.",
     timeline: [{"time": "16:30–17:00", "title": "Qarşılama İçkiləri"}, {"time": "17:00–17:30", "title": "Nikah Mərasimi"}, {"time": "17:30–19:30", "title": "Kokteyl Saatı"}, {"time": "19:30–22:00", "title": "Toy Ziyafəti / Şam Yeməyi"}, {"time": "22:00–02:00", "title": "Şənlik"}],
     events: {
-      welcome: { title: 'Toydan Əvvəl Görüş', description: 'Toydan əvvəl hamınızla kiçik, səmimi bir görüşdə bir araya gəlmək istərdik. Planlar hələ dəqiqləşməyib; tarix, saat və məkan təsdiqlənəndə məlumat verəcəyik.', date: 'Tarix dəqiqləşdiriləcək', time: 'İlkin plan', location: 'Məkan dəqiqləşdiriləcək' },
+      welcome: { title: 'Toydan Əvvəl Görüş', description: 'Toydan əvvəl hamınızla kiçik, səmimi bir görüşdə bir araya gəlmək istərdik. Planlar hələ dəqiqləşməyib; saat və məkan təsdiqlənəndə məlumat verəcəyik.', date: '15 iyun 2027', time: 'İlkin plan', location: 'Məkan dəqiqləşdiriləcək' },
       wedding: { title: 'Toy', description: 'Aralıq dənizi sahilindəki gözəl Xalet del Nin-də evlənməyimizi qeyd etmək üçün bizə qoşulun.', date: '16 iyun 2027', location: 'Xalet del Nin', time: "Qarşılama içkiləri: 16:30 (ilkin plan)" },
       ceremony: { title: 'Mərasim', description: 'Günay və Rafael andlarını paylaşır.' },
       cocktail: { title: 'Kokteyl Saatı', description: 'İçkilər, yüngül qəlyanaltılar və günbatımı söhbətləri.' },
@@ -176,8 +176,6 @@ export default {
             "body": "Şənlik dəniz kənarında çəmənlikdə, bağ yollarında və terraslarda başlayacaq. Saat 22:00-dan sonra musiqi və rəqs qapalı məkana keçəcək. Qalın dabanlı, zərif dabansız və ya rahat klassik ayaqqabı seçə bilərsiniz. Axşam yüngül üst geyim də faydalı ola bilər."
         }
     ],
-    "paletteTitle": "Rəng İlhamı",
-    "palette": "Yaşıl tonları, tutqun mavi, çəhrayı, terrakota və digər yay rənglərini sevirik. Qara və tünd göy, eləcə də çiçəkli və cəsarətli naxışlar da xoş qarşılanır. Bunlar ilham üçündür, məcburi rəng palitrası deyil; nümunələrə uyğunlaşmaq və ya yeni geyim almaq lazım deyil.",
     "womenTitle": "Donlar və Kombinezonlar",
     "women": "Zərif midi və ya yerə qədər uzun donlar, dəbli kombinezonlar və uyğunlaşdırılmış axşam geyimləri uyğundur. Açıq havada və rəqs edərkən rahat olacağınız parçalar və ayaqqabılar seçin.",
     "menTitle": "Kostyumlar və Smokinlər",
@@ -188,7 +186,7 @@ export default {
     "inspirationLinks": [
         {
             "label": "Aralıq Dənizi Üslubunda Qonaq Geyimləri",
-            "url": "https://www.pinterest.com/ideas/spanish-wedding-guest-outfit/902739100527/",
+            "url": "https://www.pinterest.com/search/pins/?q=garden%20formal%20wedding%20guest%20dress&rs=typed",
             "note": "Rəngli donlar, naxışlar və uyğunlaşdırılmış geyimlərdən ilham alın. Geyim seçərkən yuxarıdakı qaydalara əsaslanın."
         },
         {

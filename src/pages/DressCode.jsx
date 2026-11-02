@@ -1,8 +1,6 @@
 import SectionHeader from '../components/SectionHeader';
 import { useTranslation } from '../hooks/useTranslation';
 
-const palette = ['#63724f', '#2f3a2b', '#7996ad', '#bc8190', '#bd7055', '#202e46'];
-
 export default function DressCode() {
   const { t } = useTranslation();
   const sections = t('dress.sections', []);
@@ -27,16 +25,7 @@ export default function DressCode() {
       </section>
 
       <section className="section">
-        <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
-          <div>
-            <h2 className="font-serif text-5xl">{t('dress.paletteTitle')}</h2>
-            <p className="mt-4 leading-7 text-charcoal/70">{t('dress.palette')}</p>
-            <div className="mt-6 grid grid-cols-6 gap-3">
-              {palette.map((color) => (
-                <span key={color} className="aspect-square border border-gold/20" style={{ backgroundColor: color }} />
-              ))}
-            </div>
-          </div>
+        <div className="mx-auto max-w-5xl">
           <div className="grid gap-5 sm:grid-cols-2">
             <article className="border border-gold/25 bg-white/55 p-7">
               <h3 className="font-serif text-3xl">{t('dress.womenTitle')}</h3>

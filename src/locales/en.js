@@ -52,7 +52,7 @@ export default {
     timelineNote: "June 16, 2027 · Xalet del Nin · All times are local to Spain. This schedule is tentative and may change. The party ends at 2:00 AM on June 17.",
     timeline: [{"time": "4:30–5:00 PM", "title": "Welcome Drinks"}, {"time": "5:00–5:30 PM", "title": "Ceremony"}, {"time": "5:30–7:30 PM", "title": "Cocktail Hour"}, {"time": "7:30–10:00 PM", "title": "Wedding Reception / Dinner"}, {"time": "10:00 PM–2:00 AM", "title": "Party"}],
     events: {
-      welcome: { title: 'Pre-Wedding Get-Together', description: 'We’re hoping to bring everyone together for a small, relaxed hangout before the wedding. Plans are still tentative; we’ll share the date, time, and location once confirmed.', date: 'Date to be confirmed', time: 'Tentative', location: 'Location to be confirmed' },
+      welcome: { title: 'Pre-Wedding Get-Together', description: 'We’re hoping to bring everyone together for a small, relaxed hangout before the wedding. Plans are still tentative; we’ll share the time and location once confirmed.', date: 'June 15, 2027', time: 'Tentative', location: 'Location to be confirmed' },
       wedding: { title: 'Wedding', description: 'Join us at the beautiful Xalet del Nin as we celebrate our wedding on the Mediterranean coast.', time: "4:30 PM welcome drinks (proposed)" },
       ceremony: { title: 'Ceremony', description: 'June and Rafael exchange vows.' },
       cocktail: { title: 'Cocktail Hour', description: 'Drinks, small bites, and sunset conversation.' },
@@ -175,8 +175,6 @@ export default {
             "body": "Our celebration begins outdoors on grass, garden paths, and terraces by the sea. After 10:00 PM, music and dancing move indoors. Block heels, dressy flats, or comfortable dress shoes work well, and a light layer may be useful later in the evening."
         }
     ],
-    "paletteTitle": "Color Inspiration",
-    "palette": "We love greens, dusty blue, rose, terracotta, and other summer colors. Black and navy are welcome too, along with florals and bold prints. These are ideas for inspiration, not a required palette—you don’t need to match the swatches or buy something new.",
     "womenTitle": "Dresses & Jumpsuits",
     "women": "Elegant midi or floor-length dresses, dressy jumpsuits, and coordinated evening outfits are welcome. Choose fabrics and shoes that will feel comfortable outdoors and on the dance floor.",
     "menTitle": "Suits & Tuxedos",
@@ -187,7 +185,7 @@ export default {
     "inspirationLinks": [
         {
             "label": "Mediterranean Guest Outfits",
-            "url": "https://www.pinterest.com/ideas/spanish-wedding-guest-outfit/902739100527/",
+            "url": "https://www.pinterest.com/search/pins/?q=garden%20formal%20wedding%20guest%20dress&rs=typed",
             "note": "Colorful dresses, prints, and coordinated outfits for inspiration. Follow the dress code above when choosing your look."
         },
         {

@@ -53,7 +53,7 @@ export default {
     timelineNote: "16 de junio de 2027 · Xalet del Nin · Todos los horarios son de España. Este programa es tentativo y puede cambiar. La fiesta termina a las 2:00 AM del 17 de junio.",
     timeline: [{"time": "4:30–5:00 PM", "title": "Bebidas de Bienvenida"}, {"time": "5:00–5:30 PM", "title": "Ceremonia"}, {"time": "5:30–7:30 PM", "title": "Cóctel"}, {"time": "7:30–10:00 PM", "title": "Recepción / Cena"}, {"time": "10:00 PM–2:00 AM", "title": "Fiesta"}],
     events: {
-      welcome: { title: 'Reunión Antes de la Boda', description: 'Nos encantaría reunirnos con ustedes para convivir un rato en un ambiente relajado antes de la boda. El plan aún es tentativo; compartiremos la fecha, la hora y el lugar cuando estén confirmados.', date: 'Fecha por confirmar', time: 'Plan tentativo', location: 'Lugar por confirmar' },
+      welcome: { title: 'Reunión Antes de la Boda', description: 'Nos encantaría reunirnos con ustedes para convivir un rato en un ambiente relajado antes de la boda. El plan aún es tentativo; compartiremos la hora y el lugar cuando estén confirmados.', date: '15 de junio de 2027', time: 'Plan tentativo', location: 'Lugar por confirmar' },
       wedding: { title: 'Boda', description: 'Acompáñenos en el hermoso Xalet del Nin para celebrar nuestra boda junto a la costa mediterránea.', time: "Bebidas de bienvenida a las 4:30 PM (tentativo)" },
       ceremony: { title: 'Ceremonia', description: 'June y Rafael intercambian votos.' },
       cocktail: { title: 'Cóctel', description: 'Bebidas, bocadillos y conversación al atardecer.' },
@@ -175,8 +175,6 @@ export default {
             "body": "La celebración comienza al aire libre, sobre pasto, caminos de jardín y terrazas junto al mar. Después de las 10:00 PM, la música y el baile pasan al interior. Recomendamos tacones de bloque, zapatos bajos de vestir o zapatos formales cómodos. Una prenda ligera para cubrirse puede ser útil más tarde."
         }
     ],
-    "paletteTitle": "Inspiración de Colores",
-    "palette": "Nos encantan los verdes, el azul empolvado, el rosa, el terracota y otros colores de verano. El negro y el azul marino también son bienvenidos, al igual que las flores y los estampados llamativos. Son ideas para inspirarse, no una paleta obligatoria; no necesitan combinar con las muestras ni comprar algo nuevo.",
     "womenTitle": "Vestidos y Jumpsuits",
     "women": "Son bienvenidos los vestidos midi o largos elegantes, los jumpsuits de vestir y los conjuntos de noche. Elijan telas y zapatos cómodos para estar al aire libre y bailar.",
     "menTitle": "Trajes y Esmoquin",
@@ -187,7 +185,7 @@ export default {
     "inspirationLinks": [
         {
             "label": "Atuendos Mediterráneos para Invitados",
-            "url": "https://www.pinterest.com/ideas/spanish-wedding-guest-outfit/902739100527/",
+            "url": "https://www.pinterest.com/search/pins/?q=garden%20formal%20wedding%20guest%20dress&rs=typed",
             "note": "Vestidos de colores, estampados y conjuntos para inspirarse. Sigan el código de vestimenta de arriba al elegir su atuendo."
         },
         {

@@ -161,26 +161,42 @@ export default {
     },
   },
   dress: {
-    title: 'Código de Vestimenta',
-    intro: 'Formal de jardín mediterráneo: elegante, romántico, colorido y cómodo para una celebración al aire libre junto al mar.',
-    sections: [
-      { eyebrow: 'La idea', title: 'Formal de Jardín, No Black Tie', body: 'Imaginen una boda de verano refinada en una villa costera: siluetas pulidas, buen color, telas frescas y un poco de personalidad. El venue tiene jardines, piedra, aire de mar y fiesta interior por la noche, así que elijan algo que funcione en ambos ambientes.' },
-      { eyebrow: 'El lugar', title: 'Afuera Primero, Adentro Después', body: 'La primera parte de la celebración será al aire libre, con pasto, caminos de jardín y terrazas. Después de las 10:00 PM, la música y el baile pasan al interior, así que una capa ligera y zapatos cómodos de vestir serán buena idea.' },
+    "title": "Código de Vestimenta",
+    "intro": "Vístanse para una elegante noche de verano junto al Mediterráneo. Son bienvenidos los vestidos midi o largos, los jumpsuits de vestir y los trajes con saco. Recomendamos usar corbata; el esmoquin es bienvenido, pero no obligatorio. Anímense a usar color, flores u otros estampados y elijan zapatos cómodos para los jardines y el baile.",
+    "sections": [
+        {
+            "eyebrow": "El Estilo",
+            "title": "Formal de Verano",
+            "body": "Piensen en un atuendo elegante de noche con un toque mediterráneo. Las telas ligeras, los colores y el estilo personal son bienvenidos. Elijan algo con lo que puedan disfrutar desde las bebidas de bienvenida hasta el último baile."
+        },
+        {
+            "eyebrow": "El Lugar",
+            "title": "Afuera Primero, Adentro Después",
+            "body": "La celebración comienza al aire libre, sobre pasto, caminos de jardín y terrazas junto al mar. Después de las 10:00 PM, la música y el baile pasan al interior. Recomendamos tacones de bloque, zapatos bajos de vestir o zapatos formales cómodos. Una prenda ligera para cubrirse puede ser útil más tarde."
+        }
     ],
-    paletteTitle: 'Paleta de Color',
-    palette: 'Nos encantan olivo, salvia, esmeralda, dorado tenue, champagne, amarillo suave, azul empolvado, rosa, terracota, neutros cálidos y charcoal. Los estampados son bienvenidos si se sienten elevados y mediterráneos, no demasiado playeros o casuales.',
-    womenTitle: 'Para Mujeres',
-    women: 'Vestidos midi o largos, jumpsuits elegantes, conjuntos de vestir, seda, chiffon, mezclas de lino y telas estructuradas de verano funcionan muy bien. Recomendamos tacones de bloque, plataformas discretas o flats elegantes para las zonas de jardín.',
-    menTitle: 'Para Hombres',
-    men: 'Trajes ligeros o separates con buen fit son perfectos. Lino, lana tropical o mezclas frescas de algodón en charcoal, olivo, beige, navy o neutros suaves se verán pulidos sin sentirse pesados.',
-    avoidTitle: 'Por Favor Eviten',
-    avoid: 'Por favor eviten blanco, marfil de novia, mezclilla, shorts, chanclas, tenis casuales, salidas de playa y cualquier look demasiado de antro o demasiado casual. No se requiere tuxedo.',
-    inspiration: 'Inspiración',
-    inspirationLinks: [
-      { label: 'Mujeres', url: 'https://www.pinterest.com/search/pins/?q=mediterranean%20garden%20formal%20wedding%20guest%20dress', note: 'Vestidos, colores y texturas de jardín formal mediterráneo.' },
-      { label: 'Hombres', url: 'https://www.pinterest.com/search/pins/?q=summer%20garden%20formal%20wedding%20men%20linen%20suit', note: 'Trajes ligeros, lino y separates pulidos de verano.' },
-    ],
-  },
+    "paletteTitle": "Inspiración de Colores",
+    "palette": "Nos encantan los verdes, el azul empolvado, el rosa, el terracota y otros colores de verano. El negro y el azul marino también son bienvenidos, al igual que las flores y los estampados llamativos. Son ideas para inspirarse, no una paleta obligatoria; no necesitan combinar con las muestras ni comprar algo nuevo.",
+    "womenTitle": "Vestidos y Jumpsuits",
+    "women": "Son bienvenidos los vestidos midi o largos elegantes, los jumpsuits de vestir y los conjuntos de noche. Elijan telas y zapatos cómodos para estar al aire libre y bailar.",
+    "menTitle": "Trajes y Esmoquin",
+    "men": "Les pedimos usar traje con saco. Recomendamos corbata; el esmoquin es bienvenido, pero no obligatorio. Los trajes de lana ligera o mezcla de lino son buenas opciones para una noche de verano.",
+    "avoidTitle": "Por Favor Eviten",
+    "avoid": "Por favor, reserven los atuendos blancos y marfil para la novia. Les pedimos dejar en casa la mezclilla, los shorts, la ropa de playa, las chanclas y los tenis casuales.",
+    "inspiration": "Inspiración de Atuendos",
+    "inspirationLinks": [
+        {
+            "label": "Atuendos Mediterráneos para Invitados",
+            "url": "https://www.pinterest.com/ideas/spanish-wedding-guest-outfit/902739100527/",
+            "note": "Vestidos de colores, estampados y conjuntos para inspirarse. Sigan el código de vestimenta de arriba al elegir su atuendo."
+        },
+        {
+            "label": "Trajes y Esmoquin",
+            "url": "https://www.pinterest.com/search/pins/?q=summer%20formal%20wedding%20guest%20suit%20tie",
+            "note": "Les pedimos usar traje con saco. Recomendamos corbata; el esmoquin es bienvenido, pero no obligatorio. Los trajes de lana ligera o mezcla de lino son buenas opciones para una noche de verano."
+        }
+    ]
+},
   gallery: {
     title: 'Galería',
     intro: 'Algunas fotos favoritas de nosotros, con más por venir.',

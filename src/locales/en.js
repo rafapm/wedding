@@ -161,26 +161,42 @@ export default {
     },
   },
   dress: {
-    title: 'Dress Code',
-    intro: 'Mediterranean garden formal: elegant, romantic, colorful, and comfortable for an outdoor celebration by the sea.',
-    sections: [
-      { eyebrow: 'The feeling', title: 'Garden Formal, Not Black Tie', body: 'Imagine a refined summer wedding at a coastal villa: polished silhouettes, beautiful color, breathable fabrics, and a little personality. The venue has gardens, stone architecture, sea air, and an indoor late-night party, so choose something that can move through both settings.' },
-      { eyebrow: 'The setting', title: 'Outdoor First, Indoor Later', body: 'The first part of the celebration will be outdoors on grass, garden paths, and terraces. After 10:00 PM, music and dancing move indoors, so layers and comfortable dress shoes are your friends.' },
+    "title": "Dress Code",
+    "intro": "Dress up for a summer evening by the Mediterranean. Elegant midi or floor-length dresses, dressy jumpsuits, and suits with jackets are welcome. Ties are encouraged; tuxedos are welcome but not required. Embrace color, florals, or other prints, and choose comfortable shoes for the gardens and dancing.",
+    "sections": [
+        {
+            "eyebrow": "The Style",
+            "title": "Summer Formal",
+            "body": "Think elegant evening attire with a Mediterranean feel. Lightweight fabrics, beautiful colors, and personal style are welcome. Choose something you’ll feel comfortable celebrating in from welcome drinks through the last dance."
+        },
+        {
+            "eyebrow": "The Setting",
+            "title": "Outdoor First, Indoor Later",
+            "body": "Our celebration begins outdoors on grass, garden paths, and terraces by the sea. After 10:00 PM, music and dancing move indoors. Block heels, dressy flats, or comfortable dress shoes work well, and a light layer may be useful later in the evening."
+        }
     ],
-    paletteTitle: 'Color Palette',
-    palette: 'We love olive, sage, emerald, muted gold, champagne, soft yellow, dusty blue, rose, terracotta, warm neutrals, and charcoal. Prints are welcome if they feel elevated and Mediterranean rather than loud or beach-casual.',
-    womenTitle: 'For Women',
-    women: 'Midi or long dresses, elegant jumpsuits, dressy separates, silk, chiffon, linen blends, and structured summer fabrics all work beautifully. Block heels, wedges, or refined flats are recommended for the garden areas.',
-    menTitle: 'For Men',
-    men: 'Lightweight suits or tailored separates are perfect. Linen, tropical wool, or breathable cotton blends in charcoal, olive, tan, navy, or soft neutrals will feel polished without being too heavy.',
-    avoidTitle: 'Please Avoid',
-    avoid: 'Please avoid white, bridal ivory, denim, shorts, flip-flops, casual sneakers, beach coverups, and anything too club-like or overly casual. A tuxedo is not required.',
-    inspiration: 'Inspiration',
-    inspirationLinks: [
-      { label: 'Women', url: 'https://www.pinterest.com/search/pins/?q=mediterranean%20garden%20formal%20wedding%20guest%20dress', note: 'Mediterranean garden formal dresses, color, and textures.' },
-      { label: 'Men', url: 'https://www.pinterest.com/search/pins/?q=summer%20garden%20formal%20wedding%20men%20linen%20suit', note: 'Lightweight tailoring, linen suits, and polished summer separates.' },
-    ],
-  },
+    "paletteTitle": "Color Inspiration",
+    "palette": "We love greens, dusty blue, rose, terracotta, and other summer colors. Black and navy are welcome too, along with florals and bold prints. These are ideas for inspiration, not a required palette—you don’t need to match the swatches or buy something new.",
+    "womenTitle": "Dresses & Jumpsuits",
+    "women": "Elegant midi or floor-length dresses, dressy jumpsuits, and coordinated evening outfits are welcome. Choose fabrics and shoes that will feel comfortable outdoors and on the dance floor.",
+    "menTitle": "Suits & Tuxedos",
+    "men": "Please wear a suit with a jacket. Ties are encouraged, and tuxedos are welcome but not required. Lightweight wool or linen-blend suits are good options for a summer evening.",
+    "avoidTitle": "Please Avoid",
+    "avoid": "Please save white and ivory outfits for the bride. We ask that you leave denim, shorts, beachwear, flip-flops, and casual sneakers at home.",
+    "inspiration": "Outfit Inspiration",
+    "inspirationLinks": [
+        {
+            "label": "Mediterranean Guest Outfits",
+            "url": "https://www.pinterest.com/ideas/spanish-wedding-guest-outfit/902739100527/",
+            "note": "Colorful dresses, prints, and coordinated outfits for inspiration. Follow the dress code above when choosing your look."
+        },
+        {
+            "label": "Suits & Tuxedos",
+            "url": "https://www.pinterest.com/search/pins/?q=summer%20formal%20wedding%20guest%20suit%20tie",
+            "note": "Please wear a suit with a jacket. Ties are encouraged, and tuxedos are welcome but not required. Lightweight wool or linen-blend suits are good options for a summer evening."
+        }
+    ]
+},
   gallery: {
     title: 'Gallery',
     intro: 'A few favorite photos of us, with more to come.',

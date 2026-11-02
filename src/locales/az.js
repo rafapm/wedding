@@ -162,26 +162,42 @@ export default {
     },
   },
   dress: {
-    title: 'Geyim Kodu',
-    intro: 'Aralıq dənizi bağ üslubu: zərif, romantik, rəngli və dəniz kənarında açıq havada keçirilən bayram üçün rahat.',
-    sections: [
-      { eyebrow: 'Üslub', title: 'Bağ Üslubu, Qara Qalstuk Tələb Olunmur', body: 'Sahil villasındakı zərif yay toyunu düşünün: səliqəli siluetlər, gözəl rənglər, nəfəs alan parçalar və bir az şəxsi üslub. Bağlar, daş memarlıq abidələri, dəniz havası və gecə qapalı məkanda əyləncə hər iki şəraitə uyğun geyim seçməyi vacib edir.' },
-      { eyebrow: 'Məkan', title: 'Əvvəl Açıq Hava, Sonra Qapalı Məkan', body: 'Şənliyin ilk hissəsi çəmənlikdə, bağ yollarında və terraslarda açıq havada olacaq. Saat 22:00-dan sonra musiqi və rəqs qapalı məkana keçir; buna görə yüngül üst geyim və rahat, zərif ayaqqabı yaxşı seçimdir.' },
+    "title": "Geyim Kodu",
+    "intro": "Aralıq dənizi kənarında yay axşamı üçün zərif geyinin. Midi və ya yerə qədər uzun donlar, zərif kombinezonlar və pencəkli kostyumlar uyğundur. Qalstuk tövsiyə olunur; smokin geyinə bilərsiniz, amma məcburi deyil. Rənglərə, çiçəkli və digər naxışlara yer verin, bağda və rəqsdə rahat olacağınız ayaqqabı seçin.",
+    "sections": [
+        {
+            "eyebrow": "Üslub",
+            "title": "Yay üçün Rəsmi Geyim",
+            "body": "Aralıq dənizi ab-havasına uyğun zərif axşam geyimi düşünün. Yüngül parçalar, gözəl rənglər və şəxsi üslubunuz xoş qarşılanır. Qarşılama içkilərindən son rəqsədək rahatlıqla əylənə biləcəyiniz geyim seçin."
+        },
+        {
+            "eyebrow": "Məkan",
+            "title": "Əvvəl Açıq Hava, Sonra Qapalı Məkan",
+            "body": "Şənlik dəniz kənarında çəmənlikdə, bağ yollarında və terraslarda başlayacaq. Saat 22:00-dan sonra musiqi və rəqs qapalı məkana keçəcək. Qalın dabanlı, zərif dabansız və ya rahat klassik ayaqqabı seçə bilərsiniz. Axşam yüngül üst geyim də faydalı ola bilər."
+        }
     ],
-    paletteTitle: 'Rəng Palitrası',
-    palette: 'Sevdiyimiz rənglər zeytun, adaçayı yaşılı, zümrüd, yumşaq qızılı, şampan, açıq sarı, toz mavisi, çəhrayı, terrakota, isti neytral və kömür tonlarıdır. Naxışlar da uyğundur, yetər ki, zərif, Aralıq dənizi ruhunda olsun və həddindən artıq çimərlik və ya gündəlik görünməsin.',
-    womenTitle: 'Qadınlar üçün',
-    women: 'Midi və ya uzun libaslar, zərif kombinezonlar, dəbli dəstlər, ipək, şifon, kətan qarışıqları və forması olan yay parçaları çox gözəl uyğunlaşır. Bağ zonaları üçün qalın dabanlı ayaqqabı, platforma və ya zərif düz ayaqqabı tövsiyə olunur.',
-    menTitle: 'Kişilər üçün',
-    men: 'Yüngül kostyumlar və ya səliqəli, yaxşı biçilmiş ayrı kombinlər idealdır. Kətan, tropik yun və ya nəfəs alan pambıq qarışıqları kömür, zeytun, bej, tünd göy və yumşaq neytral tonlarda həm zərif görünəcək, həm də ağır hiss etdirməyəcək.',
-    avoidTitle: 'Zəhmət Olmasa Çəkinin',
-    avoid: 'Gəlinə xas ağ və fil sümüyü tonlarından, cins şalvardan, şortdan, barmaq arası terliklərdən, çox gündəlik idman ayaqqabısından, çimərlik üst geyimlərindən və həddindən artıq klub üslubunda və ya gündəlik görünüşlərdən çəkinin. Smokin tələb olunmur.',
-    inspiration: 'İlham',
-    inspirationLinks: [
-      { label: 'Qadınlar üçün', url: 'https://www.pinterest.com/search/pins/?q=mediterranean%20garden%20formal%20wedding%20guest%20dress', note: 'Aralıq dənizi bağ üslubunda libaslar, rənglər və teksturalar.' },
-      { label: 'Kişilər üçün', url: 'https://www.pinterest.com/search/pins/?q=summer%20garden%20formal%20wedding%20men%20linen%20suit', note: 'Yüngül dərzilik, kətan kostyumlar və səliqəli yay kombinləri.' },
-    ],
-  },
+    "paletteTitle": "Rəng İlhamı",
+    "palette": "Yaşıl tonları, tutqun mavi, çəhrayı, terrakota və digər yay rənglərini sevirik. Qara və tünd göy, eləcə də çiçəkli və cəsarətli naxışlar da xoş qarşılanır. Bunlar ilham üçündür, məcburi rəng palitrası deyil; nümunələrə uyğunlaşmaq və ya yeni geyim almaq lazım deyil.",
+    "womenTitle": "Donlar və Kombinezonlar",
+    "women": "Zərif midi və ya yerə qədər uzun donlar, dəbli kombinezonlar və uyğunlaşdırılmış axşam geyimləri uyğundur. Açıq havada və rəqs edərkən rahat olacağınız parçalar və ayaqqabılar seçin.",
+    "menTitle": "Kostyumlar və Smokinlər",
+    "men": "Pencəkli kostyum geyinməyinizi xahiş edirik. Qalstuk tövsiyə olunur. Smokin geyinə bilərsiniz, amma məcburi deyil. Yüngül yun və ya kətan qarışığından kostyumlar yay axşamı üçün yaxşı seçimdir.",
+    "avoidTitle": "Zəhmət Olmasa Çəkinin",
+    "avoid": "Ağ və fil sümüyü rəngli geyimləri gəlin üçün saxlayın. Cins geyim, şort, çimərlik geyimi, barmaq arası terlik və gündəlik idman ayaqqabısını evdə qoymağınızı xahiş edirik.",
+    "inspiration": "Geyim İlhamı",
+    "inspirationLinks": [
+        {
+            "label": "Aralıq Dənizi Üslubunda Qonaq Geyimləri",
+            "url": "https://www.pinterest.com/ideas/spanish-wedding-guest-outfit/902739100527/",
+            "note": "Rəngli donlar, naxışlar və uyğunlaşdırılmış geyimlərdən ilham alın. Geyim seçərkən yuxarıdakı qaydalara əsaslanın."
+        },
+        {
+            "label": "Kostyumlar və Smokinlər",
+            "url": "https://www.pinterest.com/search/pins/?q=summer%20formal%20wedding%20guest%20suit%20tie",
+            "note": "Pencəkli kostyum geyinməyinizi xahiş edirik. Qalstuk tövsiyə olunur. Smokin geyinə bilərsiniz, amma məcburi deyil. Yüngül yun və ya kətan qarışığından kostyumlar yay axşamı üçün yaxşı seçimdir."
+        }
+    ]
+},
   gallery: {
     title: 'Qalereya',
     intro: 'Bizdən bir neçə sevimli foto. Daha çoxu tezliklə.',

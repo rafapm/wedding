@@ -1,7 +1,7 @@
 import SectionHeader from '../components/SectionHeader';
 import { useTranslation } from '../hooks/useTranslation';
 
-const palette = ['#f8f3ea', '#d8c3a5', '#b8945f', '#63724f', '#2f3a2b', '#282622'];
+const palette = ['#63724f', '#2f3a2b', '#7996ad', '#bc8190', '#bd7055', '#202e46'];
 
 export default function DressCode() {
   const { t } = useTranslation();

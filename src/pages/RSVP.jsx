@@ -63,16 +63,25 @@ function Field({ label, children }) {
   );
 }
 
+const dietaryOptions = ['Intolerance', 'Allergy', 'Vegetarian', 'Vegan', 'Other'];
+const dietarySeparator = '\nDetails: ';
+function readDietary(value = '') {
+  const [categoryText, ...details] = value.split(dietarySeparator);
+  const parts = categoryText.split(',').map((part) => part.trim()).filter(Boolean);
+  return {
+    categories: parts.filter((part) => dietaryOptions.includes(part)),
+    details: [...parts.filter((part) => !dietaryOptions.includes(part)), ...details].join(', '),
+  };
+}
+function writeDietary(categories, details) {
+  return categories.join(', ') + (details ? dietarySeparator + details : '');
+}
 function toggleListValue(currentValue, option) {
-  const values = currentValue
-    ? currentValue.split(',').map((value) => value.trim()).filter(Boolean)
-    : [];
-
-  if (values.includes(option)) {
-    return values.filter((value) => value !== option).join(', ');
-  }
-
-  return [...values, option].join(', ');
+  const { categories, details } = readDietary(currentValue);
+  return writeDietary(categories.includes(option) ? categories.filter((value) => value !== option) : [...categories, option], details);
+}
+function needsDietaryDetails(value) {
+  return readDietary(value).categories.some((category) => ['Allergy', 'Intolerance', 'Other'].includes(category));
 }
 
 export default function RSVP() {
@@ -148,6 +157,14 @@ export default function RSVP() {
       return;
     }
 
+    const missingDietaryDetails = invitation.guests.some((guest) => guest.events.some((event) => {
+      const response = responses[guest.id]?.[event.id];
+      return eventNeedsDetails(event.eventKey) && response?.attending === 'true' && needsDietaryDetails(response.dietaryRestrictions) && !readDietary(response.dietaryRestrictions).details.trim();
+    }));
+    if (missingDietaryDetails) {
+      setMessage(t('rsvp.dietaryDetailsRequired'));
+      return;
+    }
     setStatus('saving');
     setMessage('');
 
@@ -222,7 +239,7 @@ export default function RSVP() {
               value={email}
               onChange={(event) => setEmail(event.target.value)}
               placeholder={t('rsvp.emailPlaceholder')}
-              required
+              required={!fallbackCode.trim()}
             />
           </Field>
           <button className="button-dark h-fit" type="submit" disabled={status === 'loading'}>
@@ -347,17 +364,29 @@ export default function RSVP() {
                                 ['Allergy', t('rsvp.dietaryAllergy')],
                                 ['Vegetarian', t('rsvp.dietaryVegetarian')],
                                 ['Vegan', t('rsvp.dietaryVegan')],
+                                ['Other', t('rsvp.dietaryOther')],
                               ].map(([value, label]) => (
                                 <label key={value} className="flex cursor-pointer items-center gap-2 border border-gold/25 bg-white px-4 py-3">
                                   <input
                                     type="checkbox"
                                     value={value}
-                                    checked={(current.dietaryRestrictions || '').split(',').map((item) => item.trim()).includes(value)}
+                                    checked={readDietary(current.dietaryRestrictions).categories.includes(value)}
                                     onChange={() => updateResponse(guest.id, rsvpEvent.id, 'dietaryRestrictions', toggleListValue(current.dietaryRestrictions, value))}
                                   />
                                   <span className="text-sm font-semibold uppercase tracking-[0.12em]">{label}</span>
                                 </label>
                               ))}
+                            </div>
+                            <div className="mt-4">
+                              <Field label={t('rsvp.dietaryDetails')}>
+                                <textarea
+                                  className="min-h-28 w-full border border-gold/30 bg-white px-4 py-3"
+                                  value={readDietary(current.dietaryRestrictions).details}
+                                  onChange={(event) => updateResponse(guest.id, rsvpEvent.id, 'dietaryRestrictions', writeDietary(readDietary(current.dietaryRestrictions).categories, event.target.value))}
+                                  placeholder={t('rsvp.dietaryDetailsPlaceholder')}
+                                  required={needsDietaryDetails(current.dietaryRestrictions)}
+                                />
+                              </Field>
                             </div>
                           </fieldset>
                           <Field label={t('rsvp.arrivalDate')}>

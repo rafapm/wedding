@@ -1,21 +1,11 @@
 import { useState } from 'react';
+import StayMap from '../components/StayMap';
+import { hotels, hotelMapLink, hotelDirections } from '../data/hotels';
 import { weddingConfig } from '../data/weddingConfig';
 import SectionHeader from '../components/SectionHeader';
 import { useTranslation } from '../hooks/useTranslation';
 
 const sections = ['airports', 'tips'];
-const hotelQuery = 'ME Sitges Terramar, Passeig Marítim 80, Sitges, Spain';
-const hotelMap = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hotelQuery)}`;
-const hotelRoute = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(hotelQuery)}&destination=${encodeURIComponent(weddingConfig.venue.address)}&travelmode=driving`;
-const overviewMap = 'https://www.google.com/maps/d/embed?mid=1aWvzZ7YKL3-zugf9z3249Rb7VjwHBPA';
-const mapViews = {
-  all: { center: '41.30,1.94', zoom: 10 },
-  hotel: { center: '41.22527,1.78728', zoom: 15 },
-  venue: { center: '41.21135253,1.71312019', zoom: 15 },
-  airport: { center: '41.2974,2.0833', zoom: 13 },
-  barcelona: { center: '41.387,2.1701', zoom: 14 },
-};
-const alternatives = ['Hotel Calipolis', 'Eurostars Sitges', 'MiM Sitges'];
 const categories = ['restaurants', 'coffee', 'sightseeing', 'beaches', 'museums', 'dayTrips'];
 
 function RecommendationItem({ item }) {
@@ -32,27 +22,73 @@ function RecommendationItem({ item }) {
 }
 
 export default function TravelStay() {
-  const { t, language } = useTranslation();
-  const [mapView, setMapView] = useState('all');
-  const selectedView = mapViews[mapView];
+  const { t } = useTranslation();
+  const [copyState, setCopyState] = useState('');
+  const calipolis = hotels[0];
+  const copyCode = async () => {
+    try { await navigator.clipboard.writeText('BODAYMIEL'); setCopyState('copied'); }
+    catch { setCopyState('copyFallback'); }
+  };
+  const hotelLinks = (hotel) => <div className="mt-5 flex flex-wrap gap-x-5 gap-y-3 text-sm">
+    <a className="underline underline-offset-4" href={hotelMapLink(hotel)} target="_blank" rel="noreferrer">{t('travel.lodging.mapLink')}</a>
+    <a className="underline underline-offset-4" href={hotelDirections(hotel, weddingConfig.venue.address)} target="_blank" rel="noreferrer">{t('travel.lodging.route')}</a>
+  </div>;
   return (
     <>
       <section className="section">
         <SectionHeader title={t('travel.title')} intro={t('travel.intro')} />
         <article className="border border-gold/30 bg-white/60 p-6 sm:p-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-olive">{t('travel.lodging.eyebrow')}</p>
-          <h2 className="mt-3 font-serif text-4xl sm:text-5xl">ME Sitges Terramar</h2>
-          <p className="mt-3 text-sm uppercase tracking-wide text-charcoal/60">Passeig Marítim, 80 · 08870 Sitges, Spain</p>
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-olive">{t('travel.lodging.eyebrow')}</p>
+            <span className="border border-olive/25 bg-olive/10 px-3 py-2 text-xs font-medium text-olive">{t('travel.lodging.pickup')}</span>
+          </div>
+          <h2 className="mt-3 font-serif text-4xl sm:text-5xl">Hotel Calipolis</h2>
+          <p className="mt-3 text-sm uppercase tracking-wide text-charcoal/60">{calipolis.address}</p>
           <p className="mt-5 max-w-3xl leading-8 text-charcoal/75">{t('travel.lodging.hotelCopy')}</p>
-          <div className="mt-7 border-l-4 border-gold bg-parchment p-6">
-            <h3 className="font-serif text-3xl">{t('travel.lodging.waitTitle')}</h3>
-            <p className="mt-3 leading-7 text-charcoal/80">{t('travel.lodging.waitCopy')}</p>
+          <div className="mt-7 grid gap-7 border-l-4 border-gold bg-parchment p-5 sm:p-7 lg:grid-cols-[1fr_auto]">
+            <div>
+              <h3 className="font-serif text-3xl">{t('travel.lodging.bookingTitle')}</h3>
+              <p className="mt-3 max-w-2xl leading-7 text-charcoal/80">{t('travel.lodging.bookingCopy')}</p>
+            </div>
+            <div className="flex min-w-0 flex-col items-start justify-center lg:items-center">
+              <p className="text-xs uppercase tracking-widest text-olive">{t('travel.lodging.codeLabel')}</p>
+              <code className="my-3 select-all text-2xl tracking-[0.12em] text-charcoal sm:text-3xl">BODAYMIEL</code>
+              <button type="button" onClick={copyCode} className="border-b border-charcoal/50 pb-1 text-sm">{t(`travel.lodging.${copyState === 'copied' ? 'copied' : 'copy'}`)}</button>
+              <span role="status" className="mt-2 text-xs text-olive">{copyState ? t(`travel.lodging.${copyState}`) : ''}</span>
+            </div>
           </div>
-          <div className="mt-8">
-            <h3 className="font-serif text-3xl">{t('travel.lodging.shuttleTitle')}</h3>
-            <p className="mt-3 max-w-3xl leading-8 text-charcoal/75">{t('travel.lodging.shuttleCopy')}</p>
+          <div className="mt-6 grid gap-4 text-sm leading-6 text-charcoal/75 md:grid-cols-3">
+            {['early', 'cancellation', 'club'].map(key => <p key={key}>{t(`travel.lodging.${key}`)}</p>)}
           </div>
+          <a className="button-dark mt-7 inline-block" href={calipolis.website} target="_blank" rel="noreferrer">{t('travel.lodging.book')} ↗</a>
+          {hotelLinks(calipolis)}
         </article>
+        <div className="my-12">
+          <h2 className="font-serif text-4xl">{t('travel.lodging.otherTitle')}</h2>
+          <p className="mt-4 max-w-3xl leading-8 text-charcoal/75">{t('travel.lodging.otherNote')}</p>
+          <div className="mt-6 grid gap-5 lg:grid-cols-3">
+            {hotels.slice(1).map(hotel => <article key={hotel.id} className="flex flex-col border border-gold/25 bg-white/55 p-6 sm:p-7">
+              <h3 className="font-serif text-3xl">{hotel.name}</h3>
+              <p className="mt-3 text-xs uppercase tracking-wide text-charcoal/60">{hotel.address}</p>
+              <p className="mt-4 leading-7 text-charcoal/75">{t(`travel.lodging.${hotel.id}Copy`)}</p>
+              {hotel.wedding && <p className="mt-4 border-t border-gold/25 pt-4 text-sm leading-6 text-charcoal/70">{t('travel.lodging.terramarRate')}</p>}
+              <div className="mt-auto pt-6">
+                <a className="font-medium underline underline-offset-4" href={hotel.website} target="_blank" rel="noreferrer">{t('travel.lodging.website')} ↗</a>
+                {hotel.wedding && <a className="mt-3 block text-sm underline underline-offset-4" href={hotel.wedding} target="_blank" rel="noreferrer">{t('travel.lodging.weddingRate')} ↗</a>}
+                {hotelLinks(hotel)}
+              </div>
+            </article>)}
+          </div>
+        </div>
+        <article className="my-12 border-y border-gold/30 py-8 sm:flex sm:gap-10">
+          <h2 className="font-serif text-3xl sm:w-1/3 sm:shrink-0">{t('travel.lodging.shuttleTitle')}</h2>
+          <p className="mt-4 max-w-3xl leading-8 text-charcoal/75 sm:mt-0">{t('travel.lodging.shuttleCopy')}</p>
+        </article>
+        <div className="my-12">
+          <h2 className="font-serif text-4xl">{t('travel.lodging.mapTitle')}</h2>
+          <p className="mt-4 max-w-3xl leading-7 text-charcoal/75">{t('travel.lodging.mapNote')}</p>
+          <StayMap />
+        </div>
         <div className="my-12 grid gap-6 md:grid-cols-2">
           <article className="border border-gold/25 bg-white/55 p-7">
             <h2 className="font-serif text-3xl">{t('travel.lodging.compareTitle')}</h2>
@@ -63,45 +99,6 @@ export default function TravelStay() {
             <h2 className="font-serif text-3xl">{t('travel.lodging.mobilityTitle')}</h2>
             <p className="mt-4 leading-7 text-charcoal/75">{t('travel.lodging.mobility')}</p>
           </article>
-        </div>
-        <div className="mb-12">
-          <h2 className="font-serif text-4xl">{t('travel.lodging.mapTitle')}</h2>
-          <div className="mt-5 flex flex-wrap gap-2">
-            {Object.keys(mapViews).map((view) => (
-              <button
-                key={view}
-                type="button"
-                aria-pressed={mapView === view}
-                onClick={() => setMapView(view)}
-                className={`border border-gold/40 px-4 py-3 text-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-olive ${mapView === view ? 'bg-olive text-white' : 'bg-white/60 text-charcoal hover:bg-parchment'}`}
-              >
-                {t(`travel.lodging.mapButtons.${view}`)}
-              </button>
-            ))}
-          </div>
-          <iframe
-            title={t('travel.lodging.hotelMap')}
-            src={`${overviewMap}&ll=${selectedView.center}&z=${selectedView.zoom}&hl=${language === 'es-MX' ? 'es' : language}`}
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen
-            className="mt-6 h-[530px] w-full border border-gold/25 sm:h-[560px]"
-            loading="lazy"
-          />
-          <div className="mt-4 flex flex-wrap gap-x-8 gap-y-3">
-            <a className="underline underline-offset-4" href={hotelMap} target="_blank" rel="noreferrer">{t('travel.lodging.mapLink')}</a>
-            <a className="underline underline-offset-4" href={hotelRoute} target="_blank" rel="noreferrer">{t('travel.lodging.route')}</a>
-          </div>
-        </div>
-        <div className="mb-12">
-          <SectionHeader title={t('travel.lodging.otherTitle')} />
-          <div className="mb-8 max-w-3xl space-y-4 leading-8 text-charcoal/75">
-            {t('travel.lodging.otherNote').split('\n\n').map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          </div>
-          <div className="grid gap-4 sm:grid-cols-3">
-            {alternatives.map((name) => (
-              <a key={name} href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + ', Sitges, Spain')}`} target="_blank" rel="noreferrer" className="border border-gold/25 bg-white/55 p-6 font-serif text-2xl underline-offset-4 transition hover:bg-parchment hover:underline">{name}</a>
-            ))}
-          </div>
         </div>
         <div className="grid gap-5 md:grid-cols-2">
           {sections.map((key) => (

@@ -35,7 +35,7 @@ export default {
       },
       {
             "title": "Gözlənilməz Bir Dövrdə Sevgi",
-            "body": "Pandemiya dövründə görüşməyə başladıq və San-Fransisko körfəzi bölgəsindəki restoranları və yürüş cığırlarını kəşf etməyə çox vaxt ayırdıq. Bir-birimizi Meksika və Azərbaycan mətbəxi ilə tanış edərək, zamanla 50-dən çox restoranda yemək yedik. Günay acıya nə qədər dözə bildiyini sınadı, Rafael isə qatığın demək olar ki, hər yeməklə uyğun gəldiyini öyrəndi."
+            "body": "Pandemiya dövründə görüşməyə başladıq və Bay Area-dakı restoranları və yürüş cığırlarını kəşf etməyə çox vaxt ayırdıq. Bir-birimizi Meksika və Azərbaycan mətbəxi ilə tanış edərək, zamanla 50-dən çox restoranda yemək yedik. Günay acıya nə qədər dözə bildiyini sınadı, Rafael isə qatığın demək olar ki, hər yeməklə uyğun gəldiyini öyrəndi."
       },
       {
             "title": "Birlikdə Qurduğumuz Ev",

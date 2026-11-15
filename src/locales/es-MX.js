@@ -26,23 +26,23 @@ export default {
   },
   story: {
     title: 'Nuestra Historia: 🇦🇿 + 🇲🇽',
-    intro: "Nos conocimos a principios de 2020, justo antes de que el mundo cambiara. Al mirar atrás, ese encuentro se siente como la primera página de la vida que construiríamos juntos.",
+    intro: "",
     sections: [
       {
             "title": "Donde Comenzó Nuestra Historia",
             "body": "Nuestra primera cita fue el sábado 11 de enero de 2020 a las 5:30 PM en Vespucci, un restaurante en San Mateo, California. Aunque ya cerró, siempre tendrá un lugar en nuestra historia porque ahí compartimos nuestra primera cita, sin saber todavía lo mucho que llegaríamos a significar el uno para el otro."
       },
       {
-            "title": "Amor en Tiempos Inesperados",
-            "body": "Empezamos a salir durante la pandemia y pasamos mucho tiempo explorando restaurantes y senderos del Área de la Bahía. Con el tiempo probamos más de 50 restaurantes, compartiendo los sabores de la comida mexicana y azerbaiyana. June puso a prueba su tolerancia al picante y Rafael aprendió que el yogur va con casi todo."
+            "title": "Conociéndonos",
+            "body": "Empezamos a salir poco antes de la pandemia y pasamos mucho tiempo explorando restaurantes y senderos del Área de la Bahía. Con el tiempo probamos más de 50 restaurantes, compartiendo distintas cocinas, entre ellas la mexicana y la azerbaiyana. June iba descubriendo su tolerancia al picante, mientras Rafael aprendía que el yogur va con casi todo en la cocina azerbaiyana. Hoy, nuestro hogar es una mezcla de ambas culturas, desde la comida que preparamos hasta las tradiciones que celebramos."
       },
       {
             "title": "Nuestro Hogar",
-            "body": "Después de que Rafael terminó sus estudios en 2024, adoptamos a Luna, Leia y Mochi: tres pequeños terremotos que enseguida se adueñaron de nuestro hogar y de nuestros corazones. Luna está a cargo del turno de la mañana y espera su comida húmeda puntualmente entre las 6 y las 7 AM. También es la mente maestra detrás de los asaltos al clóset de su cuarto, con Leia y Mochi como sus cómplices. Nuestra vida juntos ahora incluye muchos ronroneos, carreras alocadas en todas direcciones y tres muy buenas razones para nunca dormir hasta tarde."
+            "body": "Después de que Rafael terminó sus estudios en 2024, adoptamos a Luna y Mochi. Unas semanas después, nos dimos cuenta de que no queríamos separar a las hermanas (Luna y Leia), así que decidimos volver por ella. ¡Así fue como terminamos con tres gatos!\n\nEstos tres mininos enseguida se sintieron como en casa. Nuestra vida juntos ahora incluye muchos ronroneos, carreras alocadas en todas direcciones y tres muy buenas razones para nunca dormir hasta tarde."
       },
       {
             "title": "Elegir un para Siempre",
-            "body": "El 23 de diciembre de 2025, Rafael le pidió matrimonio a June en República Dominicana, un lugar aún más especial por su amor por la bachata. Celebramos con una cena y vino, mientras sonaba bachata y un nuevo capítulo nos esperaba. Ahora, no podemos esperar a celebrar con las personas que amamos a nuestro lado en Barcelona."
+            "body": "El 23 de diciembre de 2025, Rafael le propuso matrimonio a June en República Dominicana, un lugar aún más especial por su amor por la bachata. Celebramos con una cena, vino y bachata, por supuesto. Ahora, esperamos con mucha ilusión celebrar nuestra boda con todos ustedes en Barcelona."
       }
 ],
   },

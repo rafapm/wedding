@@ -27,23 +27,23 @@ export default {
   },
   story: {
     title: 'Hekayəmiz: 🇦🇿 + 🇲🇽',
-    intro: "2020-ci ilin əvvəlində, dünya dəyişməzdən bir az əvvəl tanış olduq. İndi geriyə baxanda həmin görüş birlikdə quracağımız həyatın ilk səhifəsi kimi görünür.",
+    intro: "",
     sections: [
       {
             "title": "Hekayəmizin Başlanğıcı",
             "body": "İlk görüşümüz 11 yanvar 2020-ci il, şənbə günü saat 17:30-da Kaliforniyanın San Mateo şəhərindəki Vespucci restoranında oldu. Restoran artıq bağlansa da, hekayəmizdə həmişə xüsusi yeri olacaq, çünki bir-birimiz üçün nə qədər dəyərli olacağımızı hələ bilmədən ilk görüşümüzü orada keçirdik."
       },
       {
-            "title": "Gözlənilməz Bir Dövrdə Sevgi",
-            "body": "Pandemiya dövründə görüşməyə başladıq və Bay Area-dakı restoranları və yürüş cığırlarını kəşf etməyə çox vaxt ayırdıq. Bir-birimizi Meksika və Azərbaycan mətbəxi ilə tanış edərək, zamanla 50-dən çox restoranda yemək yedik. Günay acıya nə qədər dözə bildiyini sınadı, Rafael isə qatığın demək olar ki, hər yeməklə uyğun gəldiyini öyrəndi."
+            "title": "Bir-birimizi Tanıyarkən",
+            "body": "Pandemiyadan bir qədər əvvəl görüşməyə başladıq və Bay Area-dakı restoranları və yürüş cığırlarını kəşf etməyə çox vaxt ayırdıq. Zamanla 50-dən çox restoranda yemək yedik, bir-birimizi müxtəlif mətbəxlərlə, o cümlədən Meksika və Azərbaycan mətbəxi ilə tanış etdik. Günay acı yeməklərə nə qədər dözə bildiyini kəşf edirdi, Rafael isə Azərbaycan mətbəxində qatığın demək olar ki, hər yeməklə uyğun gəldiyini öyrənirdi. Bu gün evimiz bişirdiyimiz yeməklərdən qeyd etdiyimiz ənənələrə qədər hər iki mədəniyyəti birləşdirir."
       },
       {
             "title": "Birlikdə Qurduğumuz Ev",
-            "body": "Rafael 2024-cü ildə təhsilini bitirdikdən sonra Luna, Leia və Mochini sahibləndik: evimizi və ürəyimizi dərhal fəth edən üç balaca dəcəl. Səhər növbəsinə Luna rəhbərlik edir və yaş yeməyini səhər saat 6 ilə 7 arasında vaxtında gözləyir. Öz otaqlarındakı şkafa basqınların da baş plançısı odur, Leia və Mochi isə onun cinayət ortaqlarıdır. Birgə həyatımız indi bol mırıltı, hər tərəfə çılğın qaçışlar və səhərlər gec oyanmamaq üçün üç çox yaxşı səbəblə doludur."
+            "body": "Rafael 2024-cü ildə təhsilini bitirdikdən sonra Luna və Mochini sahibləndik. Bir neçə həftə sonra bacıları (Luna və Leia) bir-birindən ayırmaq istəmədiyimizi anladıq və Leia üçün geri qayıtmağa qərar verdik. Beləcə, üç pişiyimiz oldu!\n\nBu üç miyovçu tezliklə evə alışdı. Birgə həyatımız indi bol mırıltı, hər tərəfə çılğın qaçışlar və səhərlər gec oyanmamaq üçün üç çox yaxşı səbəblə doludur."
       },
       {
             "title": "Bir Ömür Birlikdə",
-            "body": "23 dekabr 2025-ci ildə Rafael Dominikan Respublikasında Günaya evlilik təklifi etdi. Günayın baçataya sevgisi bu yeri daha da xüsusi edirdi. Baçata sədaları altında şam yeməyi və şərabla bu sevinci qeyd etdik, qarşımızda isə yeni bir fəsil açılırdı. İndi sevdiyimiz insanlarla Barselonada yan-yana bu xoşbəxtliyi qeyd etməyi səbirsizliklə gözləyirik."
+            "body": "23 dekabr 2025-ci ildə Rafael Dominikan Respublikasında Günaya evlilik təklifi etdi. Günayın baçataya olan sevgisi bu yeri daha da xüsusi edirdi. Bunu şam yeməyi, şərab və əlbəttə, baçata ilə qeyd etdik. İndi isə toyumuzu hamınızla birlikdə Barselonada qeyd etməyi səbirsizliklə gözləyirik."
       }
 ],
   },

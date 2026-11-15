@@ -9,7 +9,7 @@ const places = [
   { id: 'venue', name: 'Xalet del Nin', coords: [41.2115313, 1.7137716] },
   { id: 'airport', name: 'Barcelona-El Prat (BCN)', coords: [41.2983405, 2.0800095] },
 ];
-const views = ['stays', 'all', ...places.map(({ id }) => id)];
+const views = ['all', 'stays', ...places.map(({ id }) => id)];
 
 export default function StayMap() {
   const { t, language } = useTranslation();
@@ -65,6 +65,7 @@ export default function StayMap() {
     <div ref={container} role="region" aria-label={t('travel.lodging.hotelMap')} className="relative z-0 mt-6 h-[420px] w-full border border-gold/25 sm:h-[520px]" />
     <div className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-charcoal/75">
       {hotels.map((hotel, i) => <button key={hotel.id} onClick={() => setView(hotel.id)} className="underline-offset-4 hover:underline"><span className={`mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full text-xs text-white ${i === 0 ? 'bg-olive' : 'bg-charcoal'}`}>{i + 1}</span>{hotel.name}{i === 0 && ` · ${t('travel.lodging.pickup')}`}</button>)}
+      <button type="button" onClick={() => setView('venue')} className="underline-offset-4 hover:underline"><span aria-hidden="true" className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-gold text-xs text-white">♥</span>Xalet del Nin</button>
     </div>
   </>;
 }

@@ -25,23 +25,23 @@ export default {
   },
   story: {
     title: 'Our Story: 🇦🇿 + 🇲🇽',
-    intro: "We met in early 2020, just before the world changed. Looking back now, that meeting feels like the first page of the life we would build together.",
+    intro: "",
     sections: [
       {
             "title": "Where Our Story Began",
             "body": "Our first date was on Saturday, January 11, 2020, at 5:30 PM at Vespucci, a restaurant in San Mateo, CA. The restaurant has since closed, but it will always have a place in our story because it was where we shared our first date, before we knew how much we would come to mean to each other."
       },
       {
-            "title": "Love in an Unexpected Season",
-            "body": "We started dating during the pandemic and spent a lot of time exploring Bay Area restaurants and hiking trails. We eventually tried more than 50 restaurants, introducing each other to Mexican and Azerbaijani food along the way. June tested her spice tolerance, and Rafael learned that yogurt goes with almost everything."
+            "title": "Getting to Know Each Other",
+            "body": "We started dating shortly before the pandemic and spent a lot of time exploring Bay Area restaurants and hiking trails. We eventually tried more than 50 restaurants, introducing each other to different cuisines along the way, including Mexican and Azerbaijani. June was discovering her tolerance for spicy food, while Rafael learned that yogurt goes with almost everything in Azerbaijani cuisine. Today, our home is a mix of both cultures, from the food we cook to the traditions we celebrate."
       },
       {
             "title": "A Home of Our Own",
-            "body": "After Rafael finished school in 2024, we adopted Luna, Leia, and Mochi: three tiny menaces who promptly took over our home and our hearts. Luna runs the morning shift, expecting wet food promptly between 6 and 7 AM. She’s also the mastermind behind the den-room closet raids, with Leia and Mochi as her partners in crime. Life together now comes with lots of purrs, zoomies in every direction, and three very good reasons to never sleep in."
+            "body": "After Rafael finished school in 2024, we adopted Luna and Mochi. A few weeks later, we realized that we did not want to separate the sisters (Luna and Leia), so we decided to go back for her. That’s how we ended up with three cats!\n\nThese three meowsers quickly made themselves at home. Life together now comes with lots of purrs, zoomies in every direction, and three very good reasons to never sleep in."
       },
       {
             "title": "Choosing Forever",
-            "body": "On December 23, 2025, Rafael asked June to marry him in the Dominican Republic, a place made even more special by her love of bachata. We celebrated over dinner and wine, with bachata playing and a new chapter ahead of us. Now, we can’t wait to celebrate with the people we love beside us in Barcelona."
+            "body": "On December 23, 2025, Rafael proposed to June in the Dominican Republic, a place made even more special by her love of bachata. We celebrated with dinner, wine, and bachata, of course. Now, we’re looking forward to celebrating our wedding with all of you in Barcelona."
       }
 ],
   },

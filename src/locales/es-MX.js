@@ -54,7 +54,7 @@ export default {
     timeline: [{"time": "4:30–5:00 PM", "title": "Bebidas de Bienvenida"}, {"time": "5:00–5:30 PM", "title": "Ceremonia"}, {"time": "5:30–7:30 PM", "title": "Cóctel"}, {"time": "7:30–10:00 PM", "title": "Recepción / Cena"}, {"time": "10:00 PM–2:00 AM", "title": "Fiesta"}],
     events: {
       welcome: { title: 'Reunión Antes de la Boda', description: 'Nos encantaría reunirnos con ustedes para convivir un rato en un ambiente relajado antes de la boda. El plan aún es tentativo; compartiremos la hora y el lugar cuando estén confirmados.', date: '15 de junio de 2027', time: 'Plan tentativo', location: 'Lugar por confirmar' },
-      wedding: { title: 'Boda', description: 'Acompáñenos en el hermoso Xalet del Nin para celebrar nuestra boda junto a la costa mediterránea.', time: "Bebidas de bienvenida a las 4:30 PM (tentativo)" },
+      wedding: { title: 'Boda', description: 'Acompáñenos en el hermoso Xalet del Nin para celebrar nuestra boda junto a la costa mediterránea.', time: "Bebidas de bienvenida a las 4:30 PM" },
       ceremony: { title: 'Ceremonia', description: 'June y Rafael intercambian votos.' },
       cocktail: { title: 'Cóctel', description: 'Bebidas, bocadillos y conversación al atardecer.' },
       reception: { title: 'Recepción', description: 'Cena, baile y una larga noche mediterránea.' },
@@ -370,6 +370,8 @@ export default {
     attending: 'Asisten',
     pending: 'Pendiente',
     search: 'Buscar por nombre o correo',
+    exportExcel: 'Descargar Excel',
+    exportError: 'No se pudo exportar el archivo Excel. Inténtelo de nuevo.',
     exportCsv: 'Exportar CSV',
     guest: 'Invitado',
     event: 'Evento',

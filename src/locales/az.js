@@ -55,7 +55,7 @@ export default {
     timeline: [{"time": "16:30–17:00", "title": "Qarşılama İçkiləri"}, {"time": "17:00–17:30", "title": "Nikah Mərasimi"}, {"time": "17:30–19:30", "title": "Kokteyl Saatı"}, {"time": "19:30–22:00", "title": "Toy Ziyafəti / Şam Yeməyi"}, {"time": "22:00–02:00", "title": "Şənlik"}],
     events: {
       welcome: { title: 'Toydan Əvvəl Görüş', description: 'Toydan əvvəl hamınızla kiçik, səmimi bir görüşdə bir araya gəlmək istərdik. Planlar hələ dəqiqləşməyib; saat və məkan təsdiqlənəndə məlumat verəcəyik.', date: '15 iyun 2027', time: 'İlkin plan', location: 'Məkan dəqiqləşdiriləcək' },
-      wedding: { title: 'Toy', description: 'Aralıq dənizi sahilindəki gözəl Xalet del Nin-də evlənməyimizi qeyd etmək üçün bizə qoşulun.', date: '16 iyun 2027', location: 'Xalet del Nin', time: "Qarşılama içkiləri: 16:30 (ilkin plan)" },
+      wedding: { title: 'Toy', description: 'Aralıq dənizi sahilindəki gözəl Xalet del Nin-də evlənməyimizi qeyd etmək üçün bizə qoşulun.', date: '16 iyun 2027', location: 'Xalet del Nin', time: "Qarşılama içkiləri: 16:30" },
       ceremony: { title: 'Mərasim', description: 'Günay və Rafael andlarını paylaşır.' },
       cocktail: { title: 'Kokteyl Saatı', description: 'İçkilər, yüngül qəlyanaltılar və günbatımı söhbətləri.' },
       reception: { title: 'Qəbul', description: 'Şam yeməyi, rəqs və uzun Aralıq dənizi gecəsi.' },
@@ -371,6 +371,8 @@ export default {
     attending: 'Gəlir',
     pending: 'Gözləyir',
     search: 'Ad və ya e-poçtla axtar',
+    exportExcel: 'Excel Yüklə',
+    exportError: 'Excel faylını ixrac etmək mümkün olmadı. Yenidən cəhd edin.',
     exportCsv: 'CSV ixrac et',
     guest: 'Qonaq',
     event: 'Tədbir',

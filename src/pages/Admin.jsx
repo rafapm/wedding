@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import { downloadRsvpExcel } from '../utils/rsvpExcel';
 import SectionHeader from '../components/SectionHeader';
 import { useTranslation } from '../hooks/useTranslation';
 import { isSupabaseConfigured, loadAdminDashboard, signInAdmin, updateAdminRsvp } from '../services/supabaseRsvp';
@@ -46,6 +47,7 @@ function flattenRows(households) {
 
 export default function Admin() {
   const { t } = useTranslation();
+  const [exporting, setExporting] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [token, setToken] = useState(() => sessionStorage.getItem('jr-admin-token') || '');
@@ -93,6 +95,17 @@ export default function Admin() {
     } catch (error) {
       setStatus('error');
       setMessage(error.message);
+    }
+  };
+
+  const handleExcelExport = async () => {
+    setExporting(true);
+    try {
+      await downloadRsvpExcel(dashboard, rows);
+    } catch {
+      setMessage(t('admin.exportError'));
+    } finally {
+      setExporting(false);
     }
   };
 
@@ -201,7 +214,10 @@ export default function Admin() {
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">{t('admin.search')}</span>
           <input className="mt-2 w-full border border-gold/30 bg-white px-4 py-3" value={query} onChange={(event) => setQuery(event.target.value)} />
         </label>
-        <button className="button-dark" type="button" onClick={handleExport}>{t('admin.exportCsv')}</button>
+        <div className="flex flex-wrap gap-3">
+          <button className="button-dark" type="button" disabled={exporting} onClick={handleExcelExport}>{exporting ? t('admin.loading') : t('admin.exportExcel')}</button>
+          <button className="button-light" type="button" onClick={handleExport}>{t('admin.exportCsv')}</button>
+        </div>
       </div>
 
       <div className="mt-8 space-y-5">

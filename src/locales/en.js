@@ -53,7 +53,7 @@ export default {
     timeline: [{"time": "4:30–5:00 PM", "title": "Welcome Drinks"}, {"time": "5:00–5:30 PM", "title": "Ceremony"}, {"time": "5:30–7:30 PM", "title": "Cocktail Hour"}, {"time": "7:30–10:00 PM", "title": "Wedding Reception / Dinner"}, {"time": "10:00 PM–2:00 AM", "title": "Party"}],
     events: {
       welcome: { title: 'Pre-Wedding Get-Together', description: 'We’re hoping to bring everyone together for a small, relaxed hangout before the wedding. Plans are still tentative; we’ll share the time and location once confirmed.', date: 'June 15, 2027', time: 'Tentative', location: 'Location to be confirmed' },
-      wedding: { title: 'Wedding', description: 'Join us at the beautiful Xalet del Nin as we celebrate our wedding on the Mediterranean coast.', time: "4:30 PM welcome drinks (proposed)" },
+      wedding: { title: 'Wedding', description: 'Join us at the beautiful Xalet del Nin as we celebrate our wedding on the Mediterranean coast.', time: "4:30 PM welcome drinks" },
       ceremony: { title: 'Ceremony', description: 'June and Rafael exchange vows.' },
       cocktail: { title: 'Cocktail Hour', description: 'Drinks, small bites, and sunset conversation.' },
       reception: { title: 'Reception', description: 'Dinner, dancing, and a long Mediterranean night.' },
@@ -370,6 +370,8 @@ export default {
     attending: 'Attending',
     pending: 'Pending',
     search: 'Search by name or email',
+    exportExcel: 'Download Excel',
+    exportError: 'Could not export the Excel file. Please try again.',
     exportCsv: 'Export CSV',
     guest: 'Guest',
     event: 'Event',

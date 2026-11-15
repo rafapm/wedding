@@ -42,7 +42,7 @@ export const weddingConfig = {
   },
   schedule: [
     { key: 'welcome', date: 'June 15, 2027', time: 'Tentative', location: 'Location to be confirmed' },
-    { key: 'wedding', date: 'June 16, 2027', time: '4:30 PM welcome drinks (proposed)', location: 'Xalet del Nin' },
+    { key: 'wedding', date: 'June 16, 2027', time: '4:30 PM welcome drinks', location: 'Xalet del Nin' },
   ],
   registryLinks: [
     { label: 'Registry One', url: '#', visible: false },

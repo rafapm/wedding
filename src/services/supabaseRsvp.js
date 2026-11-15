@@ -108,3 +108,17 @@ export async function updateAdminRsvp(token, payload) {
     body: JSON.stringify({ p_payload: payload }),
   });
 }
+
+export async function requestPasswordReset(email) {
+  return supabaseFetch(getAuthUrl(`recover?redirect_to=${encodeURIComponent('https://juneandrafael.com/reset-password')}`), {
+    method: 'POST',
+    body: JSON.stringify({ email: normalizeEmail(email) }),
+  });
+}
+
+export async function resetAdminPassword(token, password) {
+  return supabaseFetch(getAuthUrl('user'), {
+    method: 'PUT', token,
+    body: JSON.stringify({ password }),
+  });
+}

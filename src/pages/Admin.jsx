@@ -144,6 +144,7 @@ export default function Admin() {
           </label>
           {message && <p className="mt-4 text-charcoal/70">{message}</p>}
           <button className="button-dark mt-6" type="submit" disabled={status === 'loading'}>{status === 'loading' ? t('admin.loading') : t('admin.login')}</button>
+        <a className="mt-5 block underline" href="/reset-password">Forgot Password?</a>
         </form>
       </section>
     );

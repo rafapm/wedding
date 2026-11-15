@@ -99,34 +99,15 @@ This creates:
 
 It also creates the lookup/save/admin functions used by the website.
 
-### 2. Add test data
+### 2. Import the guest list
 
-Optional, but helpful while testing. Copy the seed SQL:
+Use one row per person, with First Name, Last Name, RSVP Group, and Email. People with the same RSVP Group share an invitation. Any email associated with the group can open it. Leave unknown emails blank; each group also has a unique invitation code.
 
-```bash
-cd /Users/rafapm/Documents/GitHub/wedding
-pbcopy < supabase/seed.sql
-```
+No demo guests are seeded. Before resetting guest data, save a private backup of groups, guests, invitations, and responses. Preserve event configuration and admin access. Import guest contact details through the database administration workflow, never into the public website bundle or Git repository.
 
-Paste it into a new Supabase SQL Editor query and click **Run**.
+### 3. Update guests later
 
-The seed creates fake guests you can test with:
-
-```text
-alex.rivera@example.com
-sam.rivera@example.com
-maya.chen@example.com
-```
-
-### 3. Add real guests later
-
-After testing, add your real households, guests, events, and event invitations in Supabase. The most important relationship is:
-
-- `households` stores the invitation/household.
-- `guests` stores each individual guest.
-- `events` stores RSVP-able events.
-- `guest_event_invites` controls which guest sees which events.
-- `rsvps` stores one response per guest per event.
+Retain the imported group and guest IDs when updating names or emails so existing RSVPs remain attached. The private import manifest records those IDs and the source spreadsheet rows. Treat companions with known names as individual guests in the same RSVP group, rather than creating extra unnamed plus-one slots.
 
 ### 4. Connect the website to Supabase
 

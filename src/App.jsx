@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import PasswordGate from './components/PasswordGate';
 import ScrollToTop from './components/ScrollToTop';
@@ -12,8 +12,15 @@ import Registry from './pages/Registry';
 import FAQ from './pages/FAQ';
 import RSVP from './pages/RSVP';
 import Admin from './pages/Admin';
+import ResetPassword from './pages/ResetPassword';
 
 export default function App() {
+  const location = useLocation();
+  const callback = new URLSearchParams(location.hash.slice(1));
+  if (location.pathname === '/reset-password') return <ResetPassword />;
+  if (callback.get('type') === 'recovery' || callback.has('error_description')) {
+    return <Navigate to={{ pathname: '/reset-password', hash: location.hash }} replace />;
+  }
   return (
     <PasswordGate>
       <Layout>

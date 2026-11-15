@@ -28,7 +28,7 @@ export default function OurStory() {
           ))}
         </div>
       </section>
-      <section className="section bg-parchment/60">
+      <section id="gallery" className="section scroll-mt-24 bg-parchment/60">
         <SectionHeader title={t('gallery.title')} intro={t('gallery.intro')} />
         <GalleryGrid images={weddingConfig.galleryImages} />
       </section>

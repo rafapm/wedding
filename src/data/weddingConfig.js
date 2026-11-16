@@ -16,7 +16,7 @@ export const weddingConfig = {
     mapEmbedUrl: 'https://www.google.com/maps?q=Passeig%20de%20Salvador%20Espriu%201%2C%2008800%20Vilanova%20i%20la%20Geltru%2C%20Barcelona%2C%20Spain&output=embed',
   },
   media: {
-    heroVideo: '/media/xalet-del-nin.mp4',
+    heroVideo: '/media/xalet-del-nin-enhanced-v2.mp4',
     heroPoster: '/images/xalet.jpg',
     venueImage: '/images/xalet.jpg',
     heroVideoClipEndSeconds: 4,

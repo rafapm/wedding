@@ -276,7 +276,7 @@ export default {
   },
   registry: {
     "title": "Regalos",
-    "message": "Para quienes quieran apoyarnos con un regalo, tenemos un fondo para nuestra luna de miel y nuestro hogar. Pueden contribuir por Venmo o Zelle a continuación. Gracias por acompañarnos en este nuevo capítulo.",
+    "message": "Para quienes quieran apoyarnos con un regalo, tenemos un fondo para nuestra luna de miel y nuestro hogar. Pueden contribuir por Venmo o Zelle a continuación, o entregarnos su regalo en efectivo en persona. Gracias por acompañarnos en este nuevo capítulo.",
     "venmoCopy": "Usen el enlace o escaneen el código QR para encontrar a Rafael en Venmo.",
     "venmoButton": "Abrir Venmo",
     "venmoAlt": "Código QR de Venmo de Rafael Perez, @rafapm22",

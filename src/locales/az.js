@@ -277,7 +277,7 @@ export default {
   },
   registry: {
     "title": "Hədiyyələr",
-    "message": "Hədiyyə ilə bizə dəstək olmaq istəyənlər üçün bal ayı və ev fondu yaratmışıq. Aşağıdakı Venmo və ya Zelle vasitəsilə töhfə verə bilərsiniz. Bu yeni fəslimizdə yanımızda olduğunuz üçün təşəkkür edirik.",
+    "message": "Hədiyyə ilə bizə dəstək olmaq istəyənlər üçün bal ayı və ev fondu yaratmışıq. Aşağıdakı Venmo və ya Zelle vasitəsilə töhfə verə və ya hədiyyənizi şəxsən nağd şəkildə təqdim edə bilərsiniz. Bu yeni fəslimizdə yanımızda olduğunuz üçün təşəkkür edirik.",
     "venmoCopy": "Rafaeli Venmoda tapmaq üçün aşağıdakı linkdən istifadə edin və ya QR kodu skan edin.",
     "venmoButton": "Venmonu Aç",
     "venmoAlt": "Rafael Perez, @rafapm22 üçün Venmo QR kodu",

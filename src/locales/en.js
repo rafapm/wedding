@@ -276,7 +276,7 @@ export default {
   },
   registry: {
     "title": "Registry",
-    "message": "For anyone who would like to help us with a gift, we have a honeymoon and house fund. You can contribute through Venmo or Zelle below. Thank you for being part of this next chapter with us.",
+    "message": "For anyone who would like to help us with a gift, we have a honeymoon and house fund. You can contribute through Venmo or Zelle below, or give a cash gift in person. Thank you for being part of this next chapter with us.",
     "venmoCopy": "Use the link below or scan the QR code to find Rafael on Venmo.",
     "venmoButton": "Open Venmo",
     "venmoAlt": "Venmo QR code for Rafael Perez, @rafapm22",

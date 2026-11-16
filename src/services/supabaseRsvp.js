@@ -1,3 +1,5 @@
+import { orderInvitationGuests } from '../utils/invitationOrder';
+
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
@@ -54,7 +56,7 @@ function withoutCancelledEvents(invitation) {
   if (!invitation?.guests) return invitation;
   return {
     ...invitation,
-    guests: invitation.guests.map((guest) => ({
+    guests: orderInvitationGuests(invitation.guests, invitation.household?.householdName).map((guest) => ({
       ...guest,
       events: guest.events?.filter((event) => !['after_wedding', 'afterWedding'].includes(event.eventKey)),
     })),
